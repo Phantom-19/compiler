@@ -1,8 +1,9 @@
 # -*- coding: UTF-8 -*-
-import marshal as mc
+#import marshal as mc
 import zlib as zn
 from base64 import *
 import zlib, base64, time, sys, os ,datetime, random
+import marshal 
 
 #system1 = base64.b16encode(zlib.compress(r))
 
@@ -11,10 +12,10 @@ dmd = raw_input('\033[1;91m[\033[1;97m**\033[1;91m] \033[1;95mSaisissez votre te
 
 #Marie = dmd.encode("UTF-8")              
 Beli = base64.marshal.loads.b32encode(dmd)  #base64.b32encode(Marie)   
-fr = exec(marshal.loads(zlib.decompress(base64.b16decode(dmd))))
+#fr = exec(marshal.loads(zlib.decompress(base64.b16decode(dmd))))
 #resultat = Beli.decode("UTF-8")
 print(Beli)
-print(fr)
+#print(fr)
 #import marshal,zlib,base64
 #exec(marshal.loads(zlib.decompress(base64.b16decode(
 
