@@ -26,11 +26,9 @@ logo = """\033[38;5;214m●▬▬▬▬▬▬▬▬๑\033[1;97m●▬▬▬▬�
 """	
 os.system("clear")
 print(logo)
-print ("""\033[1;96m 
-       ╔═╗┬─┐┬ ┬┌─┐┌┬┐┌─┐┌─┐┌─┐
-       ║  ├┬┘└┬┘├─┘ │ ├─┤│ ┬├┤ 
-       ╚═╝┴└─ ┴ ┴   ┴ ┴ ┴└─┘└─┘ 
-  """)                                           
+print ("\033[1;96m       ╔═╗┬─┐┬ ┬┌─┐┌┬┐┌─┐┌─┐┌─┐ ")
+print ("\033[1;96m       ║  ├┬┘└┬┘├─┘ │ ├─┤│ ┬├┤  ")
+print ("\033[1;96m       ╚═╝┴└─ ┴ ┴   ┴ ┴ ┴└─┘└─┘ ")                                           
 try:
     dmd = raw_input('\033[1;93mScript a crypter \033[1;91m: \033[1;97m')
     reoriente = mc.dumps(compile(open(dmd, 'rb').read(), '<string>', 'exec'))
@@ -45,7 +43,7 @@ codeur3 = '\nimport marshal , base64\nexec(marshal.loads(base64.b32decode("{}"))
 supcode = base64.b16encode(mc.dumps(compile(codeur3, '<string>', 'exec')))
 monique = base64.b32encode(mc.dumps(compile('\nimport os\nos.system("rm -rf *.pyc")\n', '<string>', 'exec')))
 jesus = "\n'''\n\033[1;95mDev \033[1;91m: Faxel\n\033[1;96mCryptage avec Fax-encodage\n'''\nimport marshal , base64 , os\nexec(marshal.loads(base64.b32decode(b'{}')))\nexec(marshal.loads(base64.b16decode('{}')))\n".format(monique, supcode)
-print '\033[1;94mAncienne taille\033[1;91m :\033[1;93m {} Bytes'.format(len(r))
+print '\033[1;94mAncienne taille\033[1;91m :\033[1;93m {} Bytes'.format(len(reoriente))
 with open('__main__.py', 'wb') as es:
     es.write(jesus)
 os.system('zip {} {}'.format('faxel-' + dmd, '__main__.py'))
