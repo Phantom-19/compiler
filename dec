@@ -1,3 +1,7 @@
+#!usr/bin/python2
+# coding=utf-8 
+# Faxel
+
 import marshal as mc
 import zlib, base64, time, sys, os ,datetime, random
 
