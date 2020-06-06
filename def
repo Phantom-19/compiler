@@ -11,7 +11,7 @@ import marshal
 dmd = raw_input('\033[1;91m[\033[1;97m**\033[1;91m] \033[1;95mSaisissez votre texte\033[1;91m : \033[1;97m ') 
 
 #Marie = dmd.encode("UTF-8")              
-Beli = base64.marshal.loads.b32encode(dmd)  #base64.b32encode(Marie)   
+Beli = marshal.loads(base64.b32encode(dmd))  #base64.b32encode(Marie)   
 #fr = exec(marshal.loads(zlib.decompress(base64.b16decode(dmd))))
 #resultat = Beli.decode("UTF-8")
 print(Beli)
