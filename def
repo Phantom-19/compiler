@@ -10,9 +10,11 @@ import zlib, base64, time, sys, os ,datetime, random
 dmd = raw_input('\033[1;91m[\033[1;97m**\033[1;91m] \033[1;95mSaisissez votre texte\033[1;91m : \033[1;97m ') 
 #system2 = 
 Marie = dmd.encode("UTF-8")              
-Beli = marshal.loads(base64.b32encode(Marie))  #base64.b32encode(Marie)           
+Beli = mc.loads(base64.b32encode(Marie))  #base64.b32encode(Marie)           
 resultat1 = Beli.decode("UTF-8")
 
+#import marshal,zlib,base64
+#exec(marshal.loads(zlib.decompress(base64.b16decode(
 
 #Marien = bases_16.encode("UTF-8")              
 #Belinda = base64.b16encode(Marien)             
