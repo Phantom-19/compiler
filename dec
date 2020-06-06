@@ -1,0 +1,28 @@
+import marshal as mc
+import zlib, base64, time, sys, os
+print """
+\n_  _ ____ _  _    ____ _  _ ____ _   _ ___  ___ 
+\n|\\ | |___  \\/  __ |___ |\\ | |     \\_/  |__]  | 
+\n| \\| |___ _/\\_    |___ | \\| |___   |   |     | 
+    """                                            
+try:
+    dmd = raw_input('Script a chiffrer : ')
+    r = mc.dumps(compile(open(dmd, 'rb').read(), '<string>', 'exec'))
+except:
+    print ("Fichier introuvable ou invalide")
+    sys.exit()
+
+s = base64.b16encode(zlib.compress(r))
+ecode = "\n# -*- coding: UTF-8 -*-\n'''Fax-Cryptage {}\nDev :Faxel \n'''\nimport sys\nimport zlib as zn\nfrom base64 import *\nimport marshal as mc\n\ndef main_code():\n    exec(mc.loads(zn.decompress(b16decode('{}'))))\n\nmain_code()\n".format(time.ctime(), s)
+e2code = '\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("{}")))\n'.format(base64.b16encode(mc.dumps(compile(ecode, '<string>', 'exec'))))
+e3code = '\nimport marshal , base64\nexec(marshal.loads(base64.b32decode("{}")))\n'.format(base64.b32encode(mc.dumps(compile(e2code, '<string>', 'exec'))))
+rmcode = base64.b16encode(mc.dumps(compile(e3code, '<string>', 'exec')))
+pycc = base64.b32encode(mc.dumps(compile('\nimport os\nos.system("rm -rf *.pyc")\n', '<string>', 'exec')))
+rccd = "\n'''\nDev : Faxel\nEncodage avec Fax-encodage\n'''\nimport marshal , base64 , os\nexec(marshal.loads(base64.b32decode(b'{}')))\nexec(marshal.loads(base64.b16decode('{}')))\n".format(pycc, rmcode)
+print 'Ancienne taille : {} Bytes'.format(len(r))
+with open('__main__.py', 'wb') as es:
+    es.write(rccd)
+os.system('zip {} {}'.format('nenc-' + dmd, '__main__.py'))
+print 'Nouvelle taille : {} Bytes'.format(len(open('nenc-' + dmd, 'rb').read()))
+os.system('rm {}'.format('__main__.py'))
+print 'Generer un script crypter : {}'.format('nenc-' + dmd)
