@@ -1,28 +1,50 @@
 import marshal as mc
-import zlib, base64, time, sys, os
-print """
-\n_  _ ____ _  _    ____ _  _ ____ _   _ ___  ___ 
-\n|\\ | |___  \\/  __ |___ |\\ | |     \\_/  |__]  | 
-\n| \\| |___ _/\\_    |___ | \\| |___   |   |     | 
-    """                                            
+import zlib, base64, time, sys, os ,datetime, random
+
+
+
+
+def McTony():
+    mr = [  '*Faxel*', '      ', '*McTony*', '      ', '*Faxel*', '      ', '*McTony*', '      ', '*Faxel*', '      ', '*Faxel*', '      ', '*McTony*', '      ', '*Faxel*', '      ', '*Faxel*', '      ', '*McTony*', '      ', '*Faxel*', '      ', '*Faxel*', '      ', '*McTony*', '      ', '*Faxel*', '      ', '*Faxel*', '      ', '*Faxel*', '      ', '*McTony*', '      ', '*Faxel*', '      ', '*Faxel*', '      ', '*McTony*\n']
+    for o in mr:
+        print '\r\x1b[1;97m[\x1b[1;32m●●\x1b[1;97m]   [38;5;221m ' + o,
+        sys.stdout.flush()
+        time.sleep(0.15)
+
+logo = """\033[38;5;214m●▬▬▬▬▬▬▬▬๑\033[1;97m●▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬●●▬▬▬▬▬\033[1;32m▬▬▬▬๑۩۩๑▬▬▬▬▬▬●     
+\033[38;5;214m•_  _ ____ \033[1;97m _  _ ____ ____ _  _\033[1;32m ____ ____   _  _• 
+\033[38;5;214m•|\/| |__/ \033[1;97m |__| |__| |    |_/ \033[1;32m |___ |__/   |_/ • 
+\033[38;5;214m•|  | |  \ \033[1;97m |  | |  | |___ | \_\033[1;32m |___ |  \ __| \_• 
+\033[38;5;214m●▬▬▬▬▬▬▬▬๑\033[1;97m●▬▬▬▬▬▬๑۩۩๑▬▬▬▬▬▬●●▬▬▬▬▬\033[1;32m▬▬▬▬๑۩۩๑▬▬▬▬▬▬●
+\033[1;97m╔═════════════════════════════════════════════╗
+\033[1;97m║\033[1;91m[\033[1;93m**\033[1;91m]\033[38;5;95m      Developpeur \033[1;97m:\033[38;5;214m  Faxel           \033[1;91m[\033[1;93m**\033[1;91m]\033[1;97m║
+\033[1;97m╚═════════════════════════════════════════════╝
+"""	
+os.system("clear")
+print(logo)
+print ("""\033[1;96m 
+       ╔═╗┬─┐┬ ┬┌─┐┌┬┐┌─┐┌─┐┌─┐
+       ║  ├┬┘└┬┘├─┘ │ ├─┤│ ┬├┤ 
+       ╚═╝┴└─ ┴ ┴   ┴ ┴ ┴└─┘└─┘ 
+  """)                                           
 try:
-    dmd = raw_input('Script a chiffrer : ')
+    dmd = raw_input('\033[1;93mScript a crypter \033[1;91m: \033[1;97m')
     r = mc.dumps(compile(open(dmd, 'rb').read(), '<string>', 'exec'))
 except:
-    print ("Fichier introuvable ou invalide")
+    print ("\033[1;91mFichier introuvable ou invalide")
     sys.exit()
 
 s = base64.b16encode(zlib.compress(r))
-ecode = "\n# -*- coding: UTF-8 -*-\n'''Fax-Cryptage {}\nDev :Faxel \n'''\nimport sys\nimport zlib as zn\nfrom base64 import *\nimport marshal as mc\n\ndef main_code():\n    exec(mc.loads(zn.decompress(b16decode('{}'))))\n\nmain_code()\n".format(time.ctime(), s)
+ecode = "\n# -*- coding: UTF-8 -*-\n'''\033[1;94mFax-Cryptage {}\n\033[1;95mDev \033[1;91m: Faxel \n'''\nimport sys\nimport zlib as zn\nfrom base64 import *\nimport marshal as mc\n\ndef main_code():\n    exec(mc.loads(zn.decompress(b16decode('{}'))))\n\nmain_code()\n".format(time.ctime(), s)
 e2code = '\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("{}")))\n'.format(base64.b16encode(mc.dumps(compile(ecode, '<string>', 'exec'))))
 e3code = '\nimport marshal , base64\nexec(marshal.loads(base64.b32decode("{}")))\n'.format(base64.b32encode(mc.dumps(compile(e2code, '<string>', 'exec'))))
 rmcode = base64.b16encode(mc.dumps(compile(e3code, '<string>', 'exec')))
 pycc = base64.b32encode(mc.dumps(compile('\nimport os\nos.system("rm -rf *.pyc")\n', '<string>', 'exec')))
-rccd = "\n'''\nDev : Faxel\nEncodage avec Fax-encodage\n'''\nimport marshal , base64 , os\nexec(marshal.loads(base64.b32decode(b'{}')))\nexec(marshal.loads(base64.b16decode('{}')))\n".format(pycc, rmcode)
-print 'Ancienne taille : {} Bytes'.format(len(r))
+jesus = "\n'''\n\033[1;95mDev \033[1;91m: Faxel\n\033[1;96mCryptage avec Fax-encodage\n'''\nimport marshal , base64 , os\nexec(marshal.loads(base64.b32decode(b'{}')))\nexec(marshal.loads(base64.b16decode('{}')))\n".format(pycc, rmcode)
+print '\033[1;94mAncienne taille\033[1;91m :\033[1;93 {} Bytes'.format(len(r))
 with open('__main__.py', 'wb') as es:
-    es.write(rccd)
-os.system('zip {} {}'.format('nenc-' + dmd, '__main__.py'))
-print 'Nouvelle taille : {} Bytes'.format(len(open('nenc-' + dmd, 'rb').read()))
+    es.write(jesus)
+os.system('zip {} {}'.format('faxel-' + dmd, '__main__.py'))
+print '\033[1;96mNouvelle taille\033[1;91m :\033[1;92m {} Bytes'.format(len(open('faxel-' + dmd, 'rb').read()))
 os.system('rm {}'.format('__main__.py'))
-print 'Generer un script crypter : {}'.format('nenc-' + dmd)
+print '\033[1;97mGenerer un script crypter \033[1;91m: \033[1;92m{}'.format('faxel-' + dmd)
