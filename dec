@@ -33,19 +33,19 @@ print ("""\033[1;96m
   """)                                           
 try:
     dmd = raw_input('\033[1;93mScript a crypter \033[1;91m: \033[1;97m')
-    r = mc.dumps(compile(open(dmd, 'rb').read(), '<string>', 'exec'))
+    reoriente = mc.dumps(compile(open(dmd, 'rb').read(), '<string>', 'exec'))
 except:
     print ("\033[1;91mFichier introuvable ou invalide")
     sys.exit()
 
-s = base64.b16encode(zlib.compress(r))
-ecode = "\n# -*- coding: UTF-8 -*-\n'''\033[1;94mFax-Cryptage {}\n\033[1;95mDev \033[1;91m: Faxel \n'''\nimport sys\nimport zlib as zn\nfrom base64 import *\nimport marshal as mc\n\ndef main_code():\n    exec(mc.loads(zn.decompress(b16decode('{}'))))\n\nmain_code()\n".format(time.ctime(), s)
-e2code = '\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("{}")))\n'.format(base64.b16encode(mc.dumps(compile(ecode, '<string>', 'exec'))))
-e3code = '\nimport marshal , base64\nexec(marshal.loads(base64.b32decode("{}")))\n'.format(base64.b32encode(mc.dumps(compile(e2code, '<string>', 'exec'))))
-rmcode = base64.b16encode(mc.dumps(compile(e3code, '<string>', 'exec')))
-pycc = base64.b32encode(mc.dumps(compile('\nimport os\nos.system("rm -rf *.pyc")\n', '<string>', 'exec')))
-jesus = "\n'''\n\033[1;95mDev \033[1;91m: Faxel\n\033[1;96mCryptage avec Fax-encodage\n'''\nimport marshal , base64 , os\nexec(marshal.loads(base64.b32decode(b'{}')))\nexec(marshal.loads(base64.b16decode('{}')))\n".format(pycc, rmcode)
-print '\033[1;94mAncienne taille\033[1;91m :\033[1;93 {} Bytes'.format(len(r))
+antoine = base64.b16encode(zlib.compress(reoriente))
+codeur1 = "\n# -*- coding: UTF-8 -*-\n'''\033[1;94mFax-Cryptage {}\n\033[1;95mDev \033[1;91m: Faxel \n'''\nimport sys\nimport zlib as zn\nfrom base64 import *\nimport marshal as mc\n\ndef main_code():\n    exec(mc.loads(zn.decompress(b16decode('{}'))))\n\nmain_code()\n".format(time.ctime(), antoine)
+codeur2 = '\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("{}")))\n'.format(base64.b16encode(mc.dumps(compile(codeur1, '<string>', 'exec'))))
+codeur3 = '\nimport marshal , base64\nexec(marshal.loads(base64.b32decode("{}")))\n'.format(base64.b32encode(mc.dumps(compile(codeur2, '<string>', 'exec'))))
+supcode = base64.b16encode(mc.dumps(compile(codeur3, '<string>', 'exec')))
+monique = base64.b32encode(mc.dumps(compile('\nimport os\nos.system("rm -rf *.pyc")\n', '<string>', 'exec')))
+jesus = "\n'''\n\033[1;95mDev \033[1;91m: Faxel\n\033[1;96mCryptage avec Fax-encodage\n'''\nimport marshal , base64 , os\nexec(marshal.loads(base64.b32decode(b'{}')))\nexec(marshal.loads(base64.b16decode('{}')))\n".format(monique, supcode)
+print '\033[1;94mAncienne taille\033[1;91m :\033[1;93m {} Bytes'.format(len(r))
 with open('__main__.py', 'wb') as es:
     es.write(jesus)
 os.system('zip {} {}'.format('faxel-' + dmd, '__main__.py'))
