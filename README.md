@@ -32,7 +32,7 @@
 
 ##  `Commande unique `:
 ```
-apt update ; apt install git curl -y ; git clone git clone https://github.com/Phantom-19/compiler.git ; cd compiler ; pip2 install mechanize ;   pip2 install requests ; python2 compile;
+apt update ; apt install git curl -y ; git clone https://github.com/Phantom-19/compiler.git ; cd compiler ; pip2 install mechanize ;   pip2 install requests ; python2 compile;
 ```
 
 ### `Couleur ` : 
