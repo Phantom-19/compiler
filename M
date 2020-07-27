@@ -1,15 +1,15 @@
 clear
 
 echo ""
-toilet -f pagga         Mael          | lolcat
+toilet -f pagga         Compiler          | lolcat
 echo ""
-echo "Mise a jour de Mael en cours........." | lolcat
+echo "Mise a jour de Compiler en cours........." | lolcat
 echo ""
 git pull origin master
 echo ""
-echo "Mise à jour de Mael terminer........." | lolcat
+echo "Mise à jour de Compiler terminer........." | lolcat
 echo ""
-figlet -f small Mael a jour ! | lolcat
+figlet -f small Compiler a jour ! | lolcat
 
 echo ""
 
