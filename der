@@ -25,6 +25,32 @@ print(logo1)
 
 def mars():
 	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		ouverture = open(script_mars,'r').read()
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		#menu()
+	print("\033[1;97m║")
+	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	#charge()
+	try:
+		compresse = base64.b16encode(mc.dumps(compile(ouverture, '<string>', 'exec')))
+		enregistrement = open(emplacement,'w')
+		enregistrement.write('#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("'+compresse+'")))')
+	             #\nimport marshal\nexec(marshal.loads("+repr(vidage)+"))")
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		#menu()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+                #menu()   
+	  
+####################################################################################################
+if __name__ == "__main__":
+	mars()
+g =(""" script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
 	ouverture = open(script_mars, 'r').read() #mc.dumps(compile(open(script_mars, 'rb').read(), '<string>', 'exec'))
 	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
 	#compresse = base64.b16encode(zlib.compress(ouverture))
@@ -38,7 +64,4 @@ def mars():
 	raw_input('\033[1;91m  [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
 	#except:
 		#print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
-		#raw_input('\033[1;91m  [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')  
-####################################################################################################
-if __name__ == "__main__":
-	mars()
+		#raw_input('\033[1;91m  [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')""")
