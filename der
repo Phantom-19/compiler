@@ -44,7 +44,7 @@ def dec_mars():
 	try:	
 		compresse = base64.b16encode(mc.dumps(compile(ouverture, '<string>', 'exec')))
 		enregistrement = open(emplacement,'w')
-		enregistrement.write('#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal as mc\nimport zlib as zn\nimport marshal , base64\nfrom base64 import *\nexec(mc.loads(zn.compress(b16decode("'+compresse+'"))))')
+		enregistrement.write('#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal as mc\nimport zlib as zn \nimport marshal , base64\nfrom base64 import *\nexec(mc.loads(zn.compress(base64.b16decode("'+compresse+'"))))')
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
@@ -69,7 +69,7 @@ def mars():
 	try:
 		compresse = base64.b16encode(mc.dumps(compile(ouverture, '<string>', 'exec')))
 		enregistrement = open(emplacement,'w')
-		enregistrement.write('#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("'+compresse+'")))')
+		enregistrement.write('#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("'+compresse+'")))')exec(marshal.loads(zlib.decompress(base64.b32decode(""))))
 	             #\nimport marshal\nexec(marshal.loads("+repr(vidage)+"))")
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
@@ -170,4 +170,8 @@ script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom d
 	except:
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-                mars_zlib_base() """)
+                mars_zlib_base() 
+		import marshal,zlib,base64
+exec(marshal.loads(zlib.decompress(base64.b32decode(""))))
+		
+		""")
