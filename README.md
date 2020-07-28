@@ -28,11 +28,11 @@
 * `pip2 install mechanize`
 * `pip2 install requests`
 
-## ` Execution > ` `python2 compile`
+## ` Execution > ` `python2 compil`
 
 ##  `Commande unique `:
 ```
-apt update ; apt install git curl -y ; git clone https://github.com/Phantom-19/compiler.git ; cd compiler ; pip2 install mechanize ;   pip2 install requests ; python2 compile;
+apt update ; apt install git curl -y ; git clone https://github.com/Phantom-19/compiler.git ; cd compiler ; pip2 install mechanize ;   pip2 install requests ; python2 compil;
 ```
 
 ### `Couleur ` : 
