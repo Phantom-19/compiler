@@ -31,7 +31,7 @@ def mars():
 	#compilage = base64.b16encode(mc.dumps(compile(compresse, '<string>', 'exec')))
 	       #vidage = marshal.dumps(compilage)
 	enregistrement = open(emplacement,"w")
-	enregistrement.write('#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("'+compilage+'")))')
+	enregistrement.write('#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("'+compresse+'")))')
 	#\nimport marshal\nexec(marshal.loads("+repr(vidage)+"))")
 	enregistrement.close()
 	print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
