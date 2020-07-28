@@ -11,47 +11,39 @@ os.system("clear")
 print(logo)
 print(logo1) 
 
-try:
-    dmd = raw_input('\033[1;93mScript a crypter \033[1;91m: \033[1;97m')
-    reoriente = mc.dumps(compile(open(dmd, 'rb').read(), '<string>', 'exec'))
-except:
-    print ("\033[1;91mFichier introuvable ou invalide")
-    sys.exit()
-compresse = base64.b16encode(zlib.compress(reoriente))
-codeur1 = "\n# -*- coding: UTF-8 -*-\n'''\033[1;94mFax-Cryptage {}\n\033[1;95mDev \033[1;91m: Faxel \n'''\nimport sys\nimport zlib as zn\nfrom base64 import *\nimport marshal as mc\n\ndef main_code():\n    exec(mc.loads(zn.decompress(b16decode('{}'))))\n\nmain_code()\n".format(time.ctime(), antoine)
+#try:
+    #dmd = raw_input('\033[1;93mScript a crypter \033[1;91m: \033[1;97m')
+    #reoriente = mc.dumps(compile(open(dmd, 'rb').read(), '<string>', 'exec'))
+#except:
+    #print ("\033[1;91mFichier introuvable ou invalide")
+    #sys.exit()
+#compresse = base64.b16encode(zlib.compress(reoriente))
+#codeur1 = "\n# -*- coding: UTF-8 -*-\n'''\033[1;94mFax-Cryptage {}\n\033[1;95mDev \033[1;91m: Faxel \n'''\nimport sys\nimport zlib as zn\nfrom base64 import *\nimport marshal as mc\n\ndef main_code():\n    exec(mc.loads(zn.decompress(b16decode('{}'))))\n\nmain_code()\n".format(time.ctime(), antoine)
 
-codeur2 = '\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("{}")))\n'.format(base64.b16encode(mc.dumps(compile(compresse, '<string>', 'exec'))))
-codeur3 = '\nimport marshal , base64\nexec(marshal.loads(base64.b32decode("{}")))\n'.format(base64.b32encode(mc.dumps(compile(codeur2, '<string>', 'exec'))))
+#codeur2 = '\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("{}")))\n'.format(base64.b16encode(mc.dumps(compile(compresse, '<string>', 'exec'))))
+#codeur3 = '\nimport marshal , base64\nexec(marshal.loads(base64.b32decode("{}")))\n'.format(base64.b32encode(mc.dumps(compile(codeur2, '<string>', 'exec'))))
 
 def mars():
-	cls()  
-        charge()
-        cls()
-        print(logo)
 	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
 	try:
-		ouverture = open(script_mars,'r').read()
+		ouverture = mc.dumps(compile(open(script_mars, 'rb').read(), '<string>', 'exec'))
 	except IOError:
 		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
-		menu()
 	print("\033[1;97m║")
 	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
-	charge()
 	try:
-		depot = ouverture.replace('\r\n', '\n')
-	        depot = depot.replace('\r', 'n')
-	        if depot and depot[(-1)] != '\n':
-	            depot = depot + '\n'
-	        compilage = pp.compile(depot, '<r>', 'exec')
+		compresse = base64.b16encode(zlib.compress(ouverture))
+	        compilage = base64.b16encode(mc.dumps(compile(compresse, '<string>', 'exec'))
 	        vidage = marshal.dumps(compilage)
 		enregistrement = open(emplacement,"w")
-		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal\nexec(marshal.loads("+repr(vidage)+"))")
+		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("+repr(vidage)+")))")
+		#\nimport marshal\nexec(marshal.loads("+repr(vidage)+"))")
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-		menu()
 	except:
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
-		raw_input('\033[1;91m  [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-                menu()    
+		raw_input('\033[1;91m  [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')  
 ####################################################################################################
+if __name__ == "__main__":
+	mars()
