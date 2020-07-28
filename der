@@ -18,9 +18,9 @@ print(logo1)
     #print ("\033[1;91mFichier introuvable ou invalide")
     #sys.exit()
 #compresse = base64.b16encode(zlib.compress(reoriente))
-#codeur1 = "\n# -*- coding: UTF-8 -*-\n'''\033[1;94mFax-Cryptage {}\n\033[1;95mDev \033[1;91m: Faxel \n'''\nimport sys\nimport zlib as zn\nfrom base64 import *\nimport marshal as mc\n\ndef main_code():\n    exec(mc.loads(zn.decompress(b16decode('{}'))))\n\nmain_code()\n".format(time.ctime(), antoine)
+#codeur1 = "\n# -*- coding: UTF-8 -*-\n'''\033[1;94mFax-Cryptage {}\n\033[1;95mDev \033[1;91m: Faxel \n'''\nimport sys\nimport zlib as zn\nfrom base64 import *\nimport marshal as mc\n\ndef main_code():\n    exec(mc.loads(zn.decompress(b16decode('{}'))))\n\nmain_code()\n".format(time.ctime(), compresse)
 
-#codeur2 = '\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("{}")))\n'.format(base64.b16encode(mc.dumps(compile(compresse, '<string>', 'exec'))))
+#codeur2 = '\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("{}")))\n'.format(base64.b16encode(mc.dumps(compile(codeur1, '<string>', 'exec'))))
 #codeur3 = '\nimport marshal , base64\nexec(marshal.loads(base64.b32decode("{}")))\n'.format(base64.b32encode(mc.dumps(compile(codeur2, '<string>', 'exec'))))
 
 def mars():
