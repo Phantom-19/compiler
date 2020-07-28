@@ -1,7 +1,16 @@
 #!usr/bin/python2
 # coding=utf-8 
 # Faxel
-
+"""
+"\n# -*- coding: UTF-8 -*-
+\n'''\033[1;94mFax-Cryptage {}
+\n\033[1;95mDev \033[1;91m: Faxel \n'''
+\nimport sys\nimport zlib as zn\nfrom base64 import *\nimport marshal as mc\n\ndef main_code():
+\n    exec(mc.loads(zn.decompress(b16decode('{}'))))
+\n\nmain_code()\n".format(time.ctime(), compresse)"""
+import sys
+import zlib as zn
+from base64 import *
 import marshal as mc
 import zlib, base64, time, sys, os ,datetime, random
 logo1 = ("""\033[1;96m       ╔═╗┬─┐┬ ┬┌─┐┌┬┐┌─┐┌─┐┌─┐ \n\033[1;96m       ║  ├┬┘└┬┘├─┘ │ ├─┤│ ┬├┤  \n\033[1;96m       ╚═╝┴└─ ┴ ┴   ┴ ┴ ┴└─┘└─┘ """)
@@ -22,7 +31,31 @@ print(logo1)
 
 #codeur2 = '\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("{}")))\n'.format(base64.b16encode(mc.dumps(compile(codeur1, '<string>', 'exec'))))
 #codeur3 = '\nimport marshal , base64\nexec(marshal.loads(base64.b32decode("{}")))\n'.format(base64.b32encode(mc.dumps(compile(codeur2, '<string>', 'exec'))))
+def dec_mars():
+	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		ouverture = open(script_mars,'r').read()
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		#menu()
+	print("\033[1;97m║")
+	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	#charge()
+	try:
+		compresse = base64.b16encode(mc.dumps(compile(ouverture, '<string>', 'exec')))
+		enregistrement = open(emplacement,'w')
+		enregistrement.write('#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\nexec(mc.loads(zn.decompress(b16decode("'+compresse+'")))')
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		#menu()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+                #menu()   
+		
 
+g =("""
 def mars():
 	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
 	try:
@@ -46,10 +79,58 @@ def mars():
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
                 #menu()   
-	  
+		
+		
+def mars():
+	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		ouverture = open(script_mars,'r').read()
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		#menu()
+	print("\033[1;97m║")
+	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	#charge()
+	try:
+		compresse = base64.b32encode(mc.dumps(compile(ouverture, '<string>', 'exec')))
+		enregistrement = open(emplacement,'w')
+		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\nexec(marshal.loads(base64.b32decode('"+compresse+"')))")
+	             #\nimport marshal\nexec(marshal.loads("+repr(vidage)+"))")
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		#menu()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+                #menu()
+		
+def mars():
+	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		ouverture = open(script_mars,'r').read()
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		#menu()
+	print("\033[1;97m║")
+	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	#charge()
+	try:
+		compresse = base64.b64encode(mc.dumps(compile(ouverture, '<string>', 'exec')))
+		enregistrement = open(emplacement,'w')
+		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\nexec(marshal.loads(base64.b64decode('''"+compresse+"''')))")
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		#menu()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+                #menu()
+""")
 ####################################################################################################
 if __name__ == "__main__":
-	mars()
+	dec_mars()
 g =(""" script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
 	ouverture = open(script_mars, 'r').read() #mc.dumps(compile(open(script_mars, 'rb').read(), '<string>', 'exec'))
 	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
@@ -64,4 +145,29 @@ g =(""" script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer 
 	raw_input('\033[1;91m  [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
 	#except:
 		#print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
-		#raw_input('\033[1;91m  [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')""")
+		#raw_input('\033[1;91m  [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+
+script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		ouverture = open(script_mars, 'rb').read()
+		#mc.dumps(compile(open(script_mars, 'rb').read(), '<string>', 'exec'))
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		mars_zlib_base()
+	print("\033[1;97m║")
+	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	charge()
+	try:
+		bac2k20 = base64.b16encode(zlib.compress(ouverture))
+		compilage = mc.dumps(compile(bac2k20, '<string>', 'exec'))
+	        vid_z = marshal.dumps(compilage)
+		enregistrement = open(emplacement,"w")
+		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\nexec(marshal.loads(base64.b16decode('"+repr(vid_z)+"')))")
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		mars_zlib_base()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')""")
+                mars_zlib_base() 
