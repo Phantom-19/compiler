@@ -41,10 +41,10 @@ def dec_mars():
 	print("\033[1;97m║")
 	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
 	#charge()
-	try:
+	try:	
 		compresse = base64.b16encode(mc.dumps(compile(ouverture, '<string>', 'exec')))
 		enregistrement = open(emplacement,'w')
-		enregistrement.write('#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\nexec(mc.loads(zn.decompress(b16decode("'+compresse+'"))))')
+		enregistrement.write('#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal as mc\nimport zlib as zn\nimport marshal , base64\nfrom base64 import *\nexec(mc.loads(zn.decompress(b16decode("'+compresse+'"))))')
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
