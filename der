@@ -57,25 +57,7 @@ def dec_mars():
                 #menu()   
 		
 
-def cryptage_bash(): 
-   try:
-       cls()
-       print(logo)
-       bash_cryp_script = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
-       resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
-       os.system("bash-obfuscate " + bash_cryp_script + " -o " + resultat )
 
-       print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;92m Terminer..")
-       raw_input('\n\x1b[1;91m[ \x1b[1;97mRetour \x1b[1;91m]')		
-       menu_bash()
-   except KeyboardInterrupt:
-       print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;94m Arret!")
-       raw_input('\n\x1b[1;91m[ \x1b[1;97mRetour \x1b[1;91m]')		
-       menu_bash()
-   except IOError:
-       print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;94m Fichier introuvable!")
-       raw_input('\n\x1b[1;91m[ \x1b[1;97mRetour \x1b[1;91m]')		
-       menu_bash()
 ####################################################################################################			
 def decryptage_bash():
    try:
@@ -106,6 +88,28 @@ def decryptage_bash():
        #menu_bash()""")
 
 def decryptage_bash():	
+	
+   try:
+       sc = raw_input( "Script  > ")
+       f = open(sc,'r')
+       Fichierdonnee = f.read()
+       f.close()
+       nouvelledonnee = Fichierdonnee.replace("eval","echo")
+       out = raw_input("Production > " )
+       f = open(out,'w')
+       f.write(nouvelledonnee)
+       f.close()
+       os.system("touch tes.sh")
+       os.system("bash " + out + " > tes.sh")
+       #os.remove(out)
+       os.system("mv -f tes.sh " + out)
+       print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+       raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+   except KeyboardInterrupt:
+       print (" Arret!")
+   except IOError:
+       print (" Fichier introuvable!")
+g =("""
     try:
        bash_decryp_script = raw_input("Script > ")
        ouverture = open(bash_decryp_script,'r')
@@ -124,7 +128,7 @@ def decryptage_bash():
     except IOError:
        print (" Fichier introuvable!")
 
-g =("""
+
         bash_decryp_script = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
 	try:
 		ouverture = open(bash_decryp_script,'r')
