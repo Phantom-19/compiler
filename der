@@ -42,6 +42,8 @@ def shell_mars():
 		menu()
 	print("\033[1;97m║")
 	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	code1 = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	code2 = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
 	#charge()
 	try:
 		coder1 = ""
@@ -58,7 +60,13 @@ def shell_mars():
 	                i = i + 0x01
 		enregistrement = open(emplacement,"w")
 		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal\nexec(marshal.loads("+repr(coder1)+"))")
-		enregistrement.close()
+		enregistrement.close()		
+		regi1 = open(code1,"w")
+		regi1.write(coder1)
+		regi1.close()
+		regi2= open(code2,"w")
+		regi2.write(coder2)
+		regi2.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
 		#menu()
