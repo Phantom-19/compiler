@@ -129,7 +129,7 @@ def Identification():
 ####################################################################################################	
 def Securiter():	
 	cls()
-	print"[38;5;214m<═════════════════\033[1;97mConnexion a[38;5;245m Mr \033[48;5;0;38;5;197mFaxel[38;5;214m═════════════════>"
+	print("[38;5;214m<═════════════════\033[1;97mConnexion a[38;5;245m Mr \033[48;5;0;38;5;197mFaxel[38;5;214m═════════════════>")
         Nu = "Faxel"
         print("")
         mdp = "08127934"
@@ -140,40 +140,38 @@ def Securiter():
     	        md = raw_input("\033[1;91m[\033[1;97m++\033[1;91m] \x1b[1;97mMot de passe de l'outil      \x1b[1;91m»»»» [38;5;245m")
                 if (md == mdp):	
 	            print("")
-		    print"[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮"
-	            print"[38;5;214m<═════════════════\033[1;97mConnexion a[38;5;245m Mr \033[48;5;0;38;5;197mFaxel[38;5;214m═════════════════>"
+		    print("[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮")
 	            charge()
-	            print("")
-                    print ("\033[1;91m[\033[1;92m●●\033[1;91m] \033[1;97mConnecté en tant que \033[1;96m"  +  Nomu) #Dev:Faxel
+	            print("[38;5;214m<═════════════════\033[1;97mConnexion a[38;5;245m Mr \033[48;5;0;38;5;197mFaxel[38;5;214m═════════════════>")
+                    print ("\n\033[1;91m[\033[1;92m●●\033[1;91m] \033[1;97mConnecté en tant que \033[1;96m"  +  Nomu) #Dev:Faxel
 	            time.sleep(1)
                     loop = 'false'
 		    menu()			
 	        else:
-                    print "\033[1;91m[\033[1;97mxx\033[1;91m] \033[1;93mMot de passe incorrect!!"
+                    print ("\n\033[1;91m[\033[1;93mx\033[1;91m] \033[1;93mMot de passe incorrect!")
                     os.system('xdg-open https://wa.me/22555709610')
 	            Securiter()
             else:
-                 print "\033[1;91m[\033[1;97mxx\033[1;91m] \033[1;94mNom d'utilisateur incorrect!!"
+                 print ("\n\033[1;91m[\033[1;93mx\033[1;91m] \033[1;95mNom d'utilisateur incorrect!")
                  os.system('xdg-open https://t.me/Faxelh')
 		 Securiter()
 ####################################################################################################			
-def faxel_securite():
-	
+def faxel_securite():	
 	cls()
 	print(logo2)
 	print("[38;5;214m<═════════════════\033[1;97mConnexion a[38;5;245m Mr \033[48;5;0;38;5;197mFaxel[38;5;214m═════════════════>")
-	mdp = "mael"
+	mdp = "Mael"
         loop = 'true'
         while (loop == 'true'):
             mp = getpass('\033[1;97m╠═\033[1;31m▶[38;5;221m MOT DE PASSE    \033[1;31m: [38;5;214m')
             if (mp == mdp):
 		 print("[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮")
+		 charge()
 	         print("[38;5;214m<═════════════════\033[1;97mConnexion a[38;5;245m Mr \033[48;5;0;38;5;197mFaxel[38;5;214m═════════════════>")
-	         charge()
                  loop = 'false'
 		 menu_decode()	
 	    else:
-		 print ("\033[1;91m[\033[1;97mxx\033[1;91m] \033[1;94mNom d'utilisateur incorrect!!")
+		 print ("\033[1;91m[\033[1;93m!\033[1;91m] \033[38;5;116m Mot de passe 🅱️ℹ️♍\033[1;91m!")
                  os.system('xdg-open https://t.me/Faxelh')
 		 faxel_securite()
   
