@@ -71,7 +71,7 @@ def dec_base_64():
 		raw_input('\033[1;91m [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
                 menu()
 		
-def base_64():
+def base_16():
 	#cls()  
         #charge()
         #cls()
@@ -96,7 +96,29 @@ def base_64():
 	except:
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
 		raw_input('\033[1;91m [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-                menu() 		
+                menu() 	
+def base_64():
+	script_base_16 = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		ouverture = open(script_base_16,'r').read()
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		menu()
+	print("\033[1;97m║")
+	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	#charge()
+	try:
+		encode = b16encode(ouverture)
+		enregistrement = open(emplacement,'w')
+		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\nexec(base64.b16decode('"+encode+"'))")
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		menu()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+                menu()    
 if __name__ == "__main__":
 	#shell_mars()
 	menu()
