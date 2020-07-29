@@ -205,7 +205,8 @@ def mars():
 """)
 ####################################################################################################
 if __name__ == "__main__":
-	dec_mars()
+	#dec_mars()
+	decryptage_bash()
 g =(""" script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
 	ouverture = open(script_mars, 'r').read() #mc.dumps(compile(open(script_mars, 'rb').read(), '<string>', 'exec'))
 	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
