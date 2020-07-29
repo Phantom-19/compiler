@@ -108,7 +108,8 @@ def decryptage_bash():
 def decryptage_bash():
         bash_decryp_script = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
 	try:
-		ouverture = open(bash_decryp_script,'r').read()
+		ouverture = open(bash_decryp_script,'r')
+		lame = ouverture.read()
 		ouverture.close()
 	except IOError:
 		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
@@ -117,9 +118,9 @@ def decryptage_bash():
 	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
 	#charge()
 	try:
-		compresse = ouverture.replace("eval","echo")
+		compresse = lame.replace("eval","echo")
 		enregistrement = open(emplacement,'w')
-		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\n")
+		enregistrement.write("#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\n")
 		enregistrement.write(compresse)
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
@@ -283,14 +284,11 @@ def decryptage():
        f = open(sc,'r')
        Fichierdonnee = f.read()
        f.close()
-
        nouvelledonnee = Fichierdonnee.replace("eval","echo")
-
        out = raw_input(Demande + W + "Production" + G + " > " + W)
        f = open(out,'w')
        f.write(nouvelledonnee)
        f.close()
-
        os.system("touch tes.sh")
        os.system("bash " + out + " > tes.sh")
        os.remove(out)
