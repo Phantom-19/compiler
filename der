@@ -31,6 +31,7 @@ print(logo1)
 
 #codeur2 = '\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("{}")))\n'.format(base64.b16encode(mc.dumps(compile(codeur1, '<string>', 'exec'))))
 #codeur3 = '\nimport marshal , base64\nexec(marshal.loads(base64.b32decode("{}")))\n'.format(base64.b32encode(mc.dumps(compile(codeur2, '<string>', 'exec'))))
+t = ("""
 def dec_mars():
 	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
 	try:
@@ -56,6 +57,79 @@ def dec_mars():
                 #menu()   
 		
 
+def cryptage_bash(): 
+   try:
+       cls()
+       print(logo)
+       bash_cryp_script = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+       resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+       os.system("bash-obfuscate " + bash_cryp_script + " -o " + resultat )
+
+       print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;92m Terminer..")
+       raw_input('\n\x1b[1;91m[ \x1b[1;97mRetour \x1b[1;91m]')		
+       menu_bash()
+   except KeyboardInterrupt:
+       print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;94m Arret!")
+       raw_input('\n\x1b[1;91m[ \x1b[1;97mRetour \x1b[1;91m]')		
+       menu_bash()
+   except IOError:
+       print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;94m Fichier introuvable!")
+       raw_input('\n\x1b[1;91m[ \x1b[1;97mRetour \x1b[1;91m]')		
+       menu_bash()
+####################################################################################################			
+def decryptage_bash():
+   try:
+       #Dev: Faxel
+       #cls()
+       #print(logo)
+       bash_decryp_script = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+       ouverture = open(bash_decryp_script,'r').read()
+       fichier_de_fin = ouverture.replace("eval","echo")
+       resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+       ouverture = open(resultat,'w')
+       ouverture.write(fichier_de_fin)
+       ouverture.close()
+       #os.system("touch tes.sh")
+       #os.system("bash " + resultat + " > tes.sh")
+       #os.remove(resultat)
+       #os.system("mv -f tes.sh " + resultat)
+       print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;92m Terminer..")
+       raw_input('\n\x1b[1;91m[ \x1b[1;97mRetour \x1b[1;91m]')		
+       #menu_bash()
+   except KeyboardInterrupt:
+       print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;94m Arret!")
+       raw_input('\n\x1b[1;91m[ \x1b[1;97mRetour \x1b[1;91m]')		
+       #menu_bash()
+   except IOError:
+       print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;94m Fichier introuvable!")
+       raw_input('\n\x1b[1;91m[ \x1b[1;97mRetour \x1b[1;91m]')		
+       #menu_bash()""")
+
+def decryptage_bash():
+        bash_decryp_script = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		ouverture = open(bash_decryp_script,'r').read()
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		#menu()
+	print("\033[1;97m║")
+	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	#charge()
+	try:
+		compresse = ouverture.replace("eval","echo")
+		enregistrement = open(emplacement,'w')
+		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\n("compresse")")
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		#menu()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+                #menu()   
+####################################################################################################	
+			
+		
 g =("""
 def mars():
 	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
