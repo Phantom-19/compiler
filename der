@@ -105,8 +105,26 @@ def decryptage_bash():
        raw_input('\n\x1b[1;91m[ \x1b[1;97mRetour \x1b[1;91m]')		
        #menu_bash()""")
 
-def decryptage_bash():
-	"""
+def decryptage_bash():	
+    try:
+       bash_decryp_script = raw_input("Script > ")
+       ouverture = open(bash_decryp_script,'r')
+       lame = ouverture.read()
+       ouverture.close()
+       decompresse = lame.replace("eval","echo")
+       stockage = raw_input("Stockage  > " )
+       enregistrement = open(stockage,'w')
+       enregistrement.write(decompresse)
+       enregistrement.close()
+       print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+       raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+       #menu()
+    except KeyboardInterrupt:
+       print (" Arret!")
+    except IOError:
+       print (" Fichier introuvable!")
+
+g =("""
         bash_decryp_script = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
 	try:
 		ouverture = open(bash_decryp_script,'r')
@@ -125,24 +143,7 @@ def decryptage_bash():
 		#menu()
 	except:
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
-		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')"""
-  try:
-       bash_decryp_script = raw_input("Script > ")
-       ouverture = open(bash_decryp_script,'r')
-       lame = ouverture.read()
-       ouverture.close()
-       decompresse = lame.replace("eval","echo")
-       stockage = raw_input("Stockage  > " )
-       enregistrement = open(stockage,'w')
-       enregistrement.write(decompresse)
-       enregistrement.close()
-       print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
-       raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-       #menu()
-   except KeyboardInterrupt:
-       print (" Arret!")
-   except IOError:
-       print (" Fichier introuvable!")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')""")
 ####################################################################################################	
 			
 		
