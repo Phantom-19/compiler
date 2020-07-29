@@ -274,8 +274,8 @@ C = '\033[1;36m'
 
 Demande = G + '[' + W + '?' + G + '] '
 Reussie = G + '[' + W + '√' + G + '] '
-Erreur = R + '[' + W + '!' + R + ']'
-
+Erreur = R + '[' + W + '!' + R + ']'""")
+r = ("""
 banner2 = """
    {}[{}1{}]{} Cryptage      {}[{}2{}]{} DeCryptage
 """.format(G,W,G,W,G,W,G,W)
