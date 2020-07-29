@@ -118,7 +118,7 @@ def decryptage_bash():
 	try:
 		compresse = ouverture.replace("eval","echo")
 		enregistrement = open(emplacement,'w')
-		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\n("+compresse+")")
+		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\n",compresse)
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
