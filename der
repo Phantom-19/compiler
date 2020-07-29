@@ -101,9 +101,9 @@ def decryptage_bash():
        f.write(decompresse)
        f.close()
        os.system("touch tes.sh")
-       os.system("bash " + out + " > tes.sh")
+       os.system("bash " + resultat + " > tes.sh")
        #os.remove(out)
-       os.system("mv -f tes.sh " + out)
+       os.system("mv -f tes.sh " + resultat)
        print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
        raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
    except KeyboardInterrupt:
