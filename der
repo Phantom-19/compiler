@@ -126,7 +126,7 @@ def decryptage_bash():
 	except:
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')"""
-   try:
+  try:
        bash_decryp_script = raw_input("Script > ")
        ouverture = open(bash_decryp_script,'r')
        lame = ouverture.read()
