@@ -33,8 +33,7 @@ print(logo1)
 #codeur3 = '\nimport marshal , base64\nexec(marshal.loads(base64.b32decode("{}")))\n'.format(base64.b32encode(mc.dumps(compile(codeur2, '<string>', 'exec'))))
  
 ####################################################################################################			
-def shell_mars():
-	
+def shell_mars():	
 	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
 	try:
 		ouverture = open(script_mars,'r').read()
@@ -49,7 +48,7 @@ def shell_mars():
                 coder2 = ""
 		i = 11
                 for x in bytearray(script_mars) :
-	                if  i == 16:
+	                if i == 16:
 		             i = 11
 	                y = x^i
 	                coder1 += '\\x'
@@ -58,7 +57,7 @@ def shell_mars():
 	                coder2 += '%02x,' %y	
 	                i = i + 0x01
 		enregistrement = open(emplacement,"w")
-		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal\nexec(marshal.loads("+repr(coder2)+"))")
+		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal\nexec(marshal.loads("+repr(coder1)+"))")
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
