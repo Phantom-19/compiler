@@ -275,14 +275,8 @@ C = '\033[1;36m'
 Demande = G + '[' + W + '?' + G + '] '
 Reussie = G + '[' + W + '√' + G + '] '
 Erreur = R + '[' + W + '!' + R + ']'""")
+
 r = ("""
-banner2 = """
-   {}[{}1{}]{} Cryptage      {}[{}2{}]{} DeCryptage
-""".format(G,W,G,W,G,W,G,W)
-
-
-print banner2
-
 def decryptage():
    try:
        sc = raw_input(Demande + W + "Script " + G + "> " + W)
@@ -328,4 +322,5 @@ elif mael == "2" or mael == "02":
    decryptage()
 else:
    print (Erreur + " Saisie incorrecte")
+
 """)
