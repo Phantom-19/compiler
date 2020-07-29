@@ -59,9 +59,9 @@ def dec_base_64():
 	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
 	#charge()
 	try:
-		decode = b64decode(ouverture)
+		decode = b16decode(ouverture)
 		enregistrement = open(emplacement,'w')
-		enregistrement.write("#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\nexec(base64.b64decode('''"+decode+"'''))")
+		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\n('"+decode+"')")
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Decompilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
@@ -86,15 +86,15 @@ def base_64():
 	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
 	#charge()
 	try:
-		encode = b64encode(ouverture)
+		encode = b16encode(ouverture)
 		enregistrement = open(emplacement,'w')
-		enregistrement.write("#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\nexec(base64.b64decode('''"+encode+"'''))")
+		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\nexec(base64.b16decode('"+encode+"'))")
 		enregistrement.close()
-		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Decompilage reussi")
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
 		menu()
 	except:
-		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Decompilage echouer")
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
 		raw_input('\033[1;91m [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
                 menu() 		
 if __name__ == "__main__":
