@@ -111,7 +111,31 @@ def decodeur():
 def shell_mars():
 	
 	
-	        decodeur=raw_input("\033[1;91m[\033[1;93m***\033[1;91m][38;5;79m  Saisissez votre texte a decoder.    \033[1;91m[\033[1;93m***\033[1;91m]\n\n\033[1;97m")
+	        codeur=raw_input("\033[1;91m[\033[1;93m***\033[1;91m][38;5;79m  Saisissez votre texte a decoder.    \033[1;91m[\033[1;93m***\033[1;91m]\n\n\033[1;97m")
+		print("")
+		tic = time.clock()
+		print("")
+                trap =raw_input("\033[1;91m[\033[1;97m++\033[1;91m] [38;5;218mNommez votre resultats\x1b[1;91m : \x1b[1;93m ") 
+		fichier=file(trap,"w")
+		print "\033[1;91m[\033[1;93m---\033[1;91m]\033[1;97m  Votre texte en Base64 a decoder est \033[91;1m:\n\n[38;5;70m {}".format(codeur)
+		print("")
+                print "\033[1;91m[\033[1;93m***\033[1;91m][38;5;221m  Il est constituer de\033[1;93m",len(codeur), '[38;5;221mcaracteres \033[1;91m[\033[1;93m***\033[1;91m]'
+                systeme1 = codeur.encode("UTF-8")
+		faxel = systeme1.encode("UTF-8")
+                mael = base64.b64encode(faxel)
+                systeme2 = mael.decode("UTF-8")  
+		save = open(trap,"w")
+		save.write(systeme2)
+		save.close()
+		toc = time.clock()
+                ttn = toc - tic
+		print ("\x1b[1;97m║\033[1;91m[\033[1;97m**\033[1;91m] [38;5;108mTerminer en\x1b[1;92m "+str(ttn)+" [38;5;108msecondes.\x1b[1;97m║\n")
+		raw_input('\n\033[1;91m[\033[1;97mRetour\033[1;91m]')
+g= ("""	
+                Marie = bases_32.encode("UTF-8")              
+                Beli = base64.b32encode(Marie)             
+                resultat1 = Beli.decode("UTF-8")
+                decodeur=raw_input("\033[1;91m[\033[1;93m***\033[1;91m][38;5;79m  Saisissez votre texte a decoder.    \033[1;91m[\033[1;93m***\033[1;91m]\n\n\033[1;97m")
 		print("")
 		tic = time.clock()
 		print("")
@@ -131,7 +155,8 @@ def shell_mars():
                 ttn = toc - tic
 		print ("\x1b[1;97m║\033[1;91m[\033[1;97m**\033[1;91m] [38;5;108mTerminer en\x1b[1;92m "+str(ttn)+" [38;5;108msecondes.\x1b[1;97m║\n")
 		raw_input('\n\033[1;91m[\033[1;97mRetour\033[1;91m]')
-g= ("""		
+
+
 	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
 	try:
 		ouverture = open(script_mars,'r').read()
