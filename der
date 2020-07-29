@@ -120,8 +120,7 @@ def shell_mars():
 		print "\033[1;91m[\033[1;93m---\033[1;91m]\033[1;97m  Votre texte en Base64 a decoder est \033[91;1m:\n\n[38;5;70m {}".format(decodeur)
 		print("")
                 print "\033[1;91m[\033[1;93m***\033[1;91m][38;5;221m  Il est constituer de\033[1;93m",len(decodeur), '[38;5;221mcaracteres \033[1;91m[\033[1;93m***\033[1;91m]'
-                print ("\x1b[1;97m║\033[1;91m[\033[1;97m**\033[1;91m] [38;5;108mTerminer en\x1b[1;92m "+str(ttn)+" [38;5;108msecondes.\x1b[1;97m║\n")
-		systeme1 = decodeur.decode("UTF-8")
+                systeme1 = decodeur.decode("UTF-8")
 		faxel = systeme1.decode("UTF-8")
                 mael = base64.b64decode(faxel)
                 systeme2 = mael.decode("UTF-8")  
@@ -130,6 +129,7 @@ def shell_mars():
 		save.close()
 		toc = time.clock()
                 ttn = toc - tic
+		print ("\x1b[1;97m║\033[1;91m[\033[1;97m**\033[1;91m] [38;5;108mTerminer en\x1b[1;92m "+str(ttn)+" [38;5;108msecondes.\x1b[1;97m║\n")
 		raw_input('\n\033[1;91m[\033[1;97mRetour\033[1;91m]')
 g= ("""		
 	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
