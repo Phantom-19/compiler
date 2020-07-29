@@ -515,7 +515,8 @@ def dec_base_64():
 	try:
 		decode = b64decode(ouverture)
 		enregistrement = open(emplacement,'w')
-		enregistrement.write("#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\nexec(base64.b64decode('''"+decode+"'''))")
+		#enregistrement.write("#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\nexec(base64.b64decode('''"+decode+"'''))")
+		enregistrement.write("#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\n("+decode+")")
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
@@ -542,7 +543,8 @@ def dec_base_32():
 	try:
 		decode = b32decode(ouverture)
 		enregistrement = open(emplacement,'w')
-		enregistrement.write('#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\nexec(base64.b32decode("'+decode+'"))')
+		#enregistrement.write('#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\nexec(base64.b32decode("'+decode+'"))')
+		enregistrement.write('#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\n('+decode+')')
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
@@ -569,7 +571,8 @@ def dec_base_16():
 	try:
 		decode = b16decode(ouverture)
 		enregistrement = open(emplacement,'w')
-		enregistrement.write("#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\nexec(base64.b16decode('"+decode+"'))")
+		#enregistrement.write("#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\nexec(base64.b16decode('"+decode+"'))")
+		enregistrement.write("#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\n("+decode+")")
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
@@ -601,7 +604,7 @@ def dec_mars():
 	        decompilage = pp.decompile(repare, '<r>', 'exec')
 	        decompte = marshal.dumps(compilage)
 		enregistrement = open(emplacement,"w")
-		enregistrement.write("#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal\nexec(marshal.loads("+repr(decompte)+"))")
+		enregistrement.write("#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal\n("+repr(decompte)+")")
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
