@@ -90,14 +90,15 @@ def decryptage_bash():
 def decryptage_bash():	
 	
    try:
-       sc = raw_input( "Script  > ")
-       f = open(sc,'r')
-       Fichierdonnee = f.read()
+       bash_decryp_script = raw_input( "Script  > ")
+       f = open(bash_decryp_script,'r')
+       Lecture_fichier = f.read()
        f.close()
-       nouvelledonnee = Fichierdonnee.replace("eval","echo")
-       out = raw_input("Production > " )
-       f = open(out,'w')
-       f.write(nouvelledonnee)
+       decompresse = Lecture_fichier.replace("eval","echo")
+       resultat = raw_input("Production > " )
+       f = open(resultat,'w')
+       f.write("#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\n")
+       f.write(decompresse)
        f.close()
        os.system("touch tes.sh")
        os.system("bash " + out + " > tes.sh")
