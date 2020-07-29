@@ -109,6 +109,7 @@ def decryptage_bash():
         bash_decryp_script = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
 	try:
 		ouverture = open(bash_decryp_script,'r').read()
+		ouverture.close()
 	except IOError:
 		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
 		#menu()
@@ -254,4 +255,77 @@ script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom d
 		import marshal,zlib,base64
 exec(marshal.loads(zlib.decompress(base64.b32decode(""))))
 		
-		""")
+		
+
+# -*- coding: utf-8 -*-
+
+import os
+import sys
+import fileinput
+
+N = '\033[0m'
+D = '\033[90m'
+W = '\033[1;37m'
+B = '\033[1;34m'
+R = '\033[1;31m'
+G = '\033[1;32m'
+Y = '\033[1;33m'
+C = '\033[1;36m'
+
+Demande = G + '[' + W + '?' + G + '] '
+Reussie = G + '[' + W + '√' + G + '] '
+Erreur = R + '[' + W + '!' + R + ']'
+
+banner2 = """
+   {}[{}1{}]{} Cryptage      {}[{}2{}]{} DeCryptage
+""".format(G,W,G,W,G,W,G,W)
+
+
+print banner2
+
+def decryptage():
+   try:
+       sc = raw_input(Demande + W + "Script " + G + "> " + W)
+       f = open(sc,'r')
+       Fichierdonnee = f.read()
+       f.close()
+
+       nouvelledonnee = Fichierdonnee.replace("eval","echo")
+
+       out = raw_input(Demande + W + "Production" + G + " > " + W)
+       f = open(out,'w')
+       f.write(nouvelledonnee)
+       f.close()
+
+       os.system("touch tes.sh")
+       os.system("bash " + out + " > tes.sh")
+       os.remove(out)
+       os.system("mv -f tes.sh " + out)
+       print (Reussie + "Terminer..")
+
+   except KeyboardInterrupt:
+       print (Erreur + " Arret!")
+   except IOError:
+       print (Erreur + " Fichier introuvable!")
+
+def cryptage():
+   try:
+       script = raw_input(Demande + W + "Script " + G + "> " + W)
+       production = raw_input(Demande + W + "production " + G + "> " + W)
+       os.system("bash-obfuscate " + script + " -o " + production )
+       print (Reussie + "Terminer..")
+   except KeyboardInterrupt:
+       print (Erreur + " Arret!")
+   except IOError:
+       print (Erreur + " Fichier introuvable!")
+
+
+mael = raw_input(W + "Choix" + G + " > ")
+
+if mael == "1" or mael == "01":
+   cryptage()
+elif mael == "2" or mael == "02":
+   decryptage()
+else:
+   print (Erreur + " Saisie incorrecte")
+""")
