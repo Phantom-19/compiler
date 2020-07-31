@@ -177,7 +177,7 @@ def zlib_lod():
 #exec(marshal.loads(zlib.decompress(base64.b32decode(""))))
 if __name__ == "__main__":
       menu()
-    """
+  d=  """
 def mars_zlib_base():
 	cls()  
         charge()
@@ -205,4 +205,5 @@ def mars_zlib_base():
 	except:
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-                mars_zlib_base() """
+                mars_zlib_base() 
+		"""
