@@ -81,5 +81,5 @@ class reports(threading.Thread):
 		
 if __name__ == "__main__":
     try:
-        reports()
+        lancement()
     finally:sys.exit()
