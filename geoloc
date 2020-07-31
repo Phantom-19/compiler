@@ -3,7 +3,7 @@
 #Dev: Faxel
 
 import requests,bs4,sys,os
-
+os.system("clear")
 class ip_geolocalisation(object):
 	def __init__(self,ip):
 		self.ip=ip
@@ -59,8 +59,8 @@ class ip_geolocalisation(object):
                                 donnee.append("")
 if __name__ =="__main__":
 	if len(sys.argv) ==1:
-               print("Usage: python "+sys.argv[0]+" <ip>")
+               print("Usage: python2 "+sys.argv[0]+" <ip>")
 	elif len(sys.argv) ==2:
                ip_geolocalisation(sys.argv[1])
 	else:
-               print("Usage: python "+sys.argv[0]+" <ip>")
+               print("Usage: python2 "+sys.argv[0]+" <ip>")
