@@ -1,8 +1,11 @@
 #!/usr/bin/python2
 #coding=utf-8
-#Dev: Faxel
-
+#Dev: Faxel 
+#github.com/AngelSecurityTeam/Phishing-Tool 
+#https://qualis.serveo.net
+import os,sys,time
 from multiprocessing.pool import ThreadPool
+os.system("clear")
 try:
 	import requests
 	import bs4
@@ -49,7 +52,7 @@ for x in beau("input"):
 print("*: separateur -> em|ps")
 try:
 	print("*: https://t.me/Faxelh\n")
-  sauvegarder = raw_input(" Notifier ou stocker le resusltat : ")
+        sauvegarder = raw_input(" Notifier ou stocker le resusltat : ")
 	ouverture = open(raw_input("?: Notifier l'emplacement de votre wordlist: ")).read().splitlines()
 except Exception as f:
 	exit("!: %s"%(f))
