@@ -56,11 +56,11 @@ class ip_geolocalisation(object):
 				print("".join(donnee)+": "+_data[1])
 				break
 			else:
-        donnee.append("")
+                                donnee.append("")
 if __name__ =="__main__":
 	if len(sys.argv) ==1:
-        print("Usage: python "+sys.argv[0]+" <ip>")
+               print("Usage: python "+sys.argv[0]+" <ip>")
 	elif len(sys.argv) ==2:
-        ip_geolocalisation(sys.argv[1])
+               ip_geolocalisation(sys.argv[1])
 	else:
-        print("Usage: python "+sys.argv[0]+" <ip>")
+               print("Usage: python "+sys.argv[0]+" <ip>")
