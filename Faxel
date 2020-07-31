@@ -11,7 +11,7 @@ from random import randint
 
 def menu():  
   os.system('clear')
-  print(logo)
+  #print(logo)
   print("\033[1;97m╔════════════════════════════╗     ")
   print("\033[1;97m║\033[1;96m       Compileur Faxel      \033[1;97m║")
   print("\033[1;97m║\033[1;96m                           \033[1;97m ║")
