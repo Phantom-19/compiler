@@ -1,0 +1,84 @@
+#!/usr/bin/python2
+#coding=utf-8
+#-*-coding:utf-8-*-
+#Dev: Faxel
+# Facebook Compte  rapports en masse
+
+
+import bs4
+import json
+import threading
+import cookielib
+import mechanize
+
+class reports(threading.Thread):
+	def __init__(self,email,pw,cible):
+		threading.Thread.__init__(self)
+		self.email = email
+		self.pw = pw
+		self.tg = cible
+	def lancement(self):
+		naviguateur = mechanize.Browser()
+		url="https://mbasic.facebook.com"
+		naviguateur.set_handle_equiv(True)
+		naviguateur.set_handle_referer(True)
+		naviguateur.set_handle_robots(False)
+		naviguateur.set_cookiejar(cookielib.LWPCookieJar())
+		naviguateur.addheaders = [
+			(
+			"User-Agent","Mozilla/5.0 (Linux; U; Android 5.1)"
+			)
+		]
+		naviguateur.open("https://mbasic.facebook.com")
+		naviguateur.select_form(nr=0)
+		naviguateur.form["email"] = "{}".format(
+			self.email
+		)
+		naviguateur.form["pass"]  = "{}".format(
+			self.pw
+		)
+		naviguateur.submit()
+		naviguateur.open(
+		"https://mbasic.facebook.com/{}".format(
+			self.tg
+			)
+		)
+		beau = bs4.BeautifulSoup(
+		naviguateur.response().read(),
+			features = "html.parser"
+		)
+		for x in beau.find_all("a",href=True):
+			if "rapid_report" in x["href"]:
+				controle=x["href"]
+		naviguateur.open(controle)
+		naviguateur._factory.is_html=True
+		jasons = json.dumps(
+			{
+			"fake":"profile_fake_account",
+			"action_key":"FRX_PROFILE_REPORT_CONFIRMATION",
+			"checked":"yes"
+			}
+		)
+		jason = json.loads(jasons)
+		naviguateur.select_form(nr=0)
+		naviguateur.form["tag"] =[jason["fake"]]
+		naviguateur.submit()
+		naviguateur._factory.is_html=True
+		naviguateur.select_form(nr=0)
+		try:
+			naviguateur.form["action_key"] = [jason["action_key"]]
+		except:
+			return False
+		naviguateur.submit()
+		naviguateur._factory.is_html = True
+		try:
+			naviguateur.select_form(nr=0)
+			naviguateur.form["checked"] = [jason["checked"]]
+			naviguateur.submit()
+			responses = naviguateur.response().read()
+			if "Merci pour votre participation." in responses:
+				print ("[*] Signalé.")
+			else:
+				print ("[-] Non rapporté.")
+		except:
+			print ("\r[-] Rapports déjà fait.")
