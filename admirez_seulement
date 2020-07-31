@@ -1,0 +1,11 @@
+def menu(string=None,f=0,cok=[]):
+	for x in string.lower():
+		f+=1
+		if f ==2:
+			cok.append(x.upper());f=0
+		else:
+			cok.append(x)
+	return "[*] Resultat : %s"%("".join(cok))
+	
+print(def menu(string=None,f=0,cok=[]):
+(raw_input("[?] Entrez votre chaine de caractere : ")))
