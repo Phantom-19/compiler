@@ -29,30 +29,30 @@ def menu():
 def select():    
   choisir = raw_input("\033[1;97m╚═\033[1;31m▶[38;5;245m Mr [38;5;221mFaxel \033[1;31m▶▶▶ \033[1;33m")
   if choisir == "1" or Choix == "01":
-    marshal()
-    menu()
+       marshal()
+       menu()
   elif choisir == "2" or Choix == "02":
-    zlib_mars()  
-    raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
-    menu()
+       zlib_mars()  
+       raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
+       menu()
   elif choisir == "3" or Choix == "03":
-    mars()  
-    raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
-    menu()
+       mars()  
+       raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
+       menu()
   elif choisir == "4" or Choix == "04":
-    binnar()   
-    raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
-    menu()
+       binnar()   
+       raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
+       menu()
   elif choisir == "5" or Choix == "05":
-    zlib_s()   
-    raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
-    menu()
+       zlib_s()   
+       raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
+       menu()
   elif choisir == "q" or Choix == "Q":
-    exit()
+       exit()
   else: 
-    print '\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m' + choisir + ' \x1b[1;91mindisponible'
-		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-		menu()
+       print ('\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m' + choisir + ' \x1b[1;91mindisponible')
+       raw_input('\033[1;91m [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+       menu()
     
 def marshal():
       script = raw_input('File >> ')    
