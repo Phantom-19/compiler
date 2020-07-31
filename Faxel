@@ -145,7 +145,7 @@ def binnar():
              f.close()   
 binnar()
 
-def zlib_s()
+def zlib_s():
        script = raw_input('File >> ')     
        resultat = raw_input('Resultat >> ' ) 
        lecture = open(script).read()                
