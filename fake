@@ -23,7 +23,7 @@ def Envoi(cible, compteur, delai):
     mael = int(compteur) + 1
     while succes != (int(mael)):
         api = random.choice(list(Faxel_bombe))
-        print("==============================Faxel===============================") | lolcat
+        print("==============================Faxel==============================="| lolcat) 
         print("                BOMBAGE en cours, veuillez patienter !!           ")
         print("Veuillez garder votre connexion de données active pendant le bombardement.")
         print("==================================================================")
