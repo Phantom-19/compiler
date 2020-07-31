@@ -1,5 +1,15 @@
-import os
+#!/usr/bin/python2
+#coding=utf-8
+#Dev: Faxel
+
+# Le credit pour ce code va a Mr Faxel
+# Si vous voulez prendre Le credit pour ce code Voyez Faster Axel.
+
+
+import base64
+import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,mechanize,fileinput
 from time import sleep
+os.system("clear")
 try:
 	import requests
 except:
