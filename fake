@@ -20,7 +20,7 @@ def Envoi(cible, compteur, delai):
     echec= 0
     requete = 0
     succes= int(requete) - int(echec)
-    mael = int(counter) + 1
+    mael = int(compteur) + 1
     while succes != (int(mael)):
         api = random.choice(list(Faxel_bombe))
         print("==============================Faxel===============================") | lolcat
