@@ -30,7 +30,7 @@ def menu():
   print("\033[1;97m║\033[1;93m3.\033[1;95m Marshal2 encodage        \033[1;97m║")
   print("\033[1;97m║\033[1;93m4.\033[1;96m Binaire  encodage        \033[1;97m║")
   print("\033[1;97m║\033[1;93m5.\033[1;97m Zlib     encodage        \033[1;97m║")
-  print("\033[1;97m║\033[1;93m5.\033[1;97m Zlib Marshal1    encodage \033[1;97m║")
+  print("\033[1;97m║\033[1;93m6.\033[1;97m Zlib Marshal1    encodage \033[1;97m║")
   print("\033[1;97m║\033[1;93mQ.\033[1;91m Quitter                  \033[1;97m║")
   print("\033[1;97m╚════════════════════════════╝     ")
   print("\033[1;97m║")
