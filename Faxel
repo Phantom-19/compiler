@@ -4,10 +4,20 @@
 
 # Le credit pour ce code va a Mr Faxel
 # Si vous voulez prendre Le credit pour ce code Voyez Faster Axel.
+import os,time,sys,fileinput,base64,datetime,random,requests,mechanize, marshal, __builtin__ as pp,zlib, binascii,py_compile 
+import marshal as mc
+from base64 import *
+from getpass import getpass
+from sys import stdout
 
-import os, sys, zlib, base64, marshal, binascii,py_compile
 from time import sleep as waktu
 from random import randint
+import subprocess as sp, sys, os, marshal, re, time, json, bs4, random, requests
+try:
+    from uncompyle6.main import decompile
+except Exception as e:
+    sp.call('pip2 install uncompyle2', shell=True, stderr=sp.STDOUT)
+
 
 def menu():  
   os.system('clear')
@@ -20,6 +30,7 @@ def menu():
   print("\033[1;97m║\033[1;93m3.\033[1;95m Marshal2 encodage        \033[1;97m║")
   print("\033[1;97m║\033[1;93m4.\033[1;96m Binaire  encodage        \033[1;97m║")
   print("\033[1;97m║\033[1;93m5.\033[1;97m Zlib     encodage        \033[1;97m║")
+  print("\033[1;97m║\033[1;93m5.\033[1;97m Zlib Marshal1    encodage \033[1;97m║")
   print("\033[1;97m║\033[1;93mQ.\033[1;91m Quitter                  \033[1;97m║")
   print("\033[1;97m╚════════════════════════════╝     ")
   print("\033[1;97m║")
@@ -48,6 +59,10 @@ def select():
        zlib_s()   
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
        menu()
+  elif choisir == "6" or choisir == "06":
+       zlib_lod()   
+       raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
+       menu()   
   elif choisir == "q" or choisir == "Q":
        exit()
   else: 
@@ -92,7 +107,7 @@ def mars():
     b = []           
     bin = ''    
     xz = []  
-    xh = compile(bc, '<Sazxt>', 'exec')            
+    xh = compile(bc, '<Faxel>', 'exec')            
     pg = marshal.dumps(xh) 
     bin += binascii.hexlify(pg)          
     for g in bin:               
@@ -130,9 +145,9 @@ def binnar():
                break             
                z += 1            
                v = len(a) / 2 + 1          
-        try:                
-            while True:                  
-              v += 1           
+        #try:                
+            #while True:                  
+               v += 1           
         except IndexError:           
              pass          
         for s in c:            
@@ -147,11 +162,47 @@ def zlib_s():
        script = raw_input('File >> ')     
        resultat = raw_input('Resultat >> ' ) 
        lecture = open(script).read()                
-       fin = zlib.compress(lecture)         
+       fin =zlib.compress(lecture)    
        s = open(resultat, 'w')               
        s.write('#Compile Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib\nexec(zlib.decompress(' + repr(fin) + '))')                
        s.close()
-
-
+def zlib_lod():
+       script = raw_input('File >> ')     
+       resultat = raw_input('Resultat >> ' ) 
+       lecture = open(script).read()                
+       fin = marshall.loads(zlib.compress(lecture))        
+       s = open(resultat, 'w')               
+       s.write('#Compile Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib\nimport marshall\nexec(marshall.loads(zlib.decompress(' + repr(fin) + ')))')               
+       s.close()
+#exec(marshal.loads(zlib.decompress(base64.b32decode(""))))
 if __name__ == "__main__":
       menu()
+    """
+def mars_zlib_base():
+	cls()  
+        charge()
+        cls()
+        print(logo)
+	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		ouverture = mc.dumps(compile(open(script_mars, 'rb').read(), '<string>', 'exec'))
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		mars_zlib_base()
+	print("\033[1;97m║")
+	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	charge()
+	try:
+		bac2k20 = base64.b16encode(zlib.compress(ouverture))
+		compilage = mc.dumps(compile(bac2k20, '<string>', 'exec'))
+	        vid_zl = marshal.dumps(compilage)
+		enregistrement = open(emplacement,"w")
+		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64 , sys\nfrom base64 import *\nimport marshal as mc\nimport zlib as zn\nexec(mc.loads(zn.decompress(b16decode("+repr(vid_zl)+")))")
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		mars_zlib_base()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+                mars_zlib_base() """
