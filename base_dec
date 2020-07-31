@@ -32,11 +32,11 @@ for k in ouverture:
 		jabot.append(resul)
 		sleep(00.01)
 	except:
-		print ("Rembourrage incorrect")
+		print ("Desolé se script n'a pas été crypter en base64")
 		sauve.append(k)
 		sleep(00.01)
 print("-"*40)
-for result in j:
+for result in jabot:
 	sauvegarde.write(result.split('\n')[0]+"\n")
 sauvegarde.close()
 print(" Réussite totale:",len(jabot))
