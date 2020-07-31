@@ -10,6 +10,8 @@ import base64
 import os,sys,time,datetime,random,hashlib,re,threading,json,urllib,cookielib,requests,mechanize,fileinput
 from time import sleep
 from sys import exit
+
+os.system("clear")
 print("\t[fissure de masse en base64]")
 script = raw_input(" Entrer le script a decrypter > ")
 resultat = raw_input(" Nommer le resusltat > ")
