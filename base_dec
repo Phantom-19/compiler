@@ -1,0 +1,37 @@
+import base64
+from time import sleep
+from sys import exit
+print("\t[fissure de masse en base64]")
+script = raw_input(" Entrer le script a decrypter > ")
+resultat = raw_input(" Nommer le resusltat > ")
+print("Attente du decryptage ...")
+print("-"*40)
+try:
+	o=open(script).readlines()
+except:
+	print("N'a pas réussi à ouvrir la liste")
+	exit()
+s=[]
+j=[]
+sauvegarde=open(resultat,'w')
+for k in o:
+	try:
+		print("Resultat -> ",base64.b64decode(k.split('\n')[0]))
+		resul = base64.b64decode(k.split('\n')[0])
+		j.append(resul)
+		sleep(00.01)
+	except:
+		print ("Rembourrage incorrect")
+		s.append(k)
+		sleep(00.01)
+print("-"*40)
+for result in j:
+	sauvegarde.write(result.split('\n')[0]+"\n")
+sauvegarde.close()
+print(" Réussite totale:",len(j))
+print(" Emplacement :",sauvegarde)
+print("-"*40)
+print(" Echec:",len(s))
+for t in s:
+	print ("Echec:",t.replace('\n',''))
+print("-"*40)
