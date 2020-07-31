@@ -10,6 +10,7 @@ from time import sleep
 from urllib2 import *
 from platform import system
 
+os.system("clear")
 def Envoi(cible, compteur, delai):
     Faxel_bombe = {
     "OYO Rooms": "https://www.oyorooms.com/api/pwa/generateotp?phone=",
@@ -23,7 +24,7 @@ def Envoi(cible, compteur, delai):
     mael = int(compteur) + 1
     while succes != (int(mael)):
         api = random.choice(list(Faxel_bombe))
-        print("==============================Faxel==============================="| lolcat) 
+        print("==============================Faxel===============================") 
         print("                BOMBAGE en cours, veuillez patienter !!           ")
         print("Veuillez garder votre connexion de données active pendant le bombardement.")
         print("==================================================================")
