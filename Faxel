@@ -148,8 +148,8 @@ def binnar():
         #try:                
             #while True:                  
                v += 1           
-        except IndexError:           
-             pass          
+        #except IndexError:           
+            # pass          
         for s in c:            
              d += chr(s)            
              e += bin(int(binascii.hexlify(d), 16))            
