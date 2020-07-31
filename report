@@ -4,12 +4,8 @@
 #Dev: Faxel
 # Facebook Compte  rapports en masse
 
-import bs4
-import json
-import threading
-import cookielib
-import mechanize
-
+import bs4, json, threading, os, sys, cookielib, mechanize
+os.system("clear")
 class reports(threading.Thread):
 	def __init__(self,email,pw,cible):
 		threading.Thread.__init__(self)
