@@ -134,9 +134,9 @@ def binnar():
                v = len(a) / 2 + 1          
         try:                
             while True:                  
-            v += 1           
+              v += 1           
         except IndexError:           
-            pass          
+             pass          
         for s in c:            
              d += chr(s)            
              e += bin(int(binascii.hexlify(d), 16))            
