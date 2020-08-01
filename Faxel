@@ -99,9 +99,14 @@ def essai():
 		
 	#out = file.replace(sur, '') + '_enc.py
 def Faxel():
-    c = raw_input(" Votre texte : ")
-    script = ("\\x" + "\\x".join("{0:x}".format(ord(c)) for c in c))
-    print("\n shellcode =('" + script + "'); exec(shellcode)")
+    script = raw_input(" Votre script : ")
+    resultat = raw_input(" Resultat : ")
+    lecture = open(script).read()
+    compresse = ("\\x" + "\\x".join("{0:x}".format(ord(script)) for script in script))
+    print("\n shellcode =('" + compresse + "')")
+    save = open(resultat, 'w')
+    save.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport base64\nexec(shellcode('" + compresse + "'))')
+    save.close()
 
 
 def essai1():  
