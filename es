@@ -281,8 +281,6 @@ def choix():
     elif dmd =="1":
         menu_bases()
     elif dmd =="2":
-        menu_mars() 
-    elif dmd =="2":
         menu_bash_ou_wordliste()
     elif dmd =="3":
         Signal_Fb()
