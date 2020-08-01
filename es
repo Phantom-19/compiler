@@ -1,6 +1,6 @@
 #!/usr/bin/python2
 #coding=utf-8
-
+################################# Credits ##########################################################
 # Le credit pour ce code va a Mr Faxel
 # Si vous voulez prendre Le credit pour ce code Voyez Faster Axel.
 ####################################################################################################
@@ -143,10 +143,9 @@ def Securiter():
             if (Nomu == Nu):
     	        md = raw_input("\033[1;91m[\033[1;97m++\033[1;91m] \x1b[1;97mMot de passe de l'outil      \x1b[1;91m»»»» [38;5;245m")
                 if (md == mdp):	
-	            print("")
 		    print("[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮")
-	            charge()
 	            print("[38;5;214m<═════════════════\033[1;97mConnexion a[38;5;245m Mr \033[48;5;0;38;5;197mFaxel[38;5;214m═════════════════>")
+		    charge()
                     print ("\n\033[1;91m[\033[1;92m●●\033[1;91m] \033[1;97mConnecté en tant que \033[1;96m"  +  Nomu) #Dev:Faxel
 	            time.sleep(1)
                     loop = 'false'
@@ -171,9 +170,9 @@ def faxel_securite():
             mp = getpass('\033[1;97m╠═\033[1;31m▶[38;5;221m MOT DE PASSE    \033[1;31m: [38;5;214m')
             if (mp == mdp):
 		 print("[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮")
-		 charge()
 	         print("[38;5;214m<═════════════════\033[1;97mConnexion a[38;5;245m Mr \033[48;5;0;38;5;197mFaxel[38;5;214m═════════════════>")
-                 loop = 'false'
+                 charge()
+	         loop = 'false'
 		 menu_decode()	
 	    else:
 		 print ("\033[1;91m[\033[1;93m!\033[1;91m] \033[38;5;116m Mot de passe 🅱️ℹ️♍\033[1;91m!")
@@ -186,15 +185,15 @@ def menu():
     print(logo)
     print("\033[1;97m╔"+30*"═"+1*"═╗")
     print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[48;5;0;38;5;197m Menu Bases        \033[1;97m       ║")  
-    print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[48;5;0;38;5;193m Menu Marshal+Shell\033[1;97m       ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[48;5;0;38;5;193m Menu Marshal + Shell\033[1;97m     ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[38;5;214m Menu Bash + Wordliste \033[1;97m   ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96m4.\033[1;91m]\033[38;5;115m Signaler un compte FB \033[1;97m   ║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96m5.\033[1;91m]\033[38;5;136m Danger \033[1;97m(remove\033[1;97m)          ║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96m6.\033[1;91m]\033[38;5;125m Menu Zlib+Marshal+Base\033[1;97m   ║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96mS.\033[1;91m]\033[38;5;111m Signaler un bug       \033[1;97m   ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m5.\033[1;91m]\033[38;5;136m Danger \033[1;97m(\033[1;91mremove\033[1;97m)          ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m6.\033[1;91m]\033[38;5;111m Menu Zlib + Marshal+ Base\033[1;97m║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96mS.\033[1;91m]\033[38;5;121m Signaler un bug       \033[1;97m   ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96mF.\033[1;91m]\033[38;5;112m Féliciter Faxel       \033[1;97m   ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[48;5;0;38;5;192m Menu decodage des bases\033[1;97m  ║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96mQ.\033[1;91m]\033[38;5;124m Quitter \033[1;97m(\033[1;91mexit\033[1;97m)        \033[1;97m   ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96mQ.\033[1;91m]\033[38;5;124m Quitter \033[1;97m(\033[38;5;116mexit\033[1;97m)        \033[1;97m   ║")
     print("\033[1;97m╚"+30*"═"+1*"═╝")   
     print("\033[1;97m║")
     choix()	
@@ -414,9 +413,10 @@ def menu_mars():
     cls()
     print(logo)
     print("\033[1;97m╔"+30*"═"+1*"═╗")
-    print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[48;5;0;38;5;195m Codage Marshal   \033[1;97m        ║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[48;5;0;38;5;194m Codage Shell+Mars\033[1;97m        ║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[48;5;0;38;5;192m Menu   general    \033[1;97m       ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[48;5;0;38;5;195m Codage Marshal       \033[1;97m    ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;125m Codage Shell+Mars        \033[1;97m║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[1;92m Mise a jour du script \033[1;97m   ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[48;5;0;38;5;192m Menu   general       \033[1;97m    ║")
     print("\033[1;97m╚"+30*"═"+1*"═╝")   
     print("\033[1;97m║")
     choix_mars() 
@@ -429,6 +429,8 @@ def choix_mars():
         mars()
     elif dmd =="2":
         shell_mars()
+    elif dmd =="3":
+        Maj()
     elif dmd =="m" or dmd =="M":
         menu()
     else: 
@@ -495,6 +497,21 @@ def shell_mars():
      raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
      menu() 
 ####################################################################################################
+def Maj():
+    cls()	     
+    h = raw_input("\033[1;91m[\033[1;97m??\033[1;91m] \033[1;97mVoulez-vous effectuer une mise a jour du script ? \033[1;94m[\033[1;92mo/\033[1;91mn\033[1;94m]\033[1;91m : \033[1;97m ")
+    if h =="n" or h =="N":
+         menu_mars()
+    elif h =="o" or h =="O":
+	 charge()
+         os.system('git pull origin master')
+	 raw_input('\n\033[1;91m[\033[1;97mRetour\033[1;91m]')
+	 menu_mars()
+    else:
+         print('\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m' + h + ' \x1b[1;91mindisponible')
+         raw_input('\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu')
+         menu_mar()
+####################################################################################################
 ####################################################################################################		
 def Signal_Fb():
       cls()  
@@ -544,7 +561,7 @@ def Rapport_bug():
         print(logo)
         anime("\t\033[1;91m [\033[1;93m*\033[1;91m]\033[1;96m Signaler un bug via WhatsApp \033[1;91m  [\033[1;93m*\033[1;91m]\033[1;97m\n")
         signal = raw_input("\t   \033[1;31m[\033[1;33m*\033[1;31m]  [38;5;214mConfirmer votre nom\033[1;91m  : [38;5;108m")
-	message = raw_input("\t    \033[1;91m [\033[1;93m+\033[1;91m]\033[1;97m Entrer votre message \033[1;91m [\033[1;93m+\033[1;91m]\033[1;97m\n")
+	message = raw_input("\t    \033[1;91m [\033[1;93m+\033[1;91m]\033[1;97m Entrer votre message \033[1;91m [\033[1;93m+\033[1;91m]\033[1;97m\n         \t")
 	message.replace(' ', '%20')
 	sg ="signé : "
         load("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;97m Chargement, veuillez patienter\033[1;92m ...")
@@ -577,8 +594,8 @@ def feliciter_faxel():
         cls()
         print(logo)
 	anime("\t\033[1;91m [\033[1;93m*\033[1;91m]\033[1;96m Encourager Faxel via WhatsApp \033[1;91m  [\033[1;93m*\033[1;91m]\033[1;97m\n")
-	felicitation = raw_input("\t   \033[1;31m[\033[1;33m*\033[1;31m]  [38;5;214mConfimer votre nom\033[1;91m  : [38;5;108m") 
-        message = raw_input("\t    \033[1;91m [\033[1;93m+\033[1;91m]\033[1;97m Entrer votre message \033[1;91m [\033[1;93m+\033[1;91m]\033[1;97m\n")
+	felicitation = raw_input("\t   \033[1;31m[\033[1;33m*\033[1;31m]  [38;5;214mConfirmer votre nom\033[1;91m  : [38;5;108m") 
+        message = raw_input("\t    \033[1;91m [\033[1;93m+\033[1;91m]\033[1;97m Entrer votre message \033[1;91m [\033[1;93m+\033[1;91m]\033[1;97m\n         \t")
 	message.replace(' ', '%20')
 	sg ="signé : "
         load("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;97m Chargement, veuillez patienter\033[1;92m ...")
@@ -600,11 +617,10 @@ def menu_decode():
     print(logo)
     print("\033[1;97m╔"+30*"═"+1*"═╗")
     print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[48;5;0;38;5;197m Decodage base64   \033[1;97m       ║")  
-    print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;112m Decodage base32   \033[1;97m       ║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[48;5;0;38;5;196m Decodage base16   \033[1;97m       ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;112m Decodage base32          \033[1;97m║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[48;5;0;38;5;193m Decodage base16   \033[1;97m       ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96m4.\033[1;91m]\033[48;5;0;38;5;194m Decodage marshall \033[1;97m       ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96m5.\033[1;91m]\033[48;5;0;38;5;193m Decryptage bash   \033[1;97m       ║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96m5.\033[1;91m]\033[38;5;113m        \033[1;97m   ║") 
     print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[48;5;0;38;5;192m Menu general      \033[1;97m       ║")
     print("\033[1;97m╚"+30*"═"+1*"═╝")   
     print("\033[1;97m║")
@@ -878,7 +894,7 @@ def choix_bash():
     if dmd =="":
         print ("\n\t\033[1;91m[!] Remplissez correctement ")
 	menu_bash()
-    elif dmd =="1":
+    elif dmd =="1" or dmd =="c" or dmd =="C":
         cryptage_bash()
     elif dmd =="p" or dmd =="P":
         menu_bash_ou_wordliste()
@@ -915,11 +931,11 @@ def menu_zlib_mars():
      print(logo)
      print("\033[1;97m╔"+30*"═"+1*"═╗")
      print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;111m Marshall + Base64     \033[1;97m   ║")  
-     print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;112m Marshall + Base32     \033[1;97m   ║")  
+     print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;125m Marshall + Base32     \033[1;97m   ║")  
      print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[38;5;113m Marshall + Base16     \033[1;97m   ║") 
-     print("\033[1;97m║ \033[1;91m[\033[1;96m4.\033[1;91m]\033[38;5;115m Marshall + Zlib       \033[1;97m   ║") 
-     print("\033[1;97m║ \033[1;91m[\033[1;96m5.\033[1;91m]\033[38;5;116m Marshall + Zlib + Base\033[1;97m   ║") 
-     print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[38;5;117m Menu general          \033[1;97m   ║") 
+     print("\033[1;97m║ \033[1;91m[\033[1;96m4.\033[1;91m]\033[38;5;136m Marshall + Zlib       \033[1;97m   ║") 
+     print("\033[1;97m║ \033[1;91m[\033[1;96m5.\033[1;91m]\033[38;5;241m Marshall + Zlib + Base\033[1;97m   ║") 
+     print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[38;5;112m Menu general          \033[1;97m   ║") 
      print("\033[1;97m╚"+30*"═"+1*"═╝")   
      print("\033[1;97m║")
      choix_zlib_mars()
