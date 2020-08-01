@@ -187,12 +187,11 @@ def menu():
     print(logo)
     print("\033[1;97m╔"+30*"═"+1*"═╗")
     print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;121m Menu Bases        \033[1;97m       ║")  
-    print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[48;5;0;38;5;193m Menu Marshal + Shell\033[1;97m     ║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[38;5;214m Menu Bash + Wordliste \033[1;97m   ║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96m4.\033[1;91m]\033[38;5;115m Signaler un compte FB \033[1;97m   ║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96m5.\033[1;91m]\033[38;5;136m Danger \033[1;97m(\033[1;91mremove\033[1;97m)          ║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96m6.\033[1;91m]\033[38;5;111m Menu Zlib + Marshal+ Base\033[1;97m║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96m7.\033[1;91m]\033[38;5;116m Menu \033[38;5;214mFaxel\033[38;5;116m Cryp complexe \033[1;97m║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;214m Menu Bash + Wordliste \033[1;97m   ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[38;5;115m Signaler un compte FB \033[1;97m   ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m4.\033[1;91m]\033[38;5;136m Danger \033[1;97m(\033[1;91mremove\033[1;97m)          ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m5.\033[1;91m]\033[38;5;111m Menu Zlib + Marshal+ Base\033[1;97m║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m6.\033[1;91m]\033[38;5;116m Menu \033[38;5;214mFaxel\033[38;5;116m Cryp complexe \033[1;97m║")
     print("\033[1;97m║ \033[1;91m[\033[1;96mS.\033[1;91m]\033[48;5;0;38;5;197m Signaler un bug       \033[1;97m   ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96mF.\033[1;91m]\033[38;5;112m Féliciter Faxel       \033[1;97m   ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[48;5;0;38;5;192m Menu decodage des bases\033[1;97m  ║")
@@ -209,15 +208,15 @@ def choix():
         menu_bases()
     elif dmd =="2":
         menu_mars() 
-    elif dmd =="3":
+    elif dmd =="2":
         menu_bash_ou_wordliste()
-    elif dmd =="4":
+    elif dmd =="3":
         Signal_Fb()
-    elif dmd =="5":
+    elif dmd =="4":
         clean_remove()
-    elif dmd =="6":
+    elif dmd =="5":
         menu_zlib_mars()
-    elif dmd =="7":
+    elif dmd =="6":
         menu_Faxel_cryptage()
     elif dmd =="s" or dmd =="S":
         signal_bug()
@@ -413,112 +412,7 @@ def dec():
      raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
      menu_base_image()
 #################################################################################################### 
-####################################################################################################
-def menu_mars():
-    cls()
-    print(logo)
-    print("\033[1;97m╔"+30*"═"+1*"═╗")
-    print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[48;5;0;38;5;195m Encodage Marshal     \033[1;97m    ║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;125m Encodage Shell + Mars    \033[1;97m║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[1;92m Mise a jour du script \033[1;97m   ║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[48;5;0;38;5;192m Menu   general       \033[1;97m    ║")
-    print("\033[1;97m╚"+30*"═"+1*"═╝")   
-    print("\033[1;97m║")
-    choix_mars() 
-def choix_mars():    
-    dmd = raw_input("\033[1;97m╚═\033[1;31m▶\033[38;5;245m Mr \033[38;5;221mFaxel \033[1;91m▶▶▶ \033[1;96m")
-    if dmd =="":
-        print ("\n\t\033[1;91m[!] Remplissez correctement ")
-	menu_mars()
-    elif dmd =="1":
-        mars()
-    elif dmd =="2":
-        shell_mars()
-    elif dmd =="3":
-        Maj()
-    elif dmd =="m" or dmd =="M":
-        menu()
-    else: 
-        print('\n\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m '+dmd+' \x1b[1;91mindisponible')
-        menu_mars()
-####################################################################################################
-def mars():
-	cls()  
-        charge()
-        cls()
-        print(logo)
-	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
-	try:
-		ouverture = open(script_mars,'r').read()
-	except IOError:
-		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
-		menu()
-	print("\033[1;97m║")
-	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
-	charge()
-	try:
-		depot = ouverture.replace('\r\n', '\n')
-	        depot = depot.replace('\r', 'n')
-	        if depot and depot[(-1)] != '\n':
-	            depot = depot + '\n'
-	        compilage = pp.compile(depot, '<r>', 'exec')
-	        vidage = marshal.dumps(compilage)
-		enregistrement = open(emplacement,"w")
-		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal\nexec(marshal.loads("+repr(vidage)+"))")
-		enregistrement.close()
-		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
-		raw_input('\033[1;91m  [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-		menu()
-	except:
-		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
-		raw_input('\033[1;91m  [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-                menu() 
-####################################################################################################		
-def shell_mars():
-     cls()
-     charge()
-     cls()
-     print(logo1)
-     Texte = raw_input('\033[1;97m╚═\033[1;31m▶ \033[1;95mSaisissez votre texte\033[1;91m \n\t\033[1;97m ') 	    
-     coder1 = ""
-     coder2 = ""
-     print ('Nombre de caractere de mot saisi: %d' % len(bytearray(Texte)))
-     print ('Codage en Shell.......')
-     time.sleep(2)
-     i = 11
-     for x in bytearray(Texte) :
-	     if  i == 16:
-		     i = 11
-	     y = x^i
-	     coder1 += '\\x'
-	     coder1 += '%02x' % y
-	     coder2 += '0x'
-	     coder2 += '%02x,' %y	
-	     i = i + 0x01	
-     print (coder1)
-     print (coder2)
-     print ('Nombre de caractere en shell avec la methode simple  : %d' % len(bytearray(coder1)))
-     print ('Nombre de caractere en shell avec la methode complexe: %d' % len(bytearray(coder2)))
-     raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-     menu() 
-####################################################################################################
-def Maj():
-    cls()	     
-    h = raw_input("\033[1;91m[\033[1;97m??\033[1;91m] \033[1;97mVoulez-vous effectuer une mise a jour du script ? \033[1;94m[\033[1;92mo/\033[1;91mn\033[1;94m]\033[1;91m : \033[1;97m ")
-    if h =="n" or h =="N":
-         menu_mars()
-    elif h =="o" or h =="O":
-	 cls()
-	 load("\033[1;97mChargement\033[1;93m...")
-	 cls()
-         os.system('git pull origin master')
-	 raw_input('\n\033[1;91m[\033[1;97mRetour\033[1;91m]')
-	 os.system("cd $HOME/compiler && python2 es ")
-    else:
-         print('\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m' + h + ' \x1b[1;91mindisponible')
-         raw_input('\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu')
-         menu_mar()
-####################################################################################################
+
 ####################################################################################################		
 def Signal_Fb():
       cls()  
@@ -980,7 +874,7 @@ def choix_bash():
         menu()
     else: 
         print('\n\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m '+dmd+' \x1b[1;91mindisponible')
-        #raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+        raw_input('\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
         menu_bash()
 ####################################################################################################	
 def cryptage_bash(): 
@@ -990,7 +884,6 @@ def cryptage_bash():
        bash_cryp_script = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
        resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
        os.system("bash-obfuscate " + bash_cryp_script + " -o " + resultat )
-
        print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;92m Terminer..")
        raw_input('\n\x1b[1;91m[ \x1b[1;97mRetour \x1b[1;91m]')		
        menu_bash()
@@ -1010,8 +903,8 @@ def menu_zlib_mars():
      print("\033[1;97m╔"+30*"═"+1*"═╗")
      print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;111m Marshall + Base64     \033[1;97m   ║")  
      print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;125m Marshall + Base32     \033[1;97m   ║")  
-     print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[38;5;113m Marshall + Base16     \033[1;97m   ║") 
-     print("\033[1;97m║ \033[1;91m[\033[1;96m4.\033[1;91m]\033[38;5;136m Marshall + Zlib       \033[1;97m   ║") 
+     print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[38;5;113m Marshall + Base16     \033[1;97m   ║")  
+     print("\033[1;97m║ \033[1;91m[\033[1;96m4.\033[1;91m]\033[38;5;136m Menu Zlib + Base      \033[1;97m   ║")      
      print("\033[1;97m║ \033[1;91m[\033[1;96m5.\033[1;91m]\033[38;5;241m Marshall + Zlib + Base\033[1;97m   ║")
      print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[38;5;112m Menu general          \033[1;97m   ║") 
      print("\033[1;97m╚"+30*"═"+1*"═╝")   
@@ -1029,9 +922,11 @@ def choix_zlib_mars():
     elif dmd =="3":
         mars_base16()
     elif dmd =="4":
-        mars_zlib()
+        zlib_compresse()
+    elif dmd =="4":
+        menu_zlib_plus_base()
     elif dmd =="5":
-        mars_zlib_base()
+        menu_zlib_base() 
     elif dmd =="m" or dmd =="M":
         menu()
     else: 
@@ -1052,7 +947,7 @@ def mars_base64():
 		mars_zlib_base()
 	print("\033[1;97m║")
 	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
-	charge()
+	load("\033[1;97mChargement\033[1;93m...")
 	try:
 		compresse = base64.b64encode(mc.dumps(compile(ouverture, '<string>', 'exec')))
 		enregistrement = open(emplacement,'w')
@@ -1079,12 +974,11 @@ def mars_base32():
 		menu_zlib_mars()
 	print("\033[1;97m║")
 	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
-	charge()
+	load("\033[1;97mChargement\033[1;93m...")
 	try:
 		compresse = base64.b32encode(mc.dumps(compile(ouverture, '<string>', 'exec')))
 		enregistrement = open(emplacement,'w')
 		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\nexec(marshal.loads(base64.b32decode('"+compresse+"')))")
-	             #\nimport marshal\nexec(marshal.loads("+repr(vidage)+"))")
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
@@ -1107,7 +1001,7 @@ def mars_base16():
 		menu_zlib_mars()
 	print("\033[1;97m║")
 	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
-	charge()
+	load("\033[1;97mChargement\033[1;93m...")
 	try:
 		compresse = base64.b16encode(mc.dumps(compile(ouverture, '<string>', 'exec')))
 		enregistrement = open(emplacement,'w')
@@ -1120,8 +1014,41 @@ def mars_base16():
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
                 menu_zlib_mars()   
-####################################################################################################			
-def mars_zlib():
+####################################################################################################
+####################################################################################################
+def menu_zlib_plus_base():
+     cls()
+     print(logo)
+     print("\033[1;97m╔"+30*"═"+1*"═╗")
+     print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;111m Zlib + Base64         \033[1;97m   ║")  
+     print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;125m Zlib + Base32         \033[1;97m   ║")  
+     print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[38;5;113m Zlib + Base16         \033[1;97m   ║") 
+     print("\033[1;97m║ \033[1;91m[\033[1;96m4.\033[1;91m]\033[38;5;136m Zlib   uniquement     \033[1;97m   ║")
+     print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[38;5;112m Menu general          \033[1;97m   ║") 
+     print("\033[1;97m╚"+30*"═"+1*"═╝")   
+     print("\033[1;97m║")
+     choix_zlib_plus_base()
+def choix_zlib_plus_base():    
+    dmd = raw_input("\033[1;97m╚═\033[1;31m▶\033[38;5;245m Mr \033[38;5;221mFaxel \033[1;91m▶▶▶ \033[1;96m")
+    if dmd =="":
+        print ("\n\t\033[1;91m[!] Remplissez correctement ")
+	menu_zlib_mars()
+    elif dmd =="1":
+        zlib_base_64()
+    elif dmd =="2":
+        zlib_base_32()
+    elif dmd =="3":
+        zlib_base_16() 
+    elif dmd =="4":
+        zlib_compresse()
+    elif dmd =="m" or dmd =="M":
+        menu_zlib_mars()
+    else: 
+        print('\n\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m '+dmd+' \x1b[1;91mindisponible')
+        #raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+        menu_zlib_plus_base()
+####################################################################################################
+def zlib_base_64():
 	cls()  
         charge()
         cls()
@@ -1131,52 +1058,303 @@ def mars_zlib():
 		lecture = open(script_mars,'r').read()
 	except IOError:
 		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
-		menu()
+		menu_zlib_plus_base()
 	print("\033[1;97m║")
 	resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
-	charge()
+	load("\033[1;97mChargement\033[1;93m...")
 	try:
-		compresse = zlib.compress(lecture)# base64.b16encode(mc.dumps(compile(ouverture, '<string>', 'exec')))
+		compresse = base64.b64encode(zlib.compress(lecture))
 		enregistrement = open(resultat,'w')
-		#enregistrement.write('#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("'+compresse+'")))')
-                enregistrement.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib\nexec(zlib.decompress(' + repr(fin) + '))')
+                enregistrement.write("'#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib , marshal , base64\nfrom base64 import *\nexec(zlib.decompress(base64.b64decode('''"+ repr(compresse) +"''')))")
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-		menu()
+		menu_zlib_plus_base()
 	except:
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-                menu()
-####################################################################################################	
-def mars_zlib_base():
+                menu_zlib_plus_base()
+####################################################################################################
+def zlib_base_32():
 	cls()  
         charge()
         cls()
         print(logo)
 	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
 	try:
-		ouverture = mc.dumps(compile(open(script_mars, 'rb').read(), '<string>', 'exec'))
+		lecture = open(script_mars,'r').read()
 	except IOError:
 		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
-		mars_zlib_base()
+		menu_zlib_plus_base()
 	print("\033[1;97m║")
-	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
-	charge()
+	resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	load("\033[1;97mChargement\033[1;93m...")
 	try:
-		bac2k20 = base64.b16encode(zlib.compress(ouverture))
-		compilage = mc.dumps(compile(bac2k20, '<string>', 'exec'))
-	        vid_zl = marshal.dumps(compilage)
-		enregistrement = open(emplacement,"w")
-		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64 , sys\nfrom base64 import *\nimport marshal as mc\nimport zlib as zn\nexec(mc.loads(zn.decompress(b16decode("+repr(vid_zl)+")))")
+		compresse = base64.b32encode(zlib.compress(lecture))
+		enregistrement = open(resultat,'w')
+                enregistrement.write("#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib , marshal , base64\nfrom base64 import *\nexec(zlib.decompress(base64.b32decode('" + repr(compresse) + "')))")
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-		mars_zlib_base()
+		menu_zlib_plus_base()
 	except:
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-                mars_zlib_base() 
+                menu_zlib_plus_base()
+####################################################################################################v		
+def zlib_base_16():
+	cls()  
+        charge()
+        cls()
+        print(logo)
+	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		lecture = open(script_mars,'r').read()
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		menu_zlib_plus_base()
+	print("\033[1;97m║")
+	resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	load("\033[1;97mChargement\033[1;93m...")
+	try:
+		compresse = base64.b16encode(zlib.compress(lecture))
+		enregistrement = open(resultat,'w')
+                enregistrement.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib , marshal , base64\nfrom base64 import *\nexec(zlib.decompress(base64.b16decode(' + repr(compresse) + ')))')
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		menu_zlib_plus_base()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+                menu_zlib_plus_base()
+####################################################################################################			
+def zlib_compresse():
+	cls()  
+        charge()
+        cls()
+        print(logo)
+	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		lecture = open(script_mars,'r').read()
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		menu_zlib_plus_base()
+	print("\033[1;97m║")
+	resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	load("\033[1;97mChargement\033[1;93m...")
+	try:
+		compresse = zlib.compress(lecture)
+		enregistrement = open(resultat,'w')
+                enregistrement.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib\nexec(zlib.decompress(' + repr(compresse) + '))')
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		menu_zlib_plus_base()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+                menu_zlib_plus_base()
+####################################################################################################
+
+####################################################################################################
+def menu_mars_zlib_base():
+    cls()
+    print(logo)
+    print("\033[1;97m╔"+30*"═"+1*"═╗")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[48;5;0;38;5;195m Encodage Marshal        \033[1;97m ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[48;5;0;38;5;195m Marshal + Zlib + Base64 \033[1;97m ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[48;5;0;38;5;195m Marshal + Zlib + Base32 \033[1;97m ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m4.\033[1;91m]\033[38;5;125m Marshal + Zlib + Base16 \033[1;97m ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m5.\033[1;91m]\033[48;5;0;38;5;195m Encodage Marshal        \033[1;97m ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m6.\033[1;91m]\033[1;92m Mise a jour du script \033[1;97m   ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[48;5;0;38;5;192m Menu   general       \033[1;97m    ║")
+    print("\033[1;97m╚"+30*"═"+1*"═╝")   
+    print("\033[1;97m║")
+    choix_mars_zlib_base() 
+def choix_mars_zlib_base():    
+    dmd = raw_input("\033[1;97m╚═\033[1;31m▶\033[38;5;245m Mr \033[38;5;221mFaxel \033[1;91m▶▶▶ \033[1;96m")
+    if dmd =="":
+        print ("\n\t\033[1;91m[!] Remplissez correctement ")
+	menu_mars_zlib_base()
+    elif dmd =="1":
+        marshall()
+    elif dmd =="2":
+        mars_zlib_base_64()
+    elif dmd =="3":
+        mars_zlib_base_32()
+    elif dmd =="4":
+        mars_zlib_base_16()
+    elif dmd =="5":
+        shell_mars()
+    elif dmd =="6":
+        Maj()
+    elif dmd =="m" or dmd =="M":
+        menu()
+    else: 
+        print('\n\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m '+dmd+' \x1b[1;91mindisponible')
+        menu_mars_zlib_base()
+####################################################################################################
+def marshall():
+	cls()  
+        charge()
+        cls()
+        print(logo)
+	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		ouverture = open(script_mars,'r').read()
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		menu_mars_zlib_base()
+	print("\033[1;97m║")
+	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	load("\033[1;97mChargement\033[1;93m...")
+	try:
+		depot = ouverture.replace('\r\n', '\n')
+	        depot = depot.replace('\r', 'n')
+	        if depot and depot[(-1)] != '\n':
+	            depot = depot + '\n'
+	        compilage = pp.compile(depot, '<r>', 'exec')
+	        vidage = marshal.dumps(compilage)
+		enregistrement = open(emplacement,"w")
+		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal\nexec(marshal.loads("+repr(vidage)+"))")
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		menu_mars_zlib_base()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+                menu_mars_zlib_base() 
+####################################################################################################		
+def mars_zlib_base_64():
+	cls()  
+        charge()
+        cls()
+        print(logo)
+	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		lecture = open(script_mars,'r').read()
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		menu_mars_zlib_basemenu_mars_zlib_base()
+	print("\033[1;97m║")
+	resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	load("\033[1;97mChargement\033[1;93m...")
+	try:
+		compression = mc.dumps(compile(lecture, '<string>', 'exec'))
+		compresse = base64.b64encode(zlib.compress(compression))
+		enregistrement = open(resultat,'w')
+                enregistrement.write("#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib, base64,marshal\nexec(marshal.loads(zlib.decompress(base64.b64decode('''"+ repr(compresse) +"'''))))")
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		menu_mars_zlib_basemenu_mars_zlib_base()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+                menu_mars_zlib_basemenu_mars_zlib_base()
+####################################################################################################
+def mars_zlib_base_32():
+	cls()  
+        charge()
+        cls()
+        print(logo)
+	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		lecture = open(script_mars,'r').read()
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		menu_mars_zlib_base()
+	print("\033[1;97m║")
+	resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	load("\033[1;97mChargement\033[1;93m...")
+	try:
+		compression = mc.dumps(compile(lecture, '<string>', 'exec'))
+		compresse = base64.b32encode(zlib.compress(compression))
+		enregistrement = open(resultat,'w')
+                enregistrement.write("#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib, base64,marshal\nexec(marshal.loads(zlib.decompress(base64.b32decode('" + repr(compresse) + "'))))")
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		menu_mars_zlib_base()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+                menu_mars_zlib_base()
+####################################################################################################
+def mars_zlib_base_16():
+	cls()  
+        charge()
+        cls()
+        print(logo)
+	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		lecture = open(script_mars,'r').read()
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		menu_mars_zlib_base()
+	print("\033[1;97m║")
+	resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	load("\033[1;97mChargement\033[1;93m...")
+	try:
+		compression = mc.dumps(compile(lecture, '<string>', 'exec'))
+		compresse = base64.b16encode(zlib.compress(compression))
+		enregistrement = open(resultat,'w')
+                enregistrement.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib, base64,marshal\nexec(marshal.loads(zlib.decompress(base64.b16decode(' + repr(compresse) + '))))')
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		menu_mars_zlib_base()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+                menu_mars_zlib_base()
+####################################################################################################
+def shell_mars():
+     cls()
+     charge()
+     cls()
+     print(logo1)
+     Texte = raw_input('\033[1;97m╚═\033[1;31m▶ \033[1;95mSaisissez votre texte\033[1;91m \n\t\033[1;97m ') 	    
+     coder1 = ""
+     coder2 = ""
+     print ('Nombre de caractere de mot saisi: %d' % len(bytearray(Texte)))
+     print ('Codage en Shell.......')
+     time.sleep(2)
+     i = 11
+     for x in bytearray(Texte) :
+	     if  i == 16:
+		     i = 11
+	     y = x^i
+	     coder1 += '\\x'
+	     coder1 += '%02x' % y
+	     coder2 += '0x'
+	     coder2 += '%02x,' %y	
+	     i = i + 0x01	
+     print (coder1)
+     print (coder2)
+     print ('Nombre de caractere en shell avec la methode simple  : %d' % len(bytearray(coder1)))
+     print ('Nombre de caractere en shell avec la methode complexe: %d' % len(bytearray(coder2)))
+     raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+     menu() 
+####################################################################################################
+def Maj():
+    cls()	     
+    h = raw_input("\033[1;91m[\033[1;97m??\033[1;91m] \033[1;97mVoulez-vous effectuer une mise a jour du script ? \033[1;94m[\033[1;92mo/\033[1;91mn\033[1;94m]\033[1;91m : \033[1;97m ")
+    if h =="n" or h =="N":
+         menu_mars_zlib_base()
+    elif h =="o" or h =="O":
+	 cls()
+	 load("\033[1;97mChargement\033[1;93m...")
+	 cls()
+         os.system('git pull origin master')
+	 raw_input('\n\033[1;91m[\033[1;97mRetour\033[1;91m]')
+	 os.system("cd $HOME/compiler && python2 es ")
+    else:
+         print('\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m' + h + ' \x1b[1;91mindisponible')
+         raw_input('\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu')
+         menu_mars_zlib_base()
 ####################################################################################################
 ####################################################################################################
 def menu_Faxel_cryptage():
@@ -1312,7 +1490,7 @@ def Encodage_Hex():
    enregistrement = open(resultat, 'w')
    enregistrement.write(compression)
    enregistrement.close()
-   print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage reussi")
+   print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
    raw_input('\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
    Menu_Hex() 
 ####################################################################################################	
@@ -1342,13 +1520,10 @@ def Encodage_Hex_Join():
    enregistrement_final.write(compression_final)
    enregistrement_final.close()
    py_compile.compile(resultat)
-   print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage reussi")
+   print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
    raw_input('\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
    Menu_Hex() 
 ####################################################################################################
-
-
-
 ####################################################################################################
 if __name__ == "__main__":
        Identification()	
