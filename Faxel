@@ -5,7 +5,7 @@
 # Le credit pour ce code va a Mr Faxel
 # Si vous voulez prendre Le credit pour ce code Voyez Faster Axel.
 
-import os, sys, zlib, base64, marshal, binascii,py_compile, __builtin__ as pp
+import os, sys, zlib, base64, marshal, binascii,py_compile, __builtin__ as pp,time
 import marshal as mc
 from time import sleep as waktu
 from random import randint
@@ -177,11 +177,11 @@ def dec_base64():
    		print("Resultat -> ",base64.b64decode(k.split('\n')[0]))
    		resul = base64.b64decode(k.split('\n')[0])
    		jabot.append(resul)
-   		sleep(00.01)
+   		time.sleep(00.01)
    	except:
    		print ("Desolé se script n'a pas été crypter en base64")
    		sauve.append(k)
-   		sleep(00.01)
+   		time.sleep(00.01)
    print("-"*40)
    for result in jabot:
    	sauvegarde.write(result.split('\n')[0]+"\n")
