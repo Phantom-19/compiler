@@ -92,7 +92,7 @@ def essai():
        u.append(ord(x))
    for a in u:
        c.append('n' * a)
-       fi = '#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\nimport marshal;import zlib\nd={}\nexec("".join([chr(len(i)) for i in d]))'.format(c)
+       fi = '#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\nimport marshal;import zlib\nexec("".join([chr(len(i)) for i in d]))\nd={}'.format(c)
        og = open(sur, 'w')
        og.write(fi)
        og.close()
