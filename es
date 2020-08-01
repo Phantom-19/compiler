@@ -209,7 +209,7 @@ def choix():
     elif dmd =="4":
         menu_mars() 
     elif dmd =="5":
-        menu_bash()
+        menu_bash_ou_wordliste()
     elif dmd =="6":
         menu_base_image()
     elif dmd =="7":
