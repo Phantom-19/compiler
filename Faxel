@@ -48,7 +48,7 @@ def select():
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
        menu()
   elif choisir == "4" or choisir == "04":
-       binnar()   
+       mars()   
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
        menu()
   elif choisir == "5" or choisir == "05":
@@ -108,7 +108,39 @@ def Faxel():
     save.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport base64\nexec("' + compresse +'")')
     save.close()
 
-
+def mars():
+	#cls()  
+        #charge()
+        #cls()
+        #print(logo)
+	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		ouverture = open(script_mars,'r').read()
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		menu()
+	print("\033[1;97m║")
+	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	#charge()
+	try:
+		depot = ouverture.replace('\r\n', '\n')
+		compresse = ("\\x" + "\\x".join("{0:x}".format(ord(depot)) for depot in depot))
+	        depot = compresse.replace('\r', 'n')
+	        if depot and depot[(-1)] != '\n':
+	            depot = depot + '\n'
+	        compilage = pp.compile(depot, '<r>', 'exec')
+	        vidage = marshal.dumps(compilage)
+		enregistrement = open(emplacement,"w")
+		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal\nexec(marshal.loads("+repr(vidage)+"))")
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		menu()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+                menu() 
+		
 def essai1():  
 	
             ia = raw_input('File >> ')
