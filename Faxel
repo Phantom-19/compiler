@@ -9,6 +9,24 @@ import os, sys, zlib, base64, marshal, binascii,py_compile, __builtin__ as pp,ti
 import marshal as mc
 from time import sleep as faxel
 from random import randint
+import zlib,marshal,new,sys, base64,time,tty,termios
+def decomp():
+     a0_func = 'YwEAAAAJAAAABAAAAAMAAABzHAEAAGQBAH0BAHQAAGoAAIMAAH0CAHQBAGoCAGoDAIMAAH0DAHQEAGoFAHwDAIMBAH0EAHQGAGoHAHQBAGoCAGoDAIMAAIMBAAF0CAB0AQBqAgBqCQBkAgCDAQCDAQCJAAB0BABqCgB8AwB0BABqCwB8BACDAwABZAMAagwAdA0AhwAAZgEAZAQAhgAAfAAAgwIAgwEAfQUAdAAAagAAgwAAfQYAfAYAfAIAGGQFAGsEAHLVAGQDAGoMAHQNAIcAAGYBAGQGAIYAAHwAAIMCAIMBAH0FAG4AAHwFAGoOAHwBAIMBAH0HAHQPAHwHAIMBAGQCAGsCAHIKAWQHAH0IAHwHAGQIABl8CABmAgBTfAcAZAgAGXwHAGQCABlmAgBTKAkAAABOcwMAAAA6UjppAQAAAHQAAAAAYwEAAAABAAAAAwAAABMAAABzFAAAAHQAAHQBAHwAAIMBAIgAAEGDAQBTKAEAAABOKAIAAAB0AwAAAGNocnQDAAAAb3JkKAEAAAB0AQAAAHgoAQAAAHQKAAAAcGFzc3BocmFzZSgAAAAAcw8AAABydXNzaWFuX2RvbGwucHl0CAAAADxsYW1iZGE+KgAAAHMAAAAAaQQAAABjAQAAAAEAAAAEAAAAEwAAAHMYAAAAdAAAdAEAfAAAgwEAiAAAZAEAF0GDAQBTKAIAAABOaQEAAAAoAgAAAFIBAAAAUgIAAAAoAQAAAFIDAAAAKAEAAABSBAAAACgAAAAAcw8AAABydXNzaWFuX2RvbGwucHlSBQAAAC0AAABzAAAAAHQIAAAAZmluaXNoZWRpAAAAACgQAAAAdAQAAAB0aW1ldAMAAABzeXN0BQAAAHN0ZGludAYAAABmaWxlbm90BwAAAHRlcm1pb3N0CQAAAHRjZ2V0YXR0cnQDAAAAdHR5dAYAAABzZXRyYXdSAgAAAHQEAAAAcmVhZHQJAAAAdGNzZXRhdHRydAkAAABUQ1NBRFJBSU50BAAAAGpvaW50AwAAAG1hcHQFAAAAc3BsaXR0AwAAAGxlbigJAAAAdAcAAABtZXNzYWdldAwAAABzcGxpdF9zdHJpbmd0AgAAAHQwdAIAAABmZHQMAAAAb2xkX3NldHRpbmdzdAMAAAByZXN0AgAAAHQxUgMAAAB0AQAAAF8oAAAAACgBAAAAUgQAAABzDwAAAHJ1c3NpYW5fZG9sbC5weXQKAAAAYXNrZGVjcnlwdB8AAABzIAAAAAABBgIMAQ8BDwEWARgCFgIhAQwBEAEkAQ8BEgEGAQ4B'
+     script = raw_input(" Votre script : ")
+     resultat = raw_input(" Resultat : ")
+     with open(script,'r') as f:
+         comprimer = f.read()
+     x = marshal.loads(base64.b64decode(a0_func))
+     x_func = new.function(x, {'ord':ord, 'sys':sys,
+                       'map':map, 'chr':chr,
+                       'time':time, 'tty':tty,
+                       'termios':termios,
+                       'len':len, })
+                 
+     save = open(resultat, 'w')   
+     save.write("#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport base64\nexec(zlib.decompress(base64.b64decode(comprimer)))")
+     save.close()
+
 
 def menu():  
   os.system('clear')
@@ -234,7 +252,36 @@ def marshal():
       s = open(resultat, 'w')             
       s.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport marshal\nexec(marshal.loads(' + str(fin) + '))')         
       s.close() 
- 
+
+
+def mars_zlib():
+	#cls()  
+        #charge()
+        #cls()
+        #print(logo)
+	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		lecture = open(script_mars,'r').read()
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		menu()
+	print("\033[1;97m║")
+	resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	#charge()
+	try:
+		compresse = base64.b16encode(zlib.compress(lecture))
+		enregistrement = open(resultat,'w')
+		#enregistrement.write('#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("'+compresse+'")))')
+                enregistrement.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib\nexec(zlib.decompress(base64.b16decode(' + repr(compresse) + ')))')
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		menu()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+                menu()
+"""
 def zlib_mars():
     script = raw_input('File >> ')            
     a = open(script).read()    
@@ -252,7 +299,7 @@ def zlib_mars():
         ox = open(js, 'w')            
         ox.write(fip)   
         ox.close()          
-"""               
+               
 def mars():
     script = raw_input('File >> ' )            
     bc = open(script,'r').read()   
