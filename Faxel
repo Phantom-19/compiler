@@ -189,10 +189,10 @@ def zlib_mars():
     for x in a:       
         z.append(ord(x))   
     for c in z:         
-        u.append(zlib.compress(str(c)))               
-    for p in u:         
-        o.append(marshal.dumps(p))         
-        fip = '#Compile Faxel\n#Twitter https://twitter.com/Faxel2020\nimport marshal\nimport zlib\nd={}\nexec("".join([chr(int(zlib.decompress(marshal.loads(i)))) for i in d]))'.format(o)            
+        u.append(zlib.compress(marshal.dumps(str(c))))              
+    #for p in u:         
+        #o.append(marshal.dumps(u))         
+        fip = '#Compile Faxel\n#Twitter https://twitter.com/Faxel2020\nimport marshal\nimport zlib\nd={}\nexec("".join([chr(int(zlib.decompress(marshal.loads(i)))) for i in d]))'.format(u)            
         ox = open(js, 'w')            
         ox.write(fip)   
         ox.close()          
