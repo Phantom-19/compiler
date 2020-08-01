@@ -10,23 +10,6 @@ import marshal as mc
 from time import sleep as faxel
 from random import randint
 import zlib,marshal,new,sys, base64,time,tty,termios
-def decomp():
-     a0_func = 'YwEAAAAJAAAABAAAAAMAAABzHAEAAGQBAH0BAHQAAGoAAIMAAH0CAHQBAGoCAGoDAIMAAH0DAHQEAGoFAHwDAIMBAH0EAHQGAGoHAHQBAGoCAGoDAIMAAIMBAAF0CAB0AQBqAgBqCQBkAgCDAQCDAQCJAAB0BABqCgB8AwB0BABqCwB8BACDAwABZAMAagwAdA0AhwAAZgEAZAQAhgAAfAAAgwIAgwEAfQUAdAAAagAAgwAAfQYAfAYAfAIAGGQFAGsEAHLVAGQDAGoMAHQNAIcAAGYBAGQGAIYAAHwAAIMCAIMBAH0FAG4AAHwFAGoOAHwBAIMBAH0HAHQPAHwHAIMBAGQCAGsCAHIKAWQHAH0IAHwHAGQIABl8CABmAgBTfAcAZAgAGXwHAGQCABlmAgBTKAkAAABOcwMAAAA6UjppAQAAAHQAAAAAYwEAAAABAAAAAwAAABMAAABzFAAAAHQAAHQBAHwAAIMBAIgAAEGDAQBTKAEAAABOKAIAAAB0AwAAAGNocnQDAAAAb3JkKAEAAAB0AQAAAHgoAQAAAHQKAAAAcGFzc3BocmFzZSgAAAAAcw8AAABydXNzaWFuX2RvbGwucHl0CAAAADxsYW1iZGE+KgAAAHMAAAAAaQQAAABjAQAAAAEAAAAEAAAAEwAAAHMYAAAAdAAAdAEAfAAAgwEAiAAAZAEAF0GDAQBTKAIAAABOaQEAAAAoAgAAAFIBAAAAUgIAAAAoAQAAAFIDAAAAKAEAAABSBAAAACgAAAAAcw8AAABydXNzaWFuX2RvbGwucHlSBQAAAC0AAABzAAAAAHQIAAAAZmluaXNoZWRpAAAAACgQAAAAdAQAAAB0aW1ldAMAAABzeXN0BQAAAHN0ZGludAYAAABmaWxlbm90BwAAAHRlcm1pb3N0CQAAAHRjZ2V0YXR0cnQDAAAAdHR5dAYAAABzZXRyYXdSAgAAAHQEAAAAcmVhZHQJAAAAdGNzZXRhdHRydAkAAABUQ1NBRFJBSU50BAAAAGpvaW50AwAAAG1hcHQFAAAAc3BsaXR0AwAAAGxlbigJAAAAdAcAAABtZXNzYWdldAwAAABzcGxpdF9zdHJpbmd0AgAAAHQwdAIAAABmZHQMAAAAb2xkX3NldHRpbmdzdAMAAAByZXN0AgAAAHQxUgMAAAB0AQAAAF8oAAAAACgBAAAAUgQAAABzDwAAAHJ1c3NpYW5fZG9sbC5weXQKAAAAYXNrZGVjcnlwdB8AAABzIAAAAAABBgIMAQ8BDwEWARgCFgIhAQwBEAEkAQ8BEgEGAQ4B'
-     script = raw_input(" Votre script : ")
-     resultat = raw_input(" Resultat : ")
-     with open(script,'r') as f:
-         comprimer = f.read()
-     x = marshal.loads(base64.b64decode(a0_func))
-     x_func = new.function(x, {'ord':ord, 'sys':sys,
-                       'map':map, 'chr':chr,
-                       'time':time, 'tty':tty,
-                       'termios':termios,
-                       'len':len, })
-                 
-     save = open(resultat, 'w')   
-     save.write("#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport base64\nexec(zlib.decompress(base64.b64decode(comprimer)))")
-     save.close()
-
 
 def menu():  
   os.system('clear')
@@ -54,7 +37,7 @@ def menu():
 def select():    
   choisir = raw_input("\033[1;97m╚═\033[1;31m▶[38;5;245m Mr [38;5;221mFaxel \033[1;31m▶▶▶ \033[1;33m")
   if choisir == "1" or choisir == "01":
-       shell()
+       Faxel_shellcode()
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
        menu()
   elif choisir == "2" or choisir == "02":
@@ -120,7 +103,16 @@ def essai():
        og.write(fi)
        og.close()
 		
-	#out = file.replace(sur, '') + '_enc.py
+def Faxel_shellcode():
+    script = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+    print("\033[1;97m║")
+    resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")    
+    lecture = open(script).read()
+    compresse =("\\x" + "\\x".join("{0:x}".format(ord(lecture)) for lecture in lecture))
+    save = open(resultat, 'w')
+    save.write("#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport base64\nexec('" + compresse + "')")
+    save.close()
+	
 def Faxel():
 #def eval_comp():
      script = raw_input(" Votre script : ")
