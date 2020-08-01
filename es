@@ -7,7 +7,7 @@
 ####################################################################################################
 # -Importation des modules-#
 import os,time,sys,fileinput,base64,datetime,random,requests,mechanize, marshal, __builtin__ as pp,zlib
-import bs4, interpreter,pyconcrete	
+import bs4,pyconcrete	
 import marshal as mc
 from base64 import *
 from getpass import getpass
