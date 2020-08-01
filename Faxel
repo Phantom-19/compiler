@@ -58,7 +58,7 @@ def select():
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
        menu()
   elif choisir == "2" or choisir == "02":
-       zlib_base_16()  
+       mars_zlib_base()  
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
        menu()
   elif choisir == "3" or choisir == "03":
@@ -253,6 +253,35 @@ def marshal():
       s.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport marshal\nexec(marshal.loads(' + str(fin) + '))')         
       s.close() 
 
+
+
+def mars_zlib_base():
+	#cls()  
+        #charge()
+        #cls()
+        #print(logo)
+	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		lecture = open(script_mars,'r').read()
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		menu()
+	print("\033[1;97m║")
+	resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	#charge()
+	try:
+		compresse = marshal.loads(base64.b16encode(zlib.compress(lecture)))
+		enregistrement = open(resultat,'w')
+                enregistrement.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib, base64,marshal\nexec(marshal.loads(zlib.decompress(base64.b16decode(' + repr(compresse) + '))))')
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		menu()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+                menu()
+
 def zlib_base_64():
 	#cls()  
         #charge()
@@ -270,7 +299,7 @@ def zlib_base_64():
 	try:
 		compresse = base64.b64encode(zlib.compress(lecture))
 		enregistrement = open(resultat,'w')
-                enregistrement.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib , marshal , base64\nfrom base64 import *\nexec(zlib.decompress(base64.b64decode(' + repr(compresse) + ')))')
+                enregistrement.write("'#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib , marshal , base64\nfrom base64 import *\nexec(zlib.decompress(base64.b64decode('''"+ repr(compresse) +"''')))")
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
@@ -322,7 +351,7 @@ def zlib_base_32():
 	try:
 		compresse = base64.b32encode(zlib.compress(lecture))
 		enregistrement = open(resultat,'w')
-                enregistrement.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib , marshal , base64\nfrom base64 import *\nexec(zlib.decompress(base64.b32decode(' + repr(compresse) + ')))')
+                enregistrement.write("#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib , marshal , base64\nfrom base64 import *\nexec(zlib.decompress(base64.b32decode('" + repr(compresse) + "')))")
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
