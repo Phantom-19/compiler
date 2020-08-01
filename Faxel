@@ -58,7 +58,7 @@ def select():
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
        menu()
   elif choisir == "2" or choisir == "02":
-       zlib_mars()  
+       mars_zlib()  
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
        menu()
   elif choisir == "3" or choisir == "03":
@@ -281,7 +281,7 @@ def mars_zlib():
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
                 menu()
-"""
+
 def zlib_mars():
     script = raw_input('File >> ')            
     a = open(script).read()    
@@ -299,7 +299,7 @@ def zlib_mars():
         ox = open(js, 'w')            
         ox.write(fip)   
         ox.close()          
-               
+ """              
 def mars():
     script = raw_input('File >> ' )            
     bc = open(script,'r').read()   
