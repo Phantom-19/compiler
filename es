@@ -1425,7 +1425,7 @@ def choix_Faxel_cryptage():
     elif dmd =="1":
         Cryptage_join()
     elif dmd =="2":
-        Menu_Hex() 
+        Cryp_Bin_Base_Join() 
     elif dmd =="3":
         Menu_Hex() 
     elif dmd =="m" or dmd =="M":
