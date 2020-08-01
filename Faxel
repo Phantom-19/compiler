@@ -55,7 +55,7 @@ def select():
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
        menu()
   elif choisir == "7" or choisir == "07":
-       essai()   
+       essai1()   
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
        menu()
   elif choisir == "q" or choisir == "Q":
@@ -65,21 +65,38 @@ def select():
        raw_input('\033[1;91m [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
        menu()
 def essai():
-	    file = raw_input('File >> ')
-	    sur = raw_input('Enreg >> ')
-            #out = file.replace(sur, '') + '_enc.py'
-            oa = open(file).read()
+   file = raw_input('File >> ')
+   sur = raw_input('Enreg >> ')        
+   oa = open(file).read()
+   u = []
+   c = []
+   for x in oa:
+       u.append(ord(x))
+   for a in u:
+       c.append('n' * a)
+   fi = 'd={}\nexec("".join([chr(len(i)) for i in d]))'.format(c)
+   og = open(sur, 'w')
+   og.write(fi)
+   og.close()
+		 #out = file.replace(sur, '') + '_enc.py
+def  essai1():           
+            ia = raw_input('File >> ')
+            a = open(ia).read()
+            z = []
             u = []
-            c = []
-            for x in oa:
-                u.append(ord(x))
-            for a in u:
-                c.append('n' * a)
-            fi = 'd={}\nexec("".join([chr(len(i)) for i in d]))'.format(c)
-            og = open(sur, 'w')
-            og.write(fi)
-            og.close()
-		
+            for x in a:
+                z.append(ord(x))
+            for c in z:
+                u.append(zlib.compress(str(c)))
+            o = []
+            for p in u:
+                o.append(marshal.dumps(p))
+            fip = 'import marshal;import zlib\nd={}\nexec("".join([chr(int(zlib.decompress(marshal.loads(i)))) for i in d]))'.format(o)
+            js = ia.replace('.py', '_enc.py')
+            ox = open(js, 'w')
+            ox.write(fip)
+            ox.close()
+            
 def marshal():
       script = raw_input('File >> ')    
       lecture = open(script,'r').read()  
