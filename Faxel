@@ -96,12 +96,13 @@ def  essai1():
             ox = open(js, 'w')
             ox.write(fip)
             ox.close()
+	
 def essai2():
 	    ia = raw_input('File >> ')
             bc = open(ia).read()
             xs = binascii.hexlify(bc)
             js = ia.replace('.py', '_enc.py')
-            fc = 'exec ("{}").decode("hex")'.format(xs)
+            fc = 'exec("{}").decode("hex")'.format(xs)
             nk = open(js, 'w')
             nk.write(fc)
             nk.close()
@@ -111,7 +112,7 @@ def essai2():
             for l in gn:
                 p.append(ord(l))
             for b in p:
-                n.append('Faxel' * b)
+                n.append('F' * b)
             fin = 'd={}\nexec("".join([chr(len(i)) for i in d]))'.format(n)
             bp = open(js, 'w')
             bp.write(fin)
