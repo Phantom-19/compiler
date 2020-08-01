@@ -99,6 +99,15 @@ def essai():
 		
 	#out = file.replace(sur, '') + '_enc.py
 def Faxel():
+#def eval_comp():
+     script = raw_input(" Votre script : ")
+     resultat = raw_input(" Resultat : ")
+     lecture = open(script).read()
+     code = base64.b64encode(lecture)    
+     save = open(resultat, 'w')
+     save.write("#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport base64\neval(compile(base64.b64decode(code), "<Faxel>", 'exec'))")
+     save.close()
+"""
     script = raw_input(" Votre script : ")
     resultat = raw_input(" Resultat : ")
     lecture = open(script).read()
@@ -107,7 +116,7 @@ def Faxel():
     save = open(resultat, 'w')
     save.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport base64\nexec("' + compresse +'")')
     save.close()
-
+"""
 def mars():
 	#cls()  
         #charge()
