@@ -7,7 +7,7 @@
 
 import os, sys, zlib, base64, marshal, binascii,py_compile, __builtin__ as pp,time
 import marshal as mc
-from time import sleep as waktu
+from time import sleep as faxel
 from random import randint
 
 def menu():  
@@ -96,7 +96,16 @@ def  essai1():
             ox = open(js, 'w')
             ox.write(fip)
             ox.close()
-            
+def essai2():
+	    ia = raw_input('File >> ')
+            bc = open(ia).read()
+            xs = binascii.hexlify(bc)
+            js = ia.replace('.py', '_enc.py')
+            fc = 'exec ("{}").decode("hex")'.format(xs)
+            nk = open(js, 'w')
+            nk.write(fc)
+            nk.close()
+	
 def marshal():
       script = raw_input('File >> ')    
       lecture = open(script,'r').read()  
