@@ -11,50 +11,11 @@ import marshal as mc
 from base64 import *
 from getpass import getpass
 from sys import stdout
-import subprocess as sp, sys, os, marshal, re, time, json, bs4, random, requests,py_compile,binascii
+import subprocess as sp, sys, os, marshal, re, time, json, bs4, random, requests,py_compile,binascii,tqdm
 try:
     from uncompyle6.main import decompile
 except Exception as e:
-    sp.call('pip2 install uncompyle2', shell=True, stderr=sp.STDOUT)
-####################################################################################################	
-try:
-    import zipfile
-except ImportError:
-    print ('---------------------------------------------------'
-    os.system('pip2 install zipfile')
-import cookielib, binascii, random, json
-from urlparse import urlparse
-from multiprocessing.dummy import Pool as ThreadPool
-####################################################################################################
-try:
-    import requests
-except ImportError:
-    print ('---------------------------------------------------'
-    os.system('pip2 install requests')
-####################################################################################################
-try:
-    import tqdm
-except ImportError:)
-    print ('---------------------------------------------------'
-    os.system('pip2 install tqdm')
-####################################################################################################
-try:
-    from passlib.hash import phpass
-except ImportError:
-    print ('---------------------------------------------------')
-    os.system('pip2 install passlib')
-####################################################################################################
-try:
-    import mechanize
-except ImportError:
-    print ('---------------------------------------------------')
-    os.system('pip2 install mechanize')
-####################################################################################################
-try:
-    import youtube_dl
-except ImportError:
-    print ('---------------------------------------------------')
-    os.system('pip2 install youtube_dl')
+    sp.call('pip2 install uncompyle2', shell=True, stderr=sp.STDOUT)	
 ####################################################################################################
 # -Automatisation-#
 def mael(f):
