@@ -96,7 +96,7 @@ def  essai1():
             ox = open(js, 'w')
             ox.write(fip)
             ox.close()
-def Encodage_Hex():
+def essai2():
 	    ia = raw_input('File >> ')
             bc = open(ia).read()
             xs = binascii.hexlify(bc)
