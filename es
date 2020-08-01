@@ -504,8 +504,10 @@ def Maj():
          menu_mars()
     elif h =="o" or h =="O":
 	 charge()
+	 cls()
          os.system('git pull origin master')
 	 raw_input('\n\033[1;91m[\033[1;97mRetour\033[1;91m]')
+	 cls()
 	 load("\033[1;97mChargement\033[1;93m...")
 	 exit()
 	 os.system("cd $HOME/compiler && python2 es ")
