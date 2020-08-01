@@ -1,7 +1,33 @@
 #!/usr/bin/python2
 #coding=utf-8
 #Dev: Faxel
+import base64
+#https://malwaredecoder.com
+#https://ideone.com/zQL5KQ
+####################################################################################################
+code="CmltcG9ydCBweW1vbmdvCmltcQ" #very long
+eval(compile(base64.b64decode(code), "<string>", 'exec'))
 
+import base64
+myscript = """IyBUaGlzIGlzIGEgc2FtcGxlIFB5d
+              GhvbiBzY3JpcHQKcHJpbnQgIkhlbG
+              xvIiwKcHJpbnQgIldvcmxkISIK"""
+eval(compile(base64.b64decode(myscript),'<string>','exec'))
+####################################################################################################
+convert all of your .py to *.pye
+
+$ pyconcrete-admin.py compile --source={your py script}  --pye
+$ pyconcrete-admin.py compile --source={your py module dir} --pye
+eval(compile(base64.b64decode(subextractor),'','exec'))
+####################################################################################################
+def run(code):
+    exec(zlib.decompress(base64.b16decode(code)))
+    exec(marshal.loads(zlib.decompress(base64.b16decode(code))))
+def enc(code):
+    return base64.b16encode(zlib.compress(code))
+    return base64.b16encode(zlib.compress(code))
+    return marshal.loads(base64.b16encode(zlib.compress(code)))
+####################################################################################################
 # Le credit pour ce code va a Mr Faxel
 # Si vous voulez prendre Le credit pour ce code Voyez Faster Axel.
 ####################################################################################################
@@ -84,7 +110,35 @@ def zlib_mars():
         ox.write(fip)   
         ox.close()          
 ####################################################################################################		
-def mars_zlib_base():
+def error_zlim():
+	#cls()  
+        #charge()
+        #cls()
+        #print(logo)
+	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		lecture = open(script_mars,'r').read()
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		menu()
+	print("\033[1;97m║")
+	resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	#charge()
+	try:
+		compression = base64.b16encode(mc.dumps(compile(lecture, '<string>', 'exec')))
+		compresse = zlib.compress(compression)
+		enregistrement = open(resultat,'w')
+                enregistrement.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib, base64,marshal\nexec(marshal.loads(zlib.decompress(base64.b16decode(' + repr(compresse) + '))))'))
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		menu()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+                menu()
+
+def error_marzli():
 	#cls()  
         #charge()
         #cls()
@@ -105,7 +159,6 @@ def mars_zlib_base():
 		#compresse = base64.b16encode(zlib.compress(compression))
 		enregistrement = open(resultat,'w')
                 enregistrement.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib, base64,marshal\nexec(marshal.loads(zlib.decompress(' + repr(compresse) + ')))')
-		#\nexec(marshal.loads(zlib.decompress(base64.b16decode(' + repr(compresse) + '))))')
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
@@ -114,6 +167,7 @@ def mars_zlib_base():
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
                 menu()
+	
 ####################################################################################################              
 """def mars():
     script = raw_input('File >> ' )            
