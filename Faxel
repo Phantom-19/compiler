@@ -118,6 +118,7 @@ def essai1():
                 ox.close()
 	
 def essai2():
+	
 	    ia = raw_input('File >> ')
             bc = open(ia).read()
             xs = binascii.hexlify(bc)
@@ -208,8 +209,8 @@ def mars():
     xh = pp.dumps(compile(bc, '<Faxel>', 'exec')  
     #mc.dumps(compile(lecture, '<r>', 'exec')) 
     #pg = marshal.dumps(xh) 
-    bin = binascii.hexlify(xh)          
-    for g in bin:               
+    te = binascii.hexlify(xh)          
+    for g in te:               
           a.append(ord(g) - 9)           
     for lx in range(len(a)):  
           b.append(randint(1, 120))          
