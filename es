@@ -11,7 +11,7 @@ import marshal as mc
 from base64 import *
 from getpass import getpass
 from sys import stdout
-import subprocess as sp, sys, os, marshal, re, time, json, bs4, random, requests,py_compile
+import subprocess as sp, sys, os, marshal, re, time, json, bs4, random, requests,py_compile,binascii
 try:
     from uncompyle6.main import decompile
 except Exception as e:
