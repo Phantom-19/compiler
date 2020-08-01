@@ -506,7 +506,9 @@ def Maj():
 	 charge()
          os.system('git pull origin master')
 	 raw_input('\n\033[1;91m[\033[1;97mRetour\033[1;91m]')
-	 menu_mars()
+	 load("\033[1;97mChargement\033[1;93m...")
+	 exit()
+	 os.system("cd $HOME/compiler && python2 es ")
     else:
          print('\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m' + h + ' \x1b[1;91mindisponible')
          raw_input('\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu')
