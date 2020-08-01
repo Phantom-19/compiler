@@ -208,7 +208,7 @@ def mars():
     xh = pp.dumps(compile(bc, '<Faxel>', 'exec')  
     #mc.dumps(compile(lecture, '<r>', 'exec')) 
     #pg = marshal.dumps(xh) 
-    bin += binascii.hexlify(xh)          
+    bin = binascii.hexlify(xh)          
     for g in bin:               
           a.append(ord(g) - 9)           
     for lx in range(len(a)):  
