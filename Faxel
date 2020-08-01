@@ -234,11 +234,11 @@ def binnar():
                break             
                z += 1            
                v = len(a) / 2 + 1          
-        try:                
-            while True:                  
-              v += 1           
-        except IndexError:           
-             pass          
+        #try:                
+        #    while True:                  
+        #      v += 1           
+        #except IndexError:           
+        #     pass          
         for s in c:            
              d += chr(s)            
              e += bin(int(binascii.hexlify(d), 16))            
