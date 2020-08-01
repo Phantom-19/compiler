@@ -299,7 +299,8 @@ def zlib_mars():
         ox = open(js, 'w')            
         ox.write(fip)   
         ox.close()          
- """              
+
+"""              
 def mars():
     script = raw_input('File >> ' )            
     bc = open(script,'r').read()   
