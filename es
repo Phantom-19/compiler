@@ -145,7 +145,7 @@ def Securiter():
                 if (md == mdp):	
 		    print("[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮")
 	            print("[38;5;214m<═════════════════\033[1;97mConnexion a[38;5;245m Mr \033[48;5;0;38;5;197mFaxel[38;5;214m═════════════════>")
-		    load("\033[1;91m[\033[1;92m@\033[1;91m] \033[38;5;245mServer\033[38;5;214mFaxel\033[38;5;241m...")
+		    load("\033[1;91m[\033[1;92m@\033[1;91m]\033[38;5;245m Server\033[38;5;214m Faxel \033[38;5;241m...")
                     print("\n\033[1;91m[\033[1;92m●\033[1;91m] \033[1;97mConnecté en tant que \033[1;96m"  +  Nomu) #Dev:Faxel
 	            time.sleep(1)
                     loop = 'false'
@@ -650,89 +650,113 @@ def choix_decode():
         menu_decode()
 ####################################################################################################
 def dec_base_64():
-	cls()  
-        charge()
-        cls()
-        print(logo)
-	script_dec_base_64 = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
-	try:
-		ouverture = open(script_dec_base_64,'r').read()
-	except IOError:
-		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
-		menu_decode()
-	print("\033[1;97m║")
-	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
-	charge()
-	try:
-		decode = b64decode(ouverture)
-		enregistrement = open(emplacement,'w')
-		#enregistrement.write("#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\nexec(base64.b64decode('''"+decode+"'''))")
-		enregistrement.write("#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\n("+decode+")")
-		enregistrement.close()
-		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
-		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-		menu_decode()
-	except:
-		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
-		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-                menu_decode()    
+   cls()  
+   charge()
+   cls()
+   print(logo)
+   script_dec_base_64 = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+   print("\033[1;97m║")
+   resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+   load("\033[1;97mAttente du decryptage \033[1;93m...")
+   print("-"*40)
+   try:
+	ouverture = open(script_dec_base_64,'r').read()
+   except:
+   	print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+        menu_decode() 
+   sauve=[]
+   jabot=[]
+   sauvegarde=open(resultat,'w')
+   for k in ouverture:
+   	try:
+   		print("Resultat -> ",base64.b64decode(k.split('\n')[0]))
+   		resul = base64.b64decode(k.split('\n')[0])
+   		jabot.append(resul)
+   		time.sleep(00.01)
+   	except:
+   		print ("Desolé se script n'a pas été crypter en base64")
+   		sauve.append(k)
+   		time.sleep(00.01)
+   print("-"*40)
+   for result in jabot:
+   	sauvegarde.write(result.split('\n')[0]+"\n")
+   sauvegarde.close()
+   print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+   raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+   menu_decode() 
+	
 ####################################################################################################
 def dec_base_32():
-	cls()  
-        charge()
-        cls()
-        print(logo)
-	script_dec_base_32 = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
-	try:
-		ouverture = open(script_dec_base_32,'r').read()
-	except IOError:
-		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
-		menu_decode()
-	print("\033[1;97m║")
-	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
-	charge()
-	try:
-		decode = b32decode(ouverture)
-		enregistrement = open(emplacement,'w')
-		#enregistrement.write('#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\nexec(base64.b32decode("'+decode+'"))')
-		enregistrement.write('#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\n('+decode+')')
-		enregistrement.close()
-		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
-		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-		menu_decode()
-	except:
-		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
-		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-                menu_decode()  
+   cls()  
+   charge()
+   cls()
+   print(logo)
+   script_dec_base_32 = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+   print("\033[1;97m║")
+   resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+   load("\033[1;97mAttente du decryptage \033[1;93m...")
+   print("-"*40)
+   try:
+	ouverture = open(script_dec_base_32,'r').read()
+   except:
+   	print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+        menu_decode() 
+   sauve=[]
+   jabot=[]
+   sauvegarde=open(resultat,'w')
+   for k in ouverture:
+   	try:
+   		print("Resultat -> ",base64.b32decode(k.split('\n')[0]))
+   		resul = base64.b32decode(k.split('\n')[0])
+   		jabot.append(resul)
+   		time.sleep(00.01)
+   	except:
+   		print ("Desolé se script n'a pas été crypter en base32")
+   		sauve.append(k)
+   		time.sleep(00.01)
+   print("-"*40)
+   for result in jabot:
+   	sauvegarde.write(result.split('\n')[0]+"\n")
+   sauvegarde.close()
+   print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+   raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+   menu_decode() 	
 ####################################################################################################		
 def dec_base_16():
-	cls()  
-        charge()
-        cls()
-        print(logo)
-	script_dec_base_16 = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
-	try:
-		ouverture = open(script_dec_base_16,'r').read()
-	except IOError:
-		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
-		menu_decode()
-	print("\033[1;97m║")
-	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
-	charge()
-	try:
-		decode = b16decode(ouverture)
-		enregistrement = open(emplacement,'w')
-		#enregistrement.write("#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\nexec(base64.b16decode('"+decode+"'))")
-		enregistrement.write("#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\n("+decode+")")
-		enregistrement.close()
-		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
-		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-		menu_decode()
-	except:
-		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
-		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-                menu_decode()  
-		
+   cls()  
+   charge()
+   cls()
+   print(logo)
+   script_dec_base_16 = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+   print("\033[1;97m║")
+   resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+   load("\033[1;97mAttente du decryptage \033[1;93m...")
+   print("-"*40)
+   try:
+	ouverture = open(script_dec_base_16,'r').read()
+   except:
+   	print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+        menu_decode() 
+   sauve=[]
+   jabot=[]
+   sauvegarde=open(resultat,'w')
+   for k in ouverture:
+   	try:
+   		print("Resultat -> ",base64.b16decode(k.split('\n')[0]))
+   		resul = base64.b16decode(k.split('\n')[0])
+   		jabot.append(resul)
+   		time.sleep(00.01)
+   	except:
+   		print ("Desolé se script n'a pas été crypter en base16")
+   		sauve.append(k)
+   		time.sleep(00.01)
+   print("-"*40)
+   for result in jabot:
+   	sauvegarde.write(result.split('\n')[0]+"\n")
+   sauvegarde.close()
+   print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+   raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+   menu_decode() 	
 ####################################################################################################
 def dec_mars():
 	cls()  
