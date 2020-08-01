@@ -1325,7 +1325,7 @@ def Encodage_Hex_Join():
    print("\033[1;97m║")
    resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m") 
    ouverture_1 = open(script_Hex).read()
-   verife_hex = binascii.hexlify(ouverture)
+   verife_hex = binascii.hexlify(ouverture_1)
    compression_premiere = '#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , binascii, base64 , sys\n\nexec("{}").decode("hex")'.format(verife_hex)
    enregistrement_premier = open(resultat, 'w')
    enregistrement_premier.write(compression_premiere)
