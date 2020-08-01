@@ -134,7 +134,7 @@ def essai2():
                 p.append(ord(l))
             for b in p:
                 n.append('f' * b)
-            fin = '#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\n\nexec("".join([chr(len(i)) for i in d]))\nd={}'.format(n)
+            fin = '#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\n\nd={}\nexec("".join([chr(len(i)) for i in d]))'.format(n)
             bp = open(res, 'w')
             bp.write(fin)
             bp.close()
@@ -178,7 +178,7 @@ def marshal():
       #debut = marshal.dumps(compresse)             
       fin = repr(compresse)             
       s = open(resultat, 'w')             
-      s.write('#Compile Faxel\n#Twitter https://twitter.com/Faxel2020\nimport marshal\nexec(marshal.loads(' + str(fin) + '))')         
+      s.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport marshal\nexec(marshal.loads(' + str(fin) + '))')         
       s.close() 
  
 def zlib_mars():
@@ -194,7 +194,7 @@ def zlib_mars():
         u.append(zlib.compress(marshal.dumps(str(c))))              
     #for p in u:         
         #o.append(marshal.dumps(u))         
-        fip = '#Compile Faxel\n#Twitter https://twitter.com/Faxel2020\nimport marshal\nimport zlib\nd={}\nexec("".join([chr(int(zlib.decompress(marshal.loads(i)))) for i in d]))'.format(u)            
+        fip = '#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport marshal\nimport zlib\nd={}\nexec("".join([chr(int(zlib.decompress(marshal.loads(i)))) for i in d]))'.format(u)            
         ox = open(js, 'w')            
         ox.write(fip)   
         ox.close()          
