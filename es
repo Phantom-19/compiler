@@ -20,44 +20,41 @@ except Exception as e:
 try:
     import zipfile
 except ImportError:
-    print '[*] pip install zipfile'
-    print '   [-] you need to install zipfile Module'
-    sys.exit()
+    print ('---------------------------------------------------'
+    os.system('pip2 install zipfile')
 import cookielib, binascii, random, json
 from urlparse import urlparse
 from multiprocessing.dummy import Pool as ThreadPool
 ####################################################################################################
 try:
-    import uncompyle6
-except ImportError:
-    print '---------------------------------------------------'
-    print '[*] pip install uncompyle6'
-    print '   [-] you need to install uncompyle6 Module'
-    sys.exit()
-####################################################################################################
-try:
     import requests
 except ImportError:
-    print '---------------------------------------------------'
-    print '[*] pip install requests'
-    print '   [-] you need to install requests Module'
-    sys.exit()
+    print ('---------------------------------------------------'
+    os.system('pip2 install requests')
 ####################################################################################################
 try:
     import tqdm
-except ImportError:
-    print '---------------------------------------------------'
-    print '[*] pip install tqdm'
-    print '   [-] you need to install tqdm Module'
-    sys.exit()
+except ImportError:)
+    print ('---------------------------------------------------'
+    os.system('pip2 install tqdm')
 ####################################################################################################
 try:
     from passlib.hash import phpass
 except ImportError:
-    print '---------------------------------------------------'
-    print '[*] pip install passlib'
-    print '   [-] you need to install passlib Module'
-    sys.exit()
+    print ('---------------------------------------------------')
+    os.system('pip2 install passlib')
+####################################################################################################
+try:
+    import mechanize
+except ImportError:
+    print ('---------------------------------------------------')
+    os.system('pip2 install mechanize')
+####################################################################################################
+try:
+    import youtube_dl
+except ImportError:
+    print ('---------------------------------------------------')
+    os.system('pip2 install youtube_dl')
 ####################################################################################################
 # -Automatisation-#
 def mael(f):
