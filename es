@@ -1,16 +1,18 @@
 #!/usr/bin/python2
 #coding=utf-8
+#cd /data/data/com.termux/files/usr/bin/.session
 ################################# Credits ##########################################################
 # Le credit pour ce code va a Mr Faxel
 # Si vous voulez prendre Le credit pour ce code Voyez Faster Axel.
 ####################################################################################################
 # -Importation des modules-#
-import os,time,sys,fileinput,base64,datetime,random,requests,mechanize, marshal, __builtin__ as pp,zlib 
+import os,time,sys,fileinput,base64,datetime,random,requests,mechanize, marshal, __builtin__ as pp,zlib
+import bs4, interpreter,pyconcrete	
 import marshal as mc
 from base64 import *
 from getpass import getpass
 from sys import stdout
-import subprocess as sp, sys, os, marshal, re, time, json, bs4, random, requests
+import subprocess as sp, sys, os, marshal, re, time, json, bs4, random, requests,py_compile
 try:
     from uncompyle6.main import decompile
 except Exception as e:
@@ -77,6 +79,7 @@ def load(word):
 # -Module uncompyle6-#
 def pip_m():
     os.system('pip2 install uncompyle6')
+    os.system('pip2 install pyconcrete')
 ####################################################################################################
 # -Permet de supprimer tous les sous-script du script en question-#
 def clean_remove():
@@ -190,6 +193,7 @@ def menu():
     print("\033[1;97m║ \033[1;91m[\033[1;96m4.\033[1;91m]\033[38;5;115m Signaler un compte FB \033[1;97m   ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96m5.\033[1;91m]\033[38;5;136m Danger \033[1;97m(\033[1;91mremove\033[1;97m)          ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96m6.\033[1;91m]\033[38;5;111m Menu Zlib + Marshal+ Base\033[1;97m║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m7.\033[1;91m]\033[38;5;116m Menu \033[38;5;214mFaxel\033[38;5;116m Cryp complexe \033[1;97m║")
     print("\033[1;97m║ \033[1;91m[\033[1;96mS.\033[1;91m]\033[48;5;0;38;5;197m Signaler un bug       \033[1;97m   ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96mF.\033[1;91m]\033[38;5;112m Féliciter Faxel       \033[1;97m   ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[48;5;0;38;5;192m Menu decodage des bases\033[1;97m  ║")
@@ -214,6 +218,8 @@ def choix():
         clean_remove()
     elif dmd =="6":
         menu_zlib_mars()
+    elif dmd =="7":
+        menu_Faxel_cryptage()
     elif dmd =="s" or dmd =="S":
         signal_bug()
     elif dmd =="f" or dmd =="F":
@@ -623,6 +629,7 @@ def menu_decode():
     print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[48;5;0;38;5;193m Decodage base16   \033[1;97m       ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96m4.\033[1;91m]\033[48;5;0;38;5;194m Decodage marshall \033[1;97m       ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96m5.\033[1;91m]\033[48;5;0;38;5;193m Decryptage bash   \033[1;97m       ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m6.\033[1;91m]\033[48;5;0;38;5;193m Facebook Hack     \033[1;97m       ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[48;5;0;38;5;192m Menu general      \033[1;97m       ║")
     print("\033[1;97m╚"+30*"═"+1*"═╝")   
     print("\033[1;97m║")
@@ -642,6 +649,8 @@ def choix_decode():
         dec_mars()
     elif dmd =="5":
         decryptage_bash()
+   elif dmd =="6":
+        connexion_facebook()
     elif dmd =="m" or dmd =="M":
         menu()
     else: 
@@ -674,17 +683,23 @@ def dec_base_64():
    		jabot.append(resul)
    		time.sleep(00.01)
    	except:
-   		print ("Desolé se script n'a pas été crypter en base64")
+		print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer") 
+   		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;97m Desolé se script n'a pas été crypter en base64")
    		sauve.append(k)
    		time.sleep(00.01)
    print("-"*40)
    for result in jabot:
    	sauvegarde.write(result.split('\n')[0]+"\n")
    sauvegarde.close()
-   print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+   print(" Réussite totale:",len(jabot))
+   print(" Emplacement :",sauvegarde)
+   print("-"*40)
+   print(" Echec:",len(sauve))
+   for t in sauve:
+	   print ("Echec:",t.replace('\n',''))
+   print("-"*40)
    raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-   menu_decode() 
-	
+   menu_decode()
 ####################################################################################################
 def dec_base_32():
    cls()  
@@ -719,8 +734,15 @@ def dec_base_32():
    	sauvegarde.write(result.split('\n')[0]+"\n")
    sauvegarde.close()
    print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+   print(" Réussite totale:",len(jabot))
+   print(" Emplacement :",sauvegarde)
+   print("-"*40)
+   print(" Echec:",len(sauve))
+   for t in sauve:
+	   print ("Echec:",t.replace('\n',''))
+   print("-"*40)
    raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-   menu_decode() 	
+   menu_decode()	
 ####################################################################################################		
 def dec_base_16():
    cls()  
@@ -755,8 +777,15 @@ def dec_base_16():
    	sauvegarde.write(result.split('\n')[0]+"\n")
    sauvegarde.close()
    print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+   print(" Réussite totale:",len(jabot))
+   print(" Emplacement :",sauvegarde)
+   print("-"*40)
+   print(" Echec:",len(sauve))
+   for t in sauve:
+	   print ("Echec:",t.replace('\n',''))
+   print("-"*40)
    raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-   menu_decode() 	
+   menu_decode()	
 ####################################################################################################
 def dec_mars():
 	cls()  
@@ -777,7 +806,7 @@ def dec_mars():
 	        repare = repare.replace('\r', 'n')
 	        if repare and repare[(-1)] != '\n':
 	            repare = repare + '\n'
-	        decompilage = pp.decompile(repare, '<r>', 'exec')
+	        decompilage = pp.decompile(repare, '<faxel>', 'exec')
 	        decompte = marshal.dumps(compilage)
 		enregistrement = open(emplacement,"w")
 		enregistrement.write("#Decompiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal\n("+repr(decompte)+")")
@@ -804,10 +833,8 @@ def decryptage_bash():
        ouverture = open(resultat,'w')
        ouverture.write(fichier_de_fin)
        ouverture.close()
-       #os.system("touch tes.sh")
-       #os.system("bash " + resultat + " > tes.sh")
-       #os.remove(resultat)
-       #os.system("mv -f tes.sh " + resultat)
+       os.system("touch tes.sh")
+       os.system("bash " + resultat + " > tes.sh")
        print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;92m Terminer..")
        raw_input('\n\x1b[1;91m[ \x1b[1;97mRetour \x1b[1;91m]')		
        menu_decode()
@@ -819,6 +846,32 @@ def decryptage_bash():
        print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;94m Fichier introuvable!")
        raw_input('\n\x1b[1;91m[ \x1b[1;97mRetour \x1b[1;91m]')		
        menu_decode()
+####################################################################################################
+def connexion_facebook():
+    cls()
+    print(logo)
+    requete = requests.Session()
+    print("\033[1;97m║")
+    nomu = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Connectez-vous à votre Fb \033[1;91m [\033[1;93m+\033[1;91m]\033[1;97m Nom d'utilisateur \033[1;91m▶▶ \033[1;97m ")
+    print("\033[1;97m║")
+    mdp = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Mot de passe \033[1;91m▶▶ \033[1;97m ")
+    load("\033[1;97mRedirection vers compte facebook\033[1;93m...")
+    requete_1 = requete.post('https://mbasic.facebook.com/login', data={'email': nomu, 'pass': mdp}).url
+    if 'save-device' in requete_1 or 'm_sess' in requete_1:
+        i = json.dumps({'email': nomu, 'pass':mdp, 
+           'name': bs4.BeautifulSoup(requete.get('https://mbasic.facebook.com/me').text, features='html.parser').find('title').text})
+        open('config/config.json', 'w').write(i)
+        print('\033[1;91m [\033[1;93m*\033[1;91m]\033[1;92m Connexion réussie..')
+        cls()
+	menu()
+    if 'checkpoint' in requete_1 or 'challange' in requete_1:
+        print("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Ton compte est bloqué! (Hit Session) Checkpoint\n\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Veuillez vous connecter manuellement et autoriser l'entrée via le navigateur")
+        raw_input('\n\033[1;91m [\033[1;93m*\033[1;91m]\033[1;97m Appuyez à nouveau sur Entrée...')
+        menu_decode()
+    else:
+        print('\033[1;91m [\033[1;93m!\033[1;91m]\033[1;94m Échec de la connexion.')
+        raw_input('\n\033[1;91m [\033[1;93m*\033[1;91m]\033[1;97m Appuyez à nouveau sur Entrée pour...')
+        menu_decode()
 #################################################################################################### 
 ####################################################################################################
 def menu_bash_ou_wordliste():
@@ -960,7 +1013,7 @@ def menu_zlib_mars():
      print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;125m Marshall + Base32     \033[1;97m   ║")  
      print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[38;5;113m Marshall + Base16     \033[1;97m   ║") 
      print("\033[1;97m║ \033[1;91m[\033[1;96m4.\033[1;91m]\033[38;5;136m Marshall + Zlib       \033[1;97m   ║") 
-     print("\033[1;97m║ \033[1;91m[\033[1;96m5.\033[1;91m]\033[38;5;241m Marshall + Zlib + Base\033[1;97m   ║") 
+     print("\033[1;97m║ \033[1;91m[\033[1;96m5.\033[1;91m]\033[38;5;241m Marshall + Zlib + Base\033[1;97m   ║")
      print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[38;5;112m Menu general          \033[1;97m   ║") 
      print("\033[1;97m╚"+30*"═"+1*"═╝")   
      print("\033[1;97m║")
@@ -1087,7 +1140,7 @@ def mars_zlib():
 		compresse = zlib.compress(lecture)# base64.b16encode(mc.dumps(compile(ouverture, '<string>', 'exec')))
 		enregistrement = open(resultat,'w')
 		#enregistrement.write('#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\nexec(marshal.loads(base64.b16decode("'+compresse+'")))')
-                enregistrement.write('#Compile Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib\nexec(zlib.decompress(' + repr(fin) + '))')
+                enregistrement.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib\nexec(zlib.decompress(' + repr(fin) + '))')
 		enregistrement.close()
 		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
@@ -1126,37 +1179,178 @@ def mars_zlib_base():
 		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
                 mars_zlib_base() 
 ####################################################################################################
-if __name__ == "__main__":
-	Identification()	
 ####################################################################################################
-"""
-# cd /data/data/com.termux/files/usr/bin/.session
-import re, os, bs4, sys, time, json, random, requests, interpreter, subprocess
+def menu_Faxel_cryptage():
+     cls()
+     print(logo)
+     print("\033[1;97m╔"+30*"═"+1*"═╗")
+     print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;241m Cryptage Join         \033[1;97m   ║")
+     print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;125m Cryp+Bin+Base+Join    \033[1;97m   ║") 
+     print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[38;5;136m Menu encodage HEX     \033[1;97m   ║")
+     print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[38;5;112m Menu general          \033[1;97m   ║") 
+     print("\033[1;97m╚"+30*"═"+1*"═╝")   
+     print("\033[1;97m║")
+     choix_Faxel_cryptage()
+def choix_Faxel_cryptage():    
+    dmd = raw_input("\033[1;97m╚═\033[1;31m▶\033[38;5;245m Mr \033[38;5;221mFaxel \033[1;91m▶▶▶ \033[1;96m")
+    if dmd =="":
+        print ("\n\t\033[1;91m[!] Remplissez correctement ")
+	menu_Faxel_cryptage()
+    elif dmd =="1":
+        Cryptage_join()
+    elif dmd =="2":
+        Menu_Hex() 
+    elif dmd =="3":
+        Menu_Hex() 
+    elif dmd =="m" or dmd =="M":
+        menu()
+    else: 
+        print('\n\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m '+dmd+' \x1b[1;91mindisponible')
+        #raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+        menu_Faxel_cryptage()
+####################################################################################################
+def Cryptage_join():
+   cls()  
+   charge()
+   cls()
+   print(logo)
+   script_Join = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+   print("\033[1;97m║")
+   resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")        
+   ouverture = open(script_Join).read()
+   mael = []
+   faxel = []
+   for x in ouverture:
+       mael.append(ord(x))
+   for a in mael:
+       faxel.append('f' * a)
+   compression = '#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , binascii, base64 , sys\nd={}\n\nexec("".join([chr(len(i)) for i in d]))'.format(faxel)
+   enregistrement = open(resultat, 'w')
+   enregistrement.write(compression)
+   enregistrement.close()
+   print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage reussi")
+   raw_input('\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+   menu_Faxel_cryptage() 
+####################################################################################################
+def Cryp_Bin_Base_Join():
+	    cls()  
+            charge()
+            cls()
+            print(logo)
+	    script_Hex = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	    print("\033[1;97m║")
+            resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m") 
+            ouverture_1 = open(script_Hex).read()  
+            encode_base_32 = base64.b32encode(ouverture_1)
+            a = []
+            b = []
+            c = []
+            d = ''
+            e = ''
+            for x in encode_base_32:
+                a.append(ord(x))
+            z = 0
+            while True:
+                if z >= len(a) / 2:
+                    break
+                z += 1
+            v = len(a) / 2 + 1
+            try:
+                while True:
+                    v += 1
+            except IndexError:
+                pass
+            for s in c:
+                d += chr(s)
+            e += bin(int(binascii.hexlify(d), 16))
+            sauve_1 = open(resultat, 'w')
+            sauve_1.write('import binascii,base64\ng = ' + str(b) + "\ns = '" + str(e) + "'" + "\neval(compile(base64.b32decode(''.join([chr(i) for i in g])+binascii.unhexlify('%x' % int(s, 2))),'<faxel>','exec'))")
+            sauve_1.close()
+            py_compile.compile(resultat)
+            ouverture2 = open(resultat + 'c').read()
+            sauve_2 = open(resultat, 'w')
+            sauve_2.write("#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport binascii, base64\n#REMARQUE : NE PAS MODIFIER SINON TOT OU TARD IL Y AURA UNE ERREUR FREQUENTE.\n\n" + ouverture2)
+            sauve_2.close()	
+####################################################################################################	
+####################################################################################################
+def Menu_Hex():
+     cls()
+     print(logo)
+     print("\033[1;97m╔"+30*"═"+1*"═╗")
+     print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;241m Cryptage Hex          \033[1;97m   ║")
+     print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;125m Cryptage Hex + Join   \033[1;97m   ║") 
+     print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[38;5;112m Menu Faxel cryptage   \033[1;97m   ║") 
+     print("\033[1;97m╚"+30*"═"+1*"═╝")   
+     print("\033[1;97m║")
+     choix_hex()
+def choix_hex():    
+    dmd = raw_input("\033[1;97m╚═\033[1;31m▶\033[38;5;245m Mr \033[38;5;221mFaxel \033[1;91m▶▶▶ \033[1;96m")
+    if dmd =="":
+        print ("\n\t\033[1;91m[!] Remplissez correctement ")
+	Menu_Hex()
+    elif dmd =="1":
+        Encodage_Hex()
+    elif dmd =="2":
+        Encodage_Hex_Join() 
+    elif dmd =="m" or dmd =="M":
+        menu_Faxel_cryptage()
+    else: 
+        print('\n\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m '+dmd+' \x1b[1;91mindisponible')
+        #raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+        Menu_Hex()
+####################################################################################################
+def Encodage_Hex():
+   cls()  
+   charge()
+   cls()
+   print(logo)
+   script_Hex = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+   print("\033[1;97m║")
+   resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m") 
+   ouverture = open(script_Hex).read()
+   verife_hex = binascii.hexlify(ouverture)
+   compression = '#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , binascii, base64 , sys\n\nexec("{}").decode("hex")'.format(verife_hex)
+   enregistrement = open(resultat, 'w')
+   enregistrement.write(compression)
+   enregistrement.close()
+   print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage reussi")
+   raw_input('\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+   Menu_Hex() 
+####################################################################################################	
+def Encodage_Hex_Join():
+   cls()  
+   charge()
+   cls()
+   print(logo)  
+   script_Hex = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+   print("\033[1;97m║")
+   resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m") 
+   ouverture_1 = open(script_Hex).read()
+   verife_hex = binascii.hexlify(ouverture)
+   compression_premiere = '#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , binascii, base64 , sys\n\nexec("{}").decode("hex")'.format(verife_hex)
+   enregistrement_premier = open(resultat, 'w')
+   enregistrement_premier.write(compression_premiere)
+   enregistrement_premier.close()
+   mael = []
+   faxel = []
+   ouverture_2 = open(resultat).read()
+   for l in ouverture_2:
+       mael.append(ord(l))
+   for b in mael:
+       faxel.append('f' * b)
+   compression_final = '#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , binascii, base64 , sys\n\nd={}\nexec("".join([chr(len(i)) for i in d]))'.format(faxel)
+   enregistrement_final = open(resultat, 'w')
+   enregistrement_final.write(compression_final)
+   enregistrement_final.close()
+   py_compile.compile(resultat)
+   print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage reussi")
+   raw_input('\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+   Menu_Hex() 
+####################################################################################################
 
-def login():
-    req = requests.Session()
-    e = raw_input('[!] No Account Detected\n[*] Login Your Fb\n[?] Username: ')
-    p = raw_input('[?] Password: ')
-    print '[*] Login ...'
-    s = req.post('https://mbasic.facebook.com/login', data={'email': e, 'pass': p}).url
-    if 'save-device' in s or 'm_sess' in s:
-        i = json.dumps({'email': e, 'pass': p, 
-           'name': bs4.BeautifulSoup(req.get('https://mbasic.facebook.com/me').text, features='html.parser').find('title').text})
-        open('config/config.json', 'w').write(i)
-        print '[*] Login Success..'
-        time.sleep(2)
-        os.system('clear')
-        os.system('python2 asu.py')
-    if 'checkpoint' in s or 'challange' in s:
-        print '[!] Akun Mu Terkunci! (Kena Sesi) Checkpoint\n[!] Silahkan login manual dan izinkan masuk via browser'
-        raw_input('[*] Press enter to again...')
-        os.system('clear')
-        login()
-    else:
-        print '[!] Login Failed.'
-        raw_input('[*] Press enter to again...')
-        os.system('clear')
-        login()
-import pyconcrete	
-pip install pyconcrete
-"""
+
+
+####################################################################################################
+if __name__ == "__main__":
+       Identification()	
+####################################################################################################
