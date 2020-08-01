@@ -649,7 +649,7 @@ def choix_decode():
         dec_mars()
     elif dmd =="5":
         decryptage_bash()
-   elif dmd =="6":
+    elif dmd =="6":
         connexion_facebook()
     elif dmd =="m" or dmd =="M":
         menu()
