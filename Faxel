@@ -200,7 +200,8 @@ def zlib_mars():
                
 def mars():
     script = raw_input('File >> ' )            
-    bc = open(script,'r').read()            
+    bc = open(script,'r').read()   
+    xs = binascii.hexlify(bc)
     js = raw_input('Resultat >> ' )         
     a = []          
     b = []           
@@ -208,9 +209,8 @@ def mars():
     xz = []  
     xh = pp.dumps(compile(bc, '<Faxel>', 'exec')  
     #mc.dumps(compile(lecture, '<r>', 'exec')) 
-    #pg = marshal.dumps(xh) 
-    te = binascii.hexlify(xh)          
-    for g in te:               
+    #pg = marshal.dumps(xh)          
+    for g in xs:               
           a.append(ord(g) - 9)           
     for lx in range(len(a)):  
           b.append(randint(1, 120))          
@@ -230,6 +230,7 @@ def mars():
 def binnar():
     script = raw_input('File >> ')           
     bc = open(script).read() 
+    
     js = raw_input('Resultat >> ' )      
     gx = base64.b32encode(bc)         
     a = []           
