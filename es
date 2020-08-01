@@ -145,8 +145,8 @@ def Securiter():
                 if (md == mdp):	
 		    print("[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮")
 	            print("[38;5;214m<═════════════════\033[1;97mConnexion a[38;5;245m Mr \033[48;5;0;38;5;197mFaxel[38;5;214m═════════════════>")
-		    charge()
-                    print ("\n\033[1;91m[\033[1;92m●●\033[1;91m] \033[1;97mConnecté en tant que \033[1;96m"  +  Nomu) #Dev:Faxel
+		    load("\033[1;91m[\033[1;92m@\033[1;91m] \033[38;5;245mServer\033[38;5;214mFaxel\033[38;5;241m...")
+                    print("\n\033[1;91m[\033[1;92m●\033[1;91m] \033[1;97mConnecté en tant que \033[1;96m"  +  Nomu) #Dev:Faxel
 	            time.sleep(1)
                     loop = 'false'
 		    menu()			
