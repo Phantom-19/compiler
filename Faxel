@@ -105,8 +105,10 @@ def Faxel():
      lecture = open(script).read()
      code = base64.b64encode(lecture)    
      save = open(resultat, 'w')
-     save.write("#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport base64\neval(compile(base64.b64decode(code), '<string>', 'exec'))")
+     #save.write("#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport base64\n('code ="""+ code +"""')\neval(compile(base64.b64decode(code), "<Faxel>", 'exec'))")
+     save.write("#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport base64\n{}\neval(compile(base64.b64decode(code), '<Faxel>', 'exec')).format(code)")
      save.close()
+     
 """
     script = raw_input(" Votre script : ")
     resultat = raw_input(" Resultat : ")
