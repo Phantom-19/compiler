@@ -102,7 +102,7 @@ def Faxel():
     script = raw_input(" Votre script : ")
     resultat = raw_input(" Resultat : ")
     lecture = open(script).read()
-    compresse = ("\\x" + "\\x".join("{0:x}".format(ord(script)) for script in script))
+    compresse = ("\\x" + "\\x".join("{0:x}".format(ord(lecture)) for lecture in lecture))
     print("\n shellcode =('" + compresse + "');exec(shellcode)")
     save = open(resultat, 'w')
     save.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport base64\nexec(shellcode("' + compresse +'"))')
