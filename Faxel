@@ -101,23 +101,24 @@ def essai2():
 	    ia = raw_input('File >> ')
             bc = open(ia).read()
             xs = binascii.hexlify(bc)
-            js = ia.replace('.py', '_enc.py')
+	    res = raw_input('Resultat >> ')
+            #js = ia.replace('.py', '_enc.py')
             fc = 'exec("{}").decode("hex")'.format(xs)
-            nk = open(js, 'w')
+            nk = open(res, 'w')
             nk.write(fc)
             nk.close()
 	    p = []
             n = []
-            gn = open(js).read()
+            gn = open(res).read()
             for l in gn:
                 p.append(ord(l))
             for b in p:
                 n.append('F' * b)
             fin = 'd={}\nexec("".join([chr(len(i)) for i in d]))'.format(n)
-            bp = open(js, 'w')
+            bp = open(res, 'w')
             bp.write(fin)
             bp.close()
-            py_compile.compile(js)
+            py_compile.compile(res)
 
 def marshal():
       script = raw_input('File >> ')    
