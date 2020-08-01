@@ -124,7 +124,7 @@ def mars():
 	#charge()
 	try:
 		#depot = ouverture.replace('\r\n', '\n')
-		depot = ouverture.("\\x" + "\\x".join("{0:x}".format(ord(depot)) for depot in depot))
+		depot = ouverture.replace("\\x" + "\\x".join("{0:x}".format(ord(depot)) for depot in depot))
 		#compresse = ("\\x" + "\\x".join("{0:x}".format(ord(depot)) for depot in depot))
 	        depot = compresse.replace('\r', 'n')
 	        compilage = pp.compile(depot, '<r>', 'exec')
