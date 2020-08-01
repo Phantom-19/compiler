@@ -43,7 +43,7 @@ def select():
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
        menu()
   elif choisir == "4" or choisir == "04":
-       essai()   
+       binnar()   
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
        menu()
   elif choisir == "5" or choisir == "05":
@@ -55,7 +55,19 @@ def select():
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
        menu()
   elif choisir == "7" or choisir == "07":
+       essai()   
+       raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
+       menu()
+  elif choisir == "8" or choisir == "08":
+       essai1()   
+       raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
+       menu()
+  elif choisir == "9" or choisir == "09":
        essai2()   
+       raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
+       menu()
+  elif choisir == "10":
+       mars_base32()   
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
        menu()
   elif choisir == "q" or choisir == "Q":
@@ -64,6 +76,7 @@ def select():
        print ('\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m' + choisir + ' \x1b[1;91mindisponible')
        raw_input('\033[1;91m [\033[1;97m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
        menu()
+
 def essai():
    file = raw_input('File >> ')
    sur = raw_input('Enreg >> ')        
@@ -74,14 +87,16 @@ def essai():
        u.append(ord(x))
    for a in u:
        c.append('n' * a)
-   fi = 'd={}\nexec("".join([chr(len(i)) for i in d]))'.format(c)
+   fi = '#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\nimport marshal;import zlib\nd={}\nexec("".join([chr(len(i)) for i in d]))'.format(c)
    og = open(sur, 'w')
    og.write(fi)
    og.close()
 		 #out = file.replace(sur, '') + '_enc.py
-def  essai1():           
+def  essai1():  
+	
             ia = raw_input('File >> ')
             a = open(ia).read()
+	    res = raw_input('Resultat >> ')
             z = []
             u = []
             for x in a:
@@ -91,9 +106,9 @@ def  essai1():
             o = []
             for p in u:
                 o.append(marshal.dumps(p))
-            fip = 'import marshal;import zlib\nd={}\nexec("".join([chr(int(zlib.decompress(marshal.loads(i)))) for i in d]))'.format(o)
-            js = ia.replace('.py', '_enc.py')
-            ox = open(js, 'w')
+            fip = '#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport base64\nimport marshal;import zlib\nd={}\nexec("".join([chr(int(zlib.decompress(marshal.loads(i)))) for i in d]))'.format(o)
+            #js = ia.replace('.py', '_enc.py')
+            ox = open(res, 'w')
             ox.write(fip)
             ox.close()
 	
@@ -102,7 +117,6 @@ def essai2():
             bc = open(ia).read()
             xs = binascii.hexlify(bc)
 	    res = raw_input('Resultat >> ')
-            #js = ia.replace('.py', '_enc.py')
             fc = 'exec("{}").decode("hex")'.format(xs)
             nk = open(res, 'w')
             nk.write(fc)
@@ -113,13 +127,42 @@ def essai2():
             for l in gn:
                 p.append(ord(l))
             for b in p:
-                n.append('F' * b)
-            fin = 'd={}\nexec("".join([chr(len(i)) for i in d]))'.format(n)
+                n.append('f' * b)
+            fin = '#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\nd={}\nexec("".join([chr(len(i)) for i in d]))'.format(n)
             bp = open(res, 'w')
             bp.write(fin)
             bp.close()
             py_compile.compile(res)
 
+#def essai3():
+	
+def mars_base32():
+	#cls()  
+        #charge()
+        #cls()
+        #print(logo)
+	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	try:
+		ouverture = open(script_mars,'r').read()
+	except IOError:
+		print ("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Script introuvable")
+		#menu_zlib_mars()
+	print("\033[1;97m║")
+	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
+	#charge()
+	try:
+		compresse = base64.b32encode(mc.dumps(compile(ouverture, '<string>', 'exec')))
+		enregistrement = open(emplacement,'w')
+		enregistrement.write("#Compiler par Faxel\n#Twitter : https://twitter.com/Faxel2020\nimport marshal , base64\nexec(marshal.loads(base64.b32decode('"+compresse+"')))")
+	             #\nimport marshal\nexec(marshal.loads("+repr(vidage)+"))")
+		enregistrement.close()
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		#menu_zlib_mars()
+	except:
+		print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+                #menu_zlib_mars()	
 def marshal():
       script = raw_input('File >> ')    
       lecture = open(script,'r').read()  
@@ -217,6 +260,19 @@ def zlib_s():
        s = open(resultat, 'w')               
        s.write('#Compile Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib\nexec(zlib.decompress(' + repr(fin) + '))')                
        s.close()
+
+
+
+
+
+
+
+
+
+
+
+
+
 """
 def dec_base64():
    script = raw_input(" Entrer le script a decrypter > ")
