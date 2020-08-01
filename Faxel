@@ -21,6 +21,7 @@ def menu():
   print("\033[1;97m║\033[1;93m3.\033[1;95m Marshal2 encodage        \033[1;97m║")
   print("\033[1;97m║\033[1;93m4.\033[1;96m Binaire  encodage        \033[1;97m║")
   print("\033[1;97m║\033[1;93m5.\033[1;97m Zlib     encodage     \033[1;92m√  \033[1;97m║")
+  print("\033[1;97m║\033[1;93m6.\033[1;97m Base64   decodage     \033[1;92m√  \033[1;97m║")	
   print("\033[1;97m║\033[1;93mQ.\033[1;91m Quitter                  \033[1;97m║")
   print("\033[1;97m╚════════════════════════════╝                ")
   print("\033[1;97m║")
@@ -49,6 +50,10 @@ def select():
        zlib_s()   
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
        menu()
+  elif choisir == "6" or choisir == "06":
+       dec_base64()   
+       raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
+       menu()
   elif choisir == "q" or choisir == "Q":
        exit()
   else: 
@@ -60,8 +65,8 @@ def marshal():
       script = raw_input('File >> ')    
       lecture = open(script,'r').read()  
       resultat = raw_input('Resultat >> ') 
-      compresse = marshal.compile(lecture, '<r>', 'exec')        
-      #debut = marshal.dumps(compresse)             
+      compresse = compile(lecture, '<r>', 'exec')        
+      debut = marshal.dumps(compresse)             
       fin = repr(compresse)             
       s = open(resultat, 'w')             
       s.write('#Compile Faxel\n#Twitter https://twitter.com/Faxel2020\nimport marshal\nexec(marshal.loads(' + str(fin) + '))')         
@@ -74,16 +79,16 @@ def zlib_mars():
     z = []            
     u = []  
     o = []  
-    for x in a:       
-          z.append(ord(x))   
-    for c in z:         
-          u.append(zlib.compress(str(c)))               
-    for p in u:         
-          o.append(marshal.dumps(p))         
-          fip = '#Compile Faxel\n#Twitter https://twitter.com/Faxel2020\nimport marshal\nimport zlib\nd={}\nexec("".join([chr(int(zlib.decompress(marshal.loads(i)))) for i in d]))'.format(o)            
-          ox = open(js, 'w')            
-          ox.write(fip)   
-          ox.close()          
+    #for x in a:       
+    z.append(ord(x))   
+    #for c in z:         
+    u.append(zlib.compress(str(c)))               
+    #for p in u:         
+    o.append(marshal.dumps(p))         
+    fip = '#Compile Faxel\n#Twitter https://twitter.com/Faxel2020\nimport marshal\nimport zlib\nd={}\nexec("".join([chr(int(zlib.decompress(marshal.loads(i)))) for i in d]))'.format(o)            
+    ox = open(js, 'w')            
+    ox.write(fip)   
+    ox.close()          
                
 def mars():
     script = raw_input('File >> ' )            
@@ -154,6 +159,33 @@ def zlib_s():
        s.write('#Compile Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib\nexec(zlib.decompress(' + repr(fin) + '))')                
        s.close()
 
+def dec_base64():
+   script = raw_input(" Entrer le script a decrypter > ")
+   resultat = raw_input(" Nommer le resultat > ")
+   print("Attente du decryptage ...")
+   print("-"*40)
+   try:
+   	ouverture = open(script).readlines()
+   except:
+   	print("N'a pas réussi à ouvrir la liste")
+   	exit()
+   sauve=[]
+   jabot=[]
+   sauvegarde=open(resultat,'w')
+   for k in ouverture:
+   	try:
+   		print("Resultat -> ",base64.b64decode(k.split('\n')[0]))
+   		resul = base64.b64decode(k.split('\n')[0])
+   		jabot.append(resul)
+   		sleep(00.01)
+   	except:
+   		print ("Desolé se script n'a pas été crypter en base64")
+   		sauve.append(k)
+   		sleep(00.01)
+   print("-"*40)
+   for result in jabot:
+   	sauvegarde.write(result.split('\n')[0]+"\n")
+   sauvegarde.close()
 
 if __name__ == "__main__":
       menu()
