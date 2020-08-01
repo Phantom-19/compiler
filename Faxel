@@ -66,7 +66,8 @@ def select():
        menu()
 def essai():
 	    file = raw_input('File >> ')
-            out = file.replace('.py', '') + '_enc.py'
+	    sur = raw_input('Enreg >> ')
+            #out = file.replace(sur, '') + '_enc.py'
             oa = open(file).read()
             u = []
             c = []
@@ -75,7 +76,7 @@ def essai():
             for a in u:
                 c.append('n' * a)
             fi = 'd={}\nexec("".join([chr(len(i)) for i in d]))'.format(c)
-            og = open(out, 'w')
+            og = open(sur, 'w')
             og.write(fi)
             og.close()
 		
