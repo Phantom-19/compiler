@@ -217,35 +217,42 @@ def mars():
     na.close()
 """	
 def binnar():
-    script = raw_input('File >> ')           
-    bc = open(script).read()     
-    js = raw_input('Resultat >> ' )      
-    gx = base64.b32encode(bc)         
-    a = []           
-    b = []          
-    c = []          
-    d = ''            
-    e = ''            
-    for x in gx:               
-        a.append(ord(x))           
-        z = 0            
-        while True:               
-           if z >= len(a) / 2:            
-               break             
-               z += 1            
-               v = len(a) / 2 + 1          
-        #try:                
-        #    while True:                  
-        #      v += 1           
-        #except IndexError:           
-        #     pass          
-        for s in c:            
-             d += chr(s)            
-             e += bin(int(binascii.hexlify(d), 16))            
-             f = open(js, 'w')            
-             f.write('#Compile Faxel\n#Twitter https://twitter.com/Faxel2020\nimport binascii,base64\ng = ' + str(b) + "\ns = '" + str(e) + "'" + "\neval(compile(base64.b32decode(''.join([chr(i) for i in g])+binascii.unhexlify('%x' % int(s, 2))),'<faxel>','exec'))") 
-             f.close()   
-
+            script_Hex = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
+	    print("\033[1;97m║")
+            resultat = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m") 
+            ouverture_1 = open(script_Hex).read()  
+            encode_base_32 = base64.b32encode(ouverture_1)
+            a = []
+            b = []
+            c = []
+            d = ''
+            e = ''
+            for x in encode_base_32:
+                a.append(ord(x))
+            z = 0
+            while True:
+                if z >= len(a) / 2:
+                    break
+                z += 1
+            v = len(a) / 2 + 1
+            try:
+                while True:
+                    v += 1
+            except IndexError:
+                pass
+            for s in c:
+                d += chr(s)
+            e += bin(int(binascii.hexlify(d), 16))
+            sauve_1 = open(resultat, 'w')
+            sauve_1.write('import binascii,base64\ng = ' + str(b) + "\ns = '" + str(e) + "'" + "\neval(compile(base64.b32decode(''.join([chr(i) for i in g])+binascii.unhexlify('%x' % int(s, 2))),'<faxel>','exec'))")
+            sauve_1.close()
+            py_compile.compile(resultat)
+            gb = open(resultat + 'c').read()
+            sauve_2 = open(resultat, 'w')
+            sauve_2.write("#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport binascii, base64\n#REMARQUE : NE PAS MODIFIER SINON TOT OU TARD IL Y AURA UNE ERREUR FREQUENTE.\n\n" + gb)
+            sauve_2.close()
+	
+	
 def zlib_s():
        script = raw_input('File >> ')     
        resultat = raw_input('Resultat >> ' ) 
