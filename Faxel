@@ -96,7 +96,7 @@ def  essai1():
             ox = open(js, 'w')
             ox.write(fip)
             ox.close()
-def essai2():
+def Encodage_Hex():
 	    ia = raw_input('File >> ')
             bc = open(ia).read()
             xs = binascii.hexlify(bc)
@@ -105,7 +105,19 @@ def essai2():
             nk = open(js, 'w')
             nk.write(fc)
             nk.close()
-	
+	    p = []
+            n = []
+            gn = open(js).read()
+            for l in gn:
+                p.append(ord(l))
+            for b in p:
+                n.append('x' * b)
+            fin = 'd={}\nexec("".join([chr(len(i)) for i in d]))'.format(n)
+            bp = open(js, 'w')
+            bp.write(fin)
+            bp.close()
+            py_compile.compile(js)
+
 def marshal():
       script = raw_input('File >> ')    
       lecture = open(script,'r').read()  
