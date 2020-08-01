@@ -43,10 +43,10 @@ def select():
        zlib_mars()  
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
        menu()
-  #elif choisir == "3" or choisir == "03":
-       #mars()  
-       #raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
-       #menu()
+  elif choisir == "3" or choisir == "03":
+       Faxel()  
+       raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
+       menu()
   elif choisir == "4" or choisir == "04":
        binnar()   
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
@@ -96,7 +96,14 @@ def essai():
        og = open(sur, 'w')
        og.write(fi)
        og.close()
-		 #out = file.replace(sur, '') + '_enc.py
+		
+	#out = file.replace(sur, '') + '_enc.py
+def Faxel():
+    c = raw_input(" Votre texte : ")
+    script = ("\\x" + "\\x".join("{0:x}".format(ord(c)) for c in c))
+    print("\n shellcode =('" + script + "'); exec(shellcode)")
+
+
 def essai1():  
 	
             ia = raw_input('File >> ')
@@ -251,7 +258,6 @@ def binnar():
             sauve_2 = open(resultat, 'w')
             sauve_2.write("#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport binascii, base64\n#REMARQUE : NE PAS MODIFIER SINON TOT OU TARD IL Y AURA UNE ERREUR FREQUENTE.\n\n" + gb)
             sauve_2.close()
-	
 	
 def zlib_s():
        script = raw_input('File >> ')     
