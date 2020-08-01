@@ -124,7 +124,6 @@ def mars():
     b = []           
     xz = []  
     xh = pp.dumps(compile(xs, '<Faxel>', 'exec')  
-    mc.dumps(compile(lecture, '<r>', 'exec')) 
     pg = marshal.dumps(xh)                                            
     na = open(js, 'w')            
     na.write('z = ' + str(xz) + '\n')           
