@@ -123,11 +123,10 @@ def mars():
 	emplacement = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Nommer le resultat du cryptage \033[1;91m▶▶▶ \033[1;97m")
 	#charge()
 	try:
-		depot = ouverture.replace('\r\n', '\n')
-		compresse = ("\\x" + "\\x".join("{0:x}".format(ord(depot)) for depot in depot))
+		#depot = ouverture.replace('\r\n', '\n')
+		depot = ouverture.("\\x" + "\\x".join("{0:x}".format(ord(depot)) for depot in depot))
+		#compresse = ("\\x" + "\\x".join("{0:x}".format(ord(depot)) for depot in depot))
 	        depot = compresse.replace('\r', 'n')
-	        if depot and depot[(-1)] != '\n':
-	            depot = depot + '\n'
 	        compilage = pp.compile(depot, '<r>', 'exec')
 	        vidage = marshal.dumps(compilage)
 		enregistrement = open(emplacement,"w")
