@@ -111,7 +111,7 @@ def essai2():
             for l in gn:
                 p.append(ord(l))
             for b in p:
-                n.append('x' * b)
+                n.append('Faxel' * b)
             fin = 'd={}\nexec("".join([chr(len(i)) for i in d]))'.format(n)
             bp = open(js, 'w')
             bp.write(fin)
