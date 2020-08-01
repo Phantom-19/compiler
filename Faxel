@@ -43,10 +43,10 @@ def select():
        zlib_mars()  
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
        menu()
-  elif choisir == "3" or choisir == "03":
-       mars()  
-       raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
-       menu()
+  #elif choisir == "3" or choisir == "03":
+       #mars()  
+       #raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
+       #menu()
   elif choisir == "4" or choisir == "04":
        binnar()   
        raw_input("\n\033[1;91m[\033[38;5;245m Retour\033[1;91m]")
@@ -202,9 +202,9 @@ def mars():
     bc = open(script,'r').read()   
     xs = binascii.hexlify(bc)
     js = raw_input('Resultat >> ' )         
-    a = []          
-    b = []           
-    xz = []  
+    #a = []          
+    #b = []           
+    #xz = []  
     xh = pp.dumps(compile(xs, '<Faxel>', 'exec')  
     #mc.dumps(compile(lecture, '<r>', 'exec')) 
     #pg = marshal.dumps(xh)                                            
