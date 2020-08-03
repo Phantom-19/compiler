@@ -809,9 +809,11 @@ def decryptage_bash():
        ouverture = open(resultat,'w')
        ouverture.write(fichier_de_fin)
        ouverture.close()
-       os.system("touch faxel.sh")
+       #os.system("touch faxel.sh")
        os.system("bash " + resultat + " > faxel")
-       print("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;92m Terminer..")
+       os.system("mv 
+       load("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Decryptage en cours, veuillez patientez..")
+       print("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;92m Decompilage reussi..")
        raw_input('\n\x1b[1;91m[ \x1b[1;97mRetour \x1b[1;91m]')		
        menu_decode()
    except KeyboardInterrupt:
