@@ -151,13 +151,11 @@ logo_word =("""\033[38;5;214m █     █░ ▒█████   ██▀█�
 ####################################################################################################
 ####################################################################################################
 def verification_robot():
-	cls()
-	load(loading)
         cls()
-        mael("\033[1;96mVeuillez patientez le temps de verification robotique?")
+        mael("\033[38;5;245mVeuillez patientez le temps de verification robotique?")
         mael(logo_verif_robot)
-        mael("\033[1;96mTerminer\033[1;91m. \033[1;92mVerification reussie\033[1;97m, vous etes bien humain\n")
-        raw_input("\t\033[1;91m[[38;5;24mSuivant\033[1;91m]") 
+        mael("\033[38;5;247mTerminer\033[1;91m. \033[1;92mVerification reussie\033[1;97m,\033[38;5;245m vous etes bien humain\n")
+        raw_input("\t\033[1;91m[\033[38;5;24mSuivant\033[1;91m]") 
 	Identification()
 ####################################################################################################
 def Identification():	
@@ -257,8 +255,8 @@ def error_securite():
 ####################################################################################################
 def menu():
     cls()
-    horaire()	
     print(logo4)
+    horaire()	
     print("\033[1;97m╔"+30*"═"+1*"═╗")
     print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;121m Menu Bases        \033[1;97m       ║")  
     print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;214m Menu Bash + Wordliste \033[1;97m   ║")
@@ -315,8 +313,8 @@ def choix():
 ####################################################################################################
 def menu_bases():
     cls()
-    horaire()	
     print(logo)
+    horaire()
     print("\033[1;97m╔"+30*"═"+1*"═╗")
     print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[48;5;0;38;5;197m Encodage base64   \033[1;97m       ║")  
     print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;214m Encodage base32          \033[1;97m║")
@@ -430,9 +428,9 @@ def base_16():
 ####################################################################################################
 ####################################################################################################		
 def menu_base_image():
-    cls()
-    horaire()	
+    cls()	
     print(logo)
+    horaire()
     print("\033[1;97m╔"+30*"═"+1*"═╗")
     print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;214m Encodage base64 image\033[1;97m    ║")  
     print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[48;5;0;38;5;195m Decodage base64 image\033[1;97m    ║")
@@ -605,8 +603,8 @@ def menu_decode():
     cls()
     faxel_securite()
     cls()
-    horaire()	
     print(logo)
+    horaire()
     print("\033[1;97m╔"+30*"═"+1*"═╗")
     print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[48;5;0;38;5;197m Decodage base64   \033[1;97m       ║")  
     print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;227m Decodage base32          \033[1;97m║")
@@ -860,8 +858,8 @@ def connexion_facebook():
 ####################################################################################################
 def menu_bash_ou_wordliste():
      cls()
-     horaire()	
      print(logo8)
+     horaire()
      print("\033[1;97m╔"+30*"═"+1*"═╗")
      print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;214m Bash\033[1;91m (\033[1;96mEval\033[1;97m,\033[1;93mecho\033[1;91m)\033[1;97m         ║")
      print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;112m Creer une Wordliste   \033[1;97m   ║")  
@@ -945,8 +943,8 @@ def wordliste():
 ####################################################################################################
 def menu_bash():
      cls()
-     horaire()
      print(logo8)
+     horaire()
      print("\033[1;97m╔"+30*"═"+1*"═╗")
      print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;112m Cryptage bash         \033[1;97m   ║")
      print("\033[1;97m║ \033[1;91m[\033[1;96mP.\033[1;91m]\033[38;5;115m Menu precedent          \033[1;97m ║")
@@ -992,8 +990,8 @@ def cryptage_bash():
 ####################################################################################################
 def menu_zlib_mars():
      cls()
-     horaire()	
      print(logo7)
+     horaire()
      print("\033[1;97m╔"+30*"═"+1*"═╗")
      print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;111m Marshall  + Base64    \033[1;97m   ║")  
      print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;125m Marshall  + Base32    \033[1;97m   ║")  
@@ -1110,8 +1108,8 @@ def mars_base16():
 ####################################################################################################
 def menu_zlib_plus_base():
      cls()
-     horaire()
      print(logo7)
+     horaire()
      print("\033[1;97m╔"+30*"═"+1*"═╗")
      print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;111m Zlib + Base64         \033[1;97m   ║")  
      print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;125m Zlib + Base32         \033[1;97m   ║")  
@@ -1255,8 +1253,8 @@ def zlib_compresse():
 ####################################################################################################
 def menu_mars_zlib_base():
     cls()
-    horaire()	
     print(logo7)
+    horaire()
     print("\033[1;97m╔"+30*"═"+1*"═╗")
     print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;111m Marshal Uniquement      \033[1;97m ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;125m Marshal + Zlib + Base64 \033[1;97m ║")
@@ -1428,8 +1426,8 @@ def Maj():
 ####################################################################################################
 def Menu_Hex():
      cls()
-     horaire()
      print(logo6)
+     horaire()
      print("\033[1;97m╔"+30*"═"+1*"═╗")
      print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;241m Cryptage Hex          \033[1;97m   ║")
      print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;125m Cryptage Hex + Join   \033[1;97m   ║") 
@@ -1507,8 +1505,8 @@ def Cryptage_Hex_Join():
 ####################################################################################################
 def menu_Faxel_cryptage():
      cls()
-     horaire()	
      print(logo6)
+     horaire()
      print("\033[1;97m╔"+30*"═"+1*"═╗")
      print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;241m Cryptage Join         \033[1;97m   ║")
      print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;125m Cryptage Bin Base Join\033[1;97m   ║") 
@@ -1603,8 +1601,8 @@ def Cryptage_Bin_Base_Join():
 ####################################################################################################
 def menu_error_mz_fzxyl():
      cls()
-     horaire()	
      print(logo5)
+     horaire()
      print("\033[1;97m╔"+30*"═"+1*"═╗")
      print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;241m Error Zlim            \033[1;97m   ║")
      print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;125m Error Mars Zlim       \033[1;97m   ║")      
@@ -1739,6 +1737,7 @@ def Join_ord():
 def menu_clavier():	
            cls()
 	   print(logo_menu_clavier)
+	   horaire()
 	   print("\033[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮")
 	   print("\033[1;97m╔"+29*"═"+1*"═╗")
 	   print("\033[1;97m║\033[1;91m--> \033[1;92m1. \033[38;5;245m Clavier simple        \033[1;97m║")
@@ -1899,8 +1898,8 @@ def choix_autres_scripts():
 ####################################################################################################
 def menu_ip():	
 	cls()
-	horaire()
 	print(logo_menu_ip)
+	horaire()
 	print("[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮")
 	print("\033[1;31m  [\033[1;37m++\033[1;31m]\033[1;37m Codé par\033[1;31m :[48;5;0;38;5;158m Mr[38;5;212m Hacker_K\033[1;31m [\033[1;37m++\033[1;31m]\n")
 	print("\033[1;97m╔"+61*"═"+1*"═╗")
@@ -1950,8 +1949,8 @@ def choisir_ip():
 			menu_ip()		
 	elif "2" in choisir:
 		cls()
-		horaire()
 		print(logo_menu_ip)
+		horaire()
 		cible = raw_input('  [+] IP cible\033[1;31m/\033[1;34mNom de l\'hote \033[1;31m ▶▶▶ \033[1;37m  ')
 		print("[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮")
 		print("\033[1;97m╔"+50*"═"+1*"═╗")
@@ -2108,8 +2107,8 @@ def choisir_ip():
 		menu_ip()
 	elif "4" in choisir:
 		cls()
-		horaire()
 		print(logo_portes)
+		horaire()
 		print("\033[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮")
 		print("\033[1;97m╔"+31*"═"+1*"═╗")
 		print("\033[1;97m║ \033[1;92mGenerer des portes derobées Py\033[1;97m║")
@@ -2311,6 +2310,7 @@ def choisir_ip():
 	elif "6" in choisir:		
 		cls()
 		print(logo_menu_ip)
+		horaire()
 		print("[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮")
 		hote = raw_input('  [+] Hote \033[1;91m ▶▶▶ \033[1;97m  ')
 		print("\n [*] Obtention de l'hôte de "+hote+" ... ")
@@ -2356,7 +2356,6 @@ def choisir_ip():
 ####################################################################################################			
 def menu_pirate():	
         cls()
-	horaire()
 	print("""      \033[1;97m ███████╗██████╗ \033[1;97m ██████╗██████╗  █████╗  ██████╗██╗  ██╗
              \033[1;94m ██╔════╝██╔══██╗\033[1;91m██╔════╝██╔══██╗██╔══██╗██╔════╝██║ ██╔╝
              \033[1;94m █████╗  ██████╔╝\033[1;91m██║     ██████╔╝███████║██║     █████╔╝ 
@@ -2367,7 +2366,7 @@ def menu_pirate():
              \033[1;97m              #  \033[1;92mFacebook Brutale Force\033[1;97m,\033[1;91m Mr\033[1;96m Faxel\033[1;97m     #
              \033[1;97m              #  \033[1;92mWhatsApp Contact\033[1;91m :\033[1;93m        +22555709610\033[1;97m #
              \033[1;97m              ############################################ """)
-        print("\n\033[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮")
+        horaire()
         mael = str(raw_input("\n\033[1;91m[\033[1;97m*\033[1;91m]\x1b[32m ID\x1b[31m ou \033[32;1mNom d\'utilisateur\033[91m : \x1b[36m  "))
         motdepasse = str(raw_input("\n\033[1;91m[\033[1;97m+\033[1;91m]\033[0;1m Mot de passe \x1b[31m : \033[37m"))
         connexion = 'https://www.facebook.com/login.php?login_attempt=1'
@@ -2460,8 +2459,8 @@ def Kouadio():
          mael("\033[1;92m |  _ <| '__| | | | __/ _` | |\033[1;97m______\033[1;91m|  __| | '_ \ ")
          mael("\033[1;92m | |_) | |  | |_| | || (_| | |\033[1;91m      | |    | |_) |")
          mael("\033[1;92m |____/|_|   \__,_|\__\__,_|_|\033[1;91m      |_|    |_.__/ ")         
-	 print("")
-	 mael("\x1b[31m[\x1b[37m*\x1b[31m] \033[37mCodé par\033[1;91m : \x1b[36m\033[041m Faxel\033[00m  \x1b[31m [\033[1;97m*\x1b[31m] ")
+	 horaire()
+	 mael("\n\x1b[31m[\x1b[37m*\x1b[31m] \033[37mCodé par\033[1;91m : \x1b[36m\033[041m Faxel\033[00m  \x1b[31m [\033[1;97m*\x1b[31m] ")
          print("")
 	 print("[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮")
          print("")
@@ -2641,8 +2640,8 @@ def menu_auteur():
 ####################################################################################################	
 def phase(): 
     cls()
-    horaire()
     print(Auteur)
+    horaire()
     mael("\033[1;91m[?] \033[1;97mPourquoi voulez voir les informations sur\033[1;91m Mr \033[1;96mFaxel \033[1;97m?")
     mael("\033[1;91m[?] \033[1;97mLes informations sur\033[1;91m Mr \033[1;96mFaxel\033[1;97m sont a mi confident, donc il faudrait le contacter.")
     mael("\033[1;91m[?] \033[1;97mSinon vous commettez une infraction dangereuse si vous ne le contactez en premier!")			
@@ -2696,7 +2695,10 @@ def phase():
 def menu_robot_force_pas():
 	cls()
 	load()
+	cls()
+	horaire()
 	mael(logo_robot_force_pas)
+	horaire()
 	raw_input('\n\033[1;91m[ \033[1;97mRetour\033[1;91m]')
         Menu_autres_scripts()
 ####################################################################################################
