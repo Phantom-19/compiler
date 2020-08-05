@@ -463,9 +463,9 @@ def choix_base_image():
         print ("\n\t\033[1;91m[\033[1;93m!\033[1;91m]\033[1;95m Remplissez correctement ")
 	menu_base_image()
     elif dmd =="1":
-        cod()
+        coder_image()
     elif dmd =="2":
-        dec()
+        decoder_image()
     elif dmd =="p" or dmd =="P":
         menu_bases()
     elif dmd =="m" or dmd =="M":
@@ -475,7 +475,7 @@ def choix_base_image():
         raw_input('\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
         menu_base_image()	
 ####################################################################################################		
-def cod():
+def coder_image():
  try:
     cls()  
     charge()
@@ -498,7 +498,7 @@ def cod():
     raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
     menu_decode()
 ####################################################################################################
-def dec():     
+def decoder_image():     
   try:
      cls()  
      charge()
