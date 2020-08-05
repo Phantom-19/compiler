@@ -291,7 +291,6 @@ def menu():
     print("\033[1;97m║ \033[1;91m[\033[1;96m6.\033[1;91m]\033[48;5;0;38;5;195m Menu Error0 Mz Fzxyl     \033[1;97m ║") 
     print("\033[1;97m║ \033[1;91m[\033[1;96m7.\033[1;91m]\033[38;5;247m Menu Autres Scripts      \033[1;97m ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96m8.\033[1;91m]\033[38;5;115m Menu Feliciter ou Signaler\033[1;97m║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96m8.\033[1;91m]\033[38;5;115m Menu Base Image           \033[1;97m║")
     print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[48;5;0;38;5;192m Menu decodage des bases\033[1;97m   ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96mQ.\033[1;91m]\033[38;5;124m Quitter \033[1;97m(\033[38;5;116mexit\033[1;97m)        \033[1;97m    ║")
     print("\033[1;97m╚"+31*"═"+1*"═╝")   
@@ -318,8 +317,6 @@ def choix():
         Menu_autres_scripts()
     elif dmd =="8":
         Menu_Feliciter_Signal()
-    elif dmd =="9":
-        menu_base_image()
     elif dmd =="m" or dmd =="M":
         faxel_securite()
     elif dmd =="0" or dmd =="q" or dmd =="Q" or dmd =="00":
@@ -481,47 +478,47 @@ def choix_base_image():
 def coder_image():
  try:
     cls()  
-    charge()
+    load("\033[1;97mChargement\033[1;92m...")
     cls()
     print(logo)
-    codeur = raw_input("\033[1;91m[\033[1;93m***\033[1;91m][38;5;79m Entrer le texte a decoder.    \033[1;91m[\033[1;93m***\033[1;91m]\n\n\033[1;97m")
+    codeur = raw_input("\033[1;91m[\033[1;93m***\033[1;91m][38;5;79m Entrer l'emplacement de l'image\033[1;91m : \033[1;97m")
     ouverture = open(codeur, 'rb') 
     lecture_image = ouverture.read() 
     image_64_encodage = base64.encodestring(lecture_image)
     load("\033[1;97mChargement\033[1;93m...")
-    resultat = raw_input("\033[1;91m[\033[1;93m***\033[1;91m][38;5;79m Entrer le texte a decoder.    \033[1;91m[\033[1;93m***\033[1;91m]\n\n\033[1;97m")
+    resultat = raw_input("\033[1;91m[\033[1;93m*\033[1;91m][38;5;79m Nommer le resultat\033[1;91m : \033[1;97m")
     save = open(resultat,"w")
     save.write(image_64_encodage)
     save.close()
-    print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
+    print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
     raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
     menu_base_image()
  except IOError:
-    print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage echouer")
+    print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;95m Compilage echouer")
     raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-    menu_decode()
+    menu_base_image()
 ####################################################################################################
 def decoder_image():     
   try:
      cls()  
-     charge()
+     load("\033[1;97mChargement\033[1;92m...")
      cls()
      print(logo)
-     image_script= raw_input("\033[1;91m[\033[1;93m***\033[1;91m][38;5;79m Entrer le texte a decoder.    \033[1;91m[\033[1;93m***\033[1;91m]\n\n\033[1;97m")
+     image_script= raw_input("\033[1;91m[\033[1;93m*\033[1;91m][38;5;79m Entrer l'emplacement du script contenant l'image crypter\033[1;91m : \033[1;97m")
      ouverture_image = open(image_script, 'wb') 
      image_64_decodage = base64.decodestring(ouverture_image) 
      load("\033[1;97mChargement\033[1;93m...")
-     resultat = raw_input("\033[1;91m[\033[1;93m***\033[1;91m][38;5;79m Entrer le texte a decoder.    \033[1;91m[\033[1;93m***\033[1;91m]\n\n\033[1;97m")
+     resultat = raw_input("\033[1;91m[\033[1;93m*\033[1;91m][38;5;79m Nommer le resultat\033[1;91m : \033[1;97m")
      save = open(resultat,"w")
      save.write(image_64_decodage)
      save.close()
-     print (image_64_decodage)
-     print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Decompilage reussi")
+     print(image_64_decodage)
+     print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Decompilage reussi")
      raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
      menu_base_image()
   except IOError:
-     print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Decompilage echouer")
-     print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Veuillez apprendre beaucoup pour utiliser ce script. Merci")
+     print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;95m Decompilage echouer")
+     print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;97m Veuillez apprendre beaucoup pour utiliser ce script. Merci")
      raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
      menu_base_image()
 ####################################################################################################
