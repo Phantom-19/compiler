@@ -2143,7 +2143,7 @@ def clavier_simple():
         except:
               pass
         print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Réussie !")
-         load("\n\033[1;91m[\033[1;97m+\033[1;91m]\033[1;97m Création du fichier d'installation\033[1;92m...")
+        load("\n\033[1;91m[\033[1;97m+\033[1;91m]\033[1;97m Création du fichier d'installation\033[1;92m...")
         Faxel = "extra-keys = [['F1','F2','F3','F4','F5','F6','F12'],['ESC','TAB','CTRL','_','-','DOWN','UP']]"
         ouvert = open('/data/data/com.termux/files/home/.termux/termux.properties','w')
         ouvert.write(Faxel)
