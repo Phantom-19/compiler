@@ -460,7 +460,7 @@ def menu_base_image():
 def choix_base_image():    
     dmd = raw_input("\033[1;97m╚═\033[1;31m▶\033[38;5;245m Mr \033[38;5;221mFaxel \033[1;91m▶▶▶ \033[1;96m")
     if dmd =="":
-        print ("\n\t\033[1;91m[!] Remplissez correctement ")
+        print ("\n\t\033[1;91m[\033[1;93m!\033[1;91m]\033[1;95m Remplissez correctement ")
 	menu_base_image()
     elif dmd =="1":
         cod()
