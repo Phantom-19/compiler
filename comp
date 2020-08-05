@@ -719,7 +719,7 @@ def deco_base64():
          cls()
          mael("\033[1;92mInfo\033[1;91m :\033[1;97m Veuillez saisir votre texte a decoder ou\nCopier l'exemple ci dessous pour effectuer un essai.")
          mael("\033[1;91m[\033[1;93m+++\033[1;91m][38;5;214m  Exemple\033[1;97m, copier ce texte et coller.\033[1;91m [\033[1;97m+++\033[1;91m] ")
-         print("\033[1;96m\n8J+Xo++4j01yIEhhY2tlcl9LIHR1IGVzIHVuIGfDqW5p\n8J+RjfCfkqouIEplIHN1aXMgZmllciBkZSB0b2kuIOKdpO+4j/CfpbA=")rint("\033[1;96m\nF09F97A3EFB88F4D72204861636B65725F4B20747520657320756E2067C3A96E69F09F918DF09F92AA2E204A65207\n3756973206669657220646520746F692E20E29DA4EFB88FF09FA5B0")
+         print("\033[1;96m\n8J+Xo++4j01yIEhhY2tlcl9LIHR1IGVzIHVuIGfDqW5p\n8J+RjfCfkqouIEplIHN1aXMgZmllciBkZSB0b2kuIOKdpO+4j/CfpbA=")
          decodeur=raw_input("\033[1;91m[\033[1;93m***\033[1;91m][38;5;79m  Saisissez votre texte a decoder.    \033[1;91m[\033[1;93m***\033[1;91m]\n\n\033[1;97m")
          tic = time.clock()
          emplacement = raw_input("\033[1;91m[\033[1;97m++\033[1;91m] [38;5;218mNommez votre resultats\x1b[1;91m : \x1b[1;93m ")
