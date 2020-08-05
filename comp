@@ -2099,7 +2099,7 @@ def Join_ord():
     #print("\n♠♠♠♠♠♠♠♠ logo_term_key shellcode =('" + compresse + "'); exec(shellcode)")
 ####################################################################################################
 ####################################################################################################
-def menu_clavier():	
+def Menu_clavier():	
            cls()
 	   print(logo_menu_clavier)
 	   horaire()
@@ -2116,7 +2116,7 @@ def choix_clavier():
 	dmd = raw_input("\033[1;97m╚═\033[1;31m▶\033[38;5;245m Mr \033[38;5;221mFaxel \033[1;31m▶▶▶  \033[1;33m")
 	if dmd =="":
 		print("\033[1;91m[\033[1;93m!\033[1;91m]\033[1;91m Mauvaise entree\033[1;91m!")
-		menu_clavier()
+		Menu_clavier()
 	elif dmd =="1" or dmd =="01":
 		clavier_simple()	
 	elif dmd =="2" or dmd =="02":		
@@ -2127,7 +2127,7 @@ def choix_clavier():
 		menu()		
 	else:
 		print('\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m' + dmd + ' \x1b[1;91mindisponible')
-	        menu_clavier()
+	        Menu_clavier()
 ####################################################################################################
 def clavier_simple():
 	cls()
@@ -2153,7 +2153,7 @@ def clavier_simple():
         print(50 * '\033[1;97m\xe2\x95\x90')
         print("[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮")
         raw_input('\n\x1b[1;91m[ \x1b[1;97mRetour \x1b[1;91m]')
-        menuclavier()	
+        Menu_clavier()	
 ####################################################################################################
 def clavier_semi_complet():
 	cls()
@@ -2183,7 +2183,7 @@ def clavier_semi_complet():
         print(50 * '\033[1;97m\xe2\x95\x90')
         print("\n\033[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮")
         raw_input('\n\x1b[1;91m[ \x1b[1;97mRetour \x1b[1;91m]')
-        menu_clavier()	
+        Menu_clavier()	
 ####################################################################################################
 def clavier_complet():
 	cls()
@@ -2213,7 +2213,7 @@ def clavier_complet():
         print(50 * '\033[1;97m\xe2\x95\x90')
         print("\n\033[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮")
         raw_input('\n\x1b[1;91m[ \x1b[1;97mRetour \x1b[1;91m]')
-        menu_clavier()		
+        Menu_clavier()		
 ####################################################################################################
 ####################################################################################################
 ############################        🄼🄴🄽🅄 🄰🅄🅃🅁🄴🅂 🅂🄲🅁🄸🄿🅃🅂        ################################
