@@ -2133,14 +2133,14 @@ def clavier_simple():
 	cls()
         print(key_simple)
         print(50 * '\033[1;97m\xe2\x95\x90')
-        load("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;97m Début du processus ....")
-        load("\033[1;91m[\033[1;97m+\033[1;91m]\033[1;92m Création d\'un repertoire de propriétés termux..\n")
+        load("\n\033[1;91m[\033[1;97m*\033[1;91m]\033[1;97m Début du processus\033[1;92m....")
+        load("\n\033[1;91m[\033[1;97m+\033[1;91m]\033[1;92m Création d\'un repertoire de propriétés termux\033[1;92m...")
         try:
               os.mkdir('/data/data/com.termux/files/home/.termux')
         except:
               pass
         print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Réussie !")
-        load("\033[1;91m[\033[1;97m+\033[1;91m]\033[1;97m Création du fichier d\'installation..")
+         load("\n\033[1;91m[\033[1;97m+\033[1;91m]\033[1;97m Création du fichier d'installation\033[1;92m...")
         Faxel = "extra-keys = [['F1','F2','F3','F4','F5','F6','F12'],['ESC','TAB','CTRL','_','-','DOWN','UP']]"
         ouvert = open('/data/data/com.termux/files/home/.termux/termux.properties','w')
         ouvert.write(Faxel)
@@ -2159,21 +2159,21 @@ def clavier_semi_complet():
 	cls()
         print(key_semi)
         print(50 * '\033[1;97m\xe2\x95\x90')
-        load("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;97m Début du processus ....")
-        load("\033[1;91m[\033[1;97m+\033[1;91m]\033[1;92m Création d\'un repertoire de propriétés termux..\n")
+        load("\n\033[1;91m[\033[1;97m*\033[1;91m]\033[1;97m Début du processus\033[1;92m....")
+        load("\n\033[1;91m[\033[1;97m+\033[1;91m]\033[1;92m Création d\'un repertoire de propriétés termux\033[1;92m...")
         try:
               os.mkdir('/data/data/com.termux/files/home/.termux')
         except:
               pass
         print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Réussie !")
-        load("\033[1;91m[\033[1;97m+\033[1;91m]\033[1;97m Création du fichier d\'installation..")
+        load("\n\033[1;91m[\033[1;97m+\033[1;91m]\033[1;97m Création du fichier d'installation\033[1;92m...")
         Mael = "extra-keys = [['ESC','/','-','HOME','UP','ENTER'],['TAB','CTRL','ALT','LEFT','DOWN','RIGHT','DEL'],['END','<>',':','//','&&','\']]"
         ouvert = open('/data/data/com.termux/files/home/.termux/termux.properties','w')
         ouvert.write(Mael)
         ouvert.close()
-        print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Installation du clavier semi-complet réussie \033[1;91m!\n")
+        load("\n\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Installation du clavier semi-complet réussie \033[1;91m!")
         sleep(1.5)
-        print("\033[1;91m[\033[1;97m!\033[1;91m]\033[1;97m Mise en place..")
+        load("\033[1;91m[\033[1;97m!\033[1;91m]\033[1;97m Mise en place\033[1;92m...")
         os.system('termux-reload-settings')
         print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Mise en place du clavier semi-complet réussie \033[1;91m!\n")
         print(50 * '\033[1;97m\xe2\x95\x90')
@@ -2189,14 +2189,14 @@ def clavier_complet():
 	cls()
         print(key_complet)
         print(50 * '\033[1;97m\xe2\x95\x90')
-        load("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;97m Début du processus ....")
-        load("\033[1;91m[\033[1;97m+\033[1;91m]\033[1;92m Création d\'un repertoire de propriétés termux..\n")
+        load("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;97m Début du processus\033[1;92m....")
+        load("\033[1;91m[\033[1;97m+\033[1;91m]\033[1;97m Création d'un repertoire de propriétés termux\033[1;92m...")
         try:
               os.mkdir('/data/data/com.termux/files/home/.termux')
         except:
               pass
         print("\033[1;91m[\033[1;97m*\033[1;91m]\033[1;92m Réussie!")
-        load("\033[1;91m[\033[1;97m+\033[1;91m]\033[1;97m Création du fichier d'installation..")
+        load("\n\033[1;91m[\033[1;97m+\033[1;91m]\033[1;97m Création du fichier d'installation\033[1;92m...")
         clavier = "extra-keys = [['ESC','HOME','-','UP','ALT','END','BKSP'],['TAB','|','LEFT','CTRL','RIGHT','PGDN','ENTER'],['//',':','\','DOWN','/','_','DEL']]"
         ouvert = open('/data/data/com.termux/files/home/.termux/termux.properties','w')
         ouvert.write(clavier)
