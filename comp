@@ -223,7 +223,7 @@ def Securiter():
                 if (md == mdp):	
 		    print("[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮")
 	            print("[38;5;214m<═════════════════\033[1;97mConnexion a[38;5;245m Mr \033[48;5;0;38;5;197mFaxel[38;5;214m═════════════════>")
-		    load("\033[1;91m[\033[1;92m@\033[1;91m]\033[38;5;245m Server\033[38;5;214m Faxel \033[38;5;241m...")
+		    load("\033[1;91m[\033[1;92m@\033[1;91m]\033[38;5;245m Server\033[38;5;214m Faxel\033[38;5;241m...\033[48;5;0;38;5;192m")
                     print("\n\033[1;91m[\033[1;92m●\033[1;91m] \033[1;97mConnecté en tant que \033[1;96m"  +  Nomu) #Dev:Faxel
 	            time.sleep(1)
                     loop = 'false'
@@ -249,7 +249,7 @@ def faxel_securite():
             if (mp == mdp):
 		 print("[38;5;214m🇨🇮\033[1;97m I'm the person whom you can never judge. \033[1;92m 🇨🇮")
 	         print("[38;5;214m<═════════════════\033[1;97mConnexion a[38;5;245m Mr \033[48;5;0;38;5;197mFaxel[38;5;214m═════════════════>")
-                 load("\033[1;97mChargement\033[1;93m...")
+                 load("\033[1;97mChargement\033[1;93m...\033[48;5;0;38;5;192m")
 	         loop = 'false'
 		 menu_decode()	
 	    else:
@@ -481,12 +481,12 @@ def coder_image():
     load("\033[1;97mChargement\033[1;92m...")
     cls()
     print(logo)
-    codeur = raw_input("\033[1;91m[\033[1;93m***\033[1;91m][38;5;79m Entrer l'emplacement de l'image\033[1;91m : \033[1;97m")
+    codeur = raw_input("\033[1;91m[\033[1;93m*\033[1;91m][38;5;79m Entrer l'emplacement de l'image\033[1;91m : \033[1;97m")
     ouverture = open(codeur, 'rb') 
     lecture_image = ouverture.read() 
     image_64_encodage = base64.encodestring(lecture_image)
     load("\033[1;97mChargement\033[1;93m...")
-    resultat = raw_input("\033[1;91m[\033[1;93m*\033[1;91m][38;5;79m Nommer le resultat\033[1;91m : \033[1;97m")
+    resultat = raw_input("\n\033[1;91m[\033[1;93m*\033[1;91m][38;5;79m Nommer le resultat\033[1;91m : \033[1;97m")
     save = open(resultat,"w")
     save.write(image_64_encodage)
     save.close()
@@ -498,30 +498,6 @@ def coder_image():
     raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
     menu_base_image()
 ####################################################################################################
-def decoder_image():     
-  try:
-     cls()  
-     load("\033[1;97mChargement\033[1;92m...")
-     cls()
-     print(logo)
-     image_script= raw_input("\033[1;91m[\033[1;93m*\033[1;91m][38;5;79m Entrer l'emplacement du script contenant l'image crypter\033[1;91m : \033[1;97m")
-     ouverture_image = open(image_script, 'wb') 
-     image_64_decodage = base64.decodestring(ouverture_image) 
-     load("\033[1;97mChargement\033[1;93m...")
-     resultat = raw_input("\033[1;91m[\033[1;93m*\033[1;91m][38;5;79m Nommer le resultat\033[1;91m : \033[1;97m")
-     save = open(resultat,"w")
-     save.write(image_64_decodage)
-     save.close()
-     print(image_64_decodage)
-     print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Decompilage reussi")
-     raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-     menu_base_image()
-  except IOError:
-     print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;95m Decompilage echouer")
-     print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;97m Veuillez apprendre beaucoup pour utiliser ce script. Merci")
-     raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-     menu_base_image()
-####################################################################################################
 #################################################################################################### 
 def menu_encodage_texte():
 	cls()
@@ -530,11 +506,8 @@ def menu_encodage_texte():
 	print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;136m Encodage base64     \033[1;97m     ║")
 	print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;111m Encodage base32     \033[1;97m     ║")
 	print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[38;5;112m Encodage base16     \033[1;97m     ║")
-	print("\033[1;97m║ \033[1;91m[\033[1;96m4.\033[1;91m]\033[38;5;115m Decodage base64     \033[1;97m     ║")
-	print("\033[1;97m║ \033[1;91m[\033[1;96m5.\033[1;91m]\033[38;5;214m Decodage base32     \033[1;97m     ║")
-	print("\033[1;97m║ \033[1;91m[\033[1;96m6.\033[1;91m]\033[38;5;116m Decodage base16     \033[1;97m     ║")
-	print("\033[1;97m║ \033[1;91m[\033[1;96m7.\033[1;91m]\033[38;5;145m Cryptage binaire    \033[1;97m     ║")
-	print("\033[1;97m║ \033[1;91m[\033[1;96m8.\033[1;91m]\033[38;5;247m Cryptage binaire 2  \033[1;97m     ║")
+	print("\033[1;97m║ \033[1;91m[\033[1;96m4.\033[1;91m]\033[38;5;145m Cryptage binaire    \033[1;97m     ║")
+	print("\033[1;97m║ \033[1;91m[\033[1;96m5.\033[1;91m]\033[38;5;247m Cryptage binaire 2  \033[1;97m     ║")
 	print("\033[1;97m║ \033[1;91m[\033[1;96mP \033[1;91m]\033[38;5;127m Menu Precedent      \033[1;97m     ║")
 	print("\033[1;97m║ \033[1;91m[\033[1;96mM \033[1;91m]\033[38;5;121m Menu Principal      \033[1;97m     ║")
 	print("\033[1;97m╚"+30*"═"+1*"═╝")   
@@ -552,14 +525,8 @@ def choisir_bases():
     elif dmd =="3":
         enco_base16()
     elif dmd =="4":
-        deco_base64()
-    elif dmd =="5":
-        deco_base32()
-    elif dmd =="6":
-        deco_base16()
-    elif dmd =="7":
         binaire()
-    elif dmd =="8":
+    elif dmd =="5":
         binaire_2()
     elif dmd =="p" or dmd =="P":
         menu_bases()
@@ -715,94 +682,6 @@ def binaire_2():
 	menu_encodage_texte()
 ####################################################################################################
 ####################################################################################################
-def deco_base64():
-         cls()
-         mael("\033[1;92mInfo\033[1;91m :\033[1;97m Veuillez saisir votre texte a decoder ou\nCopier l'exemple ci dessous pour effectuer un essai.")
-         mael("\033[1;91m[\033[1;93m+++\033[1;91m][38;5;214m  Exemple\033[1;97m, copier ce texte et coller.\033[1;91m [\033[1;97m+++\033[1;91m] ")
-         print("\033[1;96m\n8J+Xo++4j01yIEhhY2tlcl9LIHR1IGVzIHVuIGfDqW5p\n8J+RjfCfkqouIEplIHN1aXMgZmllciBkZSB0b2kuIOKdpO+4j/CfpbA=")
-         decodeur=raw_input("\033[1;91m[\033[1;93m***\033[1;91m][38;5;79m  Saisissez votre texte a decoder.    \033[1;91m[\033[1;93m***\033[1;91m]\n\n\033[1;97m")
-         tic = time.clock()
-         emplacement = raw_input("\033[1;91m[\033[1;97m++\033[1;91m] [38;5;218mNommez votre resultats\x1b[1;91m : \x1b[1;93m ")
-         systeme1 = decodeur.decode("UTF-8")
-         print("\033[1;91m[\033[1;93m---\033[1;91m]\033[1;97m  Votre texte en Base64 a decoder est \033[91;1m:\n\n[38;5;70m {}".format(decodeur))
-         print("\033[1;91m[\033[1;93m***\033[1;91m][38;5;221m  Il est constituer de\033[1;93m",len(decodeur), '[38;5;221mcaracteres \033[1;91m[\033[1;93m***\033[1;91m]')
-         faxel = systeme1.decode("UTF-8")
-         mael = base64.b64decode(faxel)
-         systeme2 = mael.decode("UTF-8")              
-	 save = open(emplacement,"w")
-	 save.write(systeme2)
-         save.close()
-         print("\033[1;91m[\033[1;93m---\033[1;91m]\033[1;97m  Le texte decoder est le suivant \033[91;1m:\n\n[38;5;70m {}".format(systeme2))
-         print("\033[1;91m[\033[1;93m***\033[1;91m][38;5;228m  Il est constituer de\033[1;93m",len(systeme2), '[38;5;228mcaracteres \033[1;91m[\033[1;93m***\033[1;91m]')             
-         toc = time.clock()
-         ttn = toc - tic
-         print("\x1b[38;5;212m<═════════════════════════════════════════>")
-         print("\n\x1b[1;97m║\033[1;91m[\033[1;97m--\033[1;91m] \x1b[1;97mEnregistrer sous [38;5;112m "+str(trap)+"\x1b[1;97m dans votre repertoire.\x1b[1;97m║")
-         print("\x1b[1;97m║\033[1;91m[\033[1;97m**\033[1;91m] [38;5;108mTerminer en\x1b[1;92m "+str(ttn)+" [38;5;108msecondes.\x1b[1;97m║")
-         print("\x1b[38;5;212m<═════════════════════════════════════════>")
-         print("                       \033[48;5;0;38;5;197mMr Faxel                   ")            
-         raw_input('\n\033[1;91m[\033[1;97mRetour\033[1;91m]')
-	 menu_encodage_texte()
-####################################################################################################
-def deco_base32():
-         cls()
-         mael("\033[1;92mInfo\033[1;91m :\033[1;97m Veuillez saisir votre texte a decoder ou\nCopier l'exemple ci dessous pour effectuer un essai.")
-         mael("\033[1;91m[\033[1;93m+++\033[1;91m][38;5;214m  Exemple\033[1;97m, copier ce texte et coller.\033[1;91m [\033[1;97m+++\033[1;91m] ")
-         print("\033[1;96m\n6CPZPI7PXCHU24RAJBQWG23FOJPUWIDUOUQGK4ZAOVXCAZ6DVFXGT4E7SGG7BH4SVIX\nCASTFEBZXK2LTEBTGSZLSEBSGKIDUN5US4IHCTWSO7OEP6CP2LMA=")
-         decodeur=raw_input("\033[1;91m[\033[1;93m***\033[1;91m][38;5;79m  Saisissez votre texte a decoder.    \033[1;91m[\033[1;93m***\033[1;91m]\n\n\033[1;97m")
-         tic = time.clock()
-         emplacement = raw_input("\033[1;91m[\033[1;97m++\033[1;91m] [38;5;218mNommez votre resultats\x1b[1;91m : \x1b[1;93m ")
-         systeme1 = decodeur.decode("UTF-8")
-         print("\033[1;91m[\033[1;93m---\033[1;91m]\033[1;97m  Votre texte en Base32 a decoder est \033[91;1m:\n\n[38;5;70m {}".format(decodeur))
-         print("\033[1;91m[\033[1;93m***\033[1;91m][38;5;221m  Il est constituer de\033[1;93m",len(decodeur), '[38;5;221mcaracteres \033[1;91m[\033[1;93m***\033[1;91m]')
-         faxel = systeme1.decode("UTF-8")
-         mael = base64.b32decode(faxel)
-         systeme2 = mael.decode("UTF-8")              
-	 save = open(emplacement,"w")
-	 save.write(systeme2)
-         save.close()
-         print("\033[1;91m[\033[1;93m---\033[1;91m]\033[1;97m  Le texte decoder est le suivant \033[91;1m:\n\n[38;5;70m {}".format(systeme2))
-         print("\033[1;91m[\033[1;93m***\033[1;91m][38;5;228m  Il est constituer de\033[1;93m",len(systeme2), '[38;5;228mcaracteres \033[1;91m[\033[1;93m***\033[1;91m]')             
-         toc = time.clock()
-         ttn = toc - tic
-         print("\x1b[38;5;212m<═════════════════════════════════════════>")
-         print("\n\x1b[1;97m║\033[1;91m[\033[1;97m--\033[1;91m] \x1b[1;97mEnregistrer sous [38;5;112m "+str(trap)+"\x1b[1;97m dans votre repertoire.\x1b[1;97m║")
-         print("\x1b[1;97m║\033[1;91m[\033[1;97m**\033[1;91m] [38;5;108mTerminer en\x1b[1;92m "+str(ttn)+" [38;5;108msecondes.\x1b[1;97m║")
-         print("\x1b[38;5;212m<═════════════════════════════════════════>")
-         print("                       \033[48;5;0;38;5;197mMr Faxel                   ")            
-         raw_input('\n\033[1;91m[\033[1;97mRetour\033[1;91m]')
-	 menu_encodage_texte()
-####################################################################################################
-def deco_base16():
-         cls()
-         mael("\033[1;92mInfo\033[1;91m :\033[1;97m Veuillez saisir votre texte a decoder ou\nCopier l'exemple ci dessous pour effectuer un essai.")
-         mael("\033[1;91m[\033[1;93m+++\033[1;91m][38;5;214m  Exemple\033[1;97m, copier ce texte et coller.\033[1;91m [\033[1;97m+++\033[1;91m] ")
-         print("\033[1;96m\nF09F97A3EFB88F4D72204861636B65725F4B20747520657320756E2067C3A96E69F09F918DF09F92AA2E204A65207\n3756973206669657220646520746F692E20E29DA4EFB88FF09FA5B0")
-         decodeur=raw_input("\033[1;91m[\033[1;93m***\033[1;91m][38;5;79m  Saisissez votre texte a decoder.    \033[1;91m[\033[1;93m***\033[1;91m]\n\n\033[1;97m")
-         tic = time.clock()
-         emplacement = raw_input("\033[1;91m[\033[1;97m++\033[1;91m] [38;5;218mNommez votre resultats\x1b[1;91m : \x1b[1;93m ")
-         systeme1 = decodeur.decode("UTF-8")
-         print("\033[1;91m[\033[1;93m---\033[1;91m]\033[1;97m  Votre texte en Base16 a decoder est \033[91;1m:\n\n[38;5;70m {}".format(decodeur))
-         print("\033[1;91m[\033[1;93m***\033[1;91m][38;5;221m  Il est constituer de\033[1;93m",len(decodeur), '[38;5;221mcaracteres \033[1;91m[\033[1;93m***\033[1;91m]')
-         faxel = systeme1.decode("UTF-8")
-         mael = base64.b16decode(faxel)
-         systeme2 = mael.decode("UTF-8")              
-	 save = open(emplacement,"w")
-	 save.write(systeme2)
-         save.close()
-         print("\033[1;91m[\033[1;93m---\033[1;91m]\033[1;97m  Le texte decoder est le suivant \033[91;1m:\n\n[38;5;70m {}".format(systeme2))
-         print("\033[1;91m[\033[1;93m***\033[1;91m][38;5;228m  Il est constituer de\033[1;93m",len(systeme2), '[38;5;228mcaracteres \033[1;91m[\033[1;93m***\033[1;91m]')             
-         toc = time.clock()
-         ttn = toc - tic
-         print("\x1b[38;5;212m<═════════════════════════════════════════>")
-         print("\n\x1b[1;97m║\033[1;91m[\033[1;97m--\033[1;91m] \x1b[1;97mEnregistrer sous [38;5;112m "+str(trap)+"\x1b[1;97m dans votre repertoire.\x1b[1;97m║")
-         print("\x1b[1;97m║\033[1;91m[\033[1;97m**\033[1;91m] [38;5;108mTerminer en\x1b[1;92m "+str(ttn)+" [38;5;108msecondes.\x1b[1;97m║")
-         print("\x1b[38;5;212m<═════════════════════════════════════════>")
-         print("                       \033[48;5;0;38;5;197mMr Faxel                   ")            
-         raw_input('\n\033[1;91m[\033[1;97mRetour\033[1;91m]')
-	 menu_encodage_texte()
-####################################################################################################
-####################################################################################################
 def Menu_Feliciter_Signal():
     cls()	
     print(logo)
@@ -945,7 +824,9 @@ def menu_decode():
     print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[38;5;115m Decodage base16   \033[1;97m       ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96m4.\033[1;91m]\033[38;5;112m Decodage marshall \033[1;97m       ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96m5.\033[1;91m]\033[38;5;136m Decryptage bash   \033[1;97m       ║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96m6.\033[1;91m]\033[38;5;241m Facebook Hack     \033[1;97m       ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m6.\033[1;91m]\033[38;5;125m Decryptage Image  \033[1;97m       ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m7.\033[1;91m]\033[38;5;241m Facebook Hack     \033[1;97m       ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m8.\033[1;91m]\033[38;5;247m Menu Decodeur     \033[1;97m       ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[48;5;0;38;5;192m Menu general      \033[1;97m       ║")
     print("\033[1;97m╚"+30*"═"+1*"═╝")   
     print("\033[1;97m║")  
@@ -966,7 +847,11 @@ def choix_decode():
     elif dmd =="5":
         decryptage_bash()
     elif dmd =="6":
+	decoder_image()
+    elif dmd =="7":
         connexion_facebook()
+    elif dmd =="8":
+        menu_decodeur()
     elif dmd =="m" or dmd =="M":
         menu()
     else: 
@@ -1163,6 +1048,150 @@ def decryptage_bash():
        print("\033[1;91m [\033[1;93m!\033[1;91m]\033[1;94m Fichier introuvable!")
        raw_input('\n\x1b[1;91m[ \x1b[1;97mRetour \x1b[1;91m]')		
        menu_decode()
+####################################################################################################
+def decoder_image():     
+  try:
+     cls()  
+     load("\033[1;97mChargement\033[1;92m...")
+     cls()
+     print(logo)
+     image_script= raw_input("\033[1;91m[\033[1;93m*\033[1;91m][38;5;79m Entrer l'emplacement du script contenant l'image crypter\033[1;91m : \033[1;97m")
+     ouverture_image = open(image_script, 'wb')
+     lecture_image = ouverture_image.read() 
+     image_64_decodage = base64.decodestring(lecture_image) 
+     load("\033[1;97mChargement\033[1;93m...")
+     resultat = raw_input("\n\033[1;91m[\033[1;93m*\033[1;91m][38;5;79m Nommer le resultat\033[1;91m : \033[1;97m")
+     save = open(resultat,"w")
+     save.write(image_64_decodage)
+     save.close()
+     print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Decompilage reussi")
+     raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+     menu_base_image()
+  except IOError:
+     print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;95m Decompilage echouer")
+     print("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;97m Veuillez apprendre beaucoup pour utiliser ce script. Merci")
+     raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+     menu_base_image()
+####################################################################################################
+####################################################################################################7
+def menu_decodeur():
+	cls()
+	print(logo)
+	print("\033[1;97m╔"+30*"═"+1*"═╗")
+	print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;115m Decodage base64     \033[1;97m     ║")
+	print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;214m Decodage base32     \033[1;97m     ║")
+	print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[38;5;116m Decodage base16     \033[1;97m     ║")
+	print("\033[1;97m║ \033[1;91m[\033[1;96mP \033[1;91m]\033[38;5;127m Menu Precedent      \033[1;97m     ║")
+	print("\033[1;97m║ \033[1;91m[\033[1;96mM \033[1;91m]\033[38;5;121m Menu Principal      \033[1;97m     ║")
+	print("\033[1;97m╚"+30*"═"+1*"═╝")   
+	print("\033[1;97m║")
+	choisir_decodeur()
+def choisir_decodeur():    
+    dmd = raw_input("\033[1;97m╚═\033[1;31m▶\033[38;5;245m Mr \033[38;5;221mFaxel \033[1;91m▶▶▶ \033[1;96m")
+    if dmd =="":
+        print("\n\t\033[1;91m[\033[1;93m!\033[1;91m]\033[1;95m Remplissez correctement ")
+	menu_decodeur()
+    elif dmd =="1":
+        deco_base64()
+    elif dmd =="2":
+        deco_base32()
+    elif dmd =="3":
+        deco_base16()
+    elif dmd =="p" or dmd =="P":
+        menu_decode()
+    elif dmd =="m" or dmd =="M":
+        menu()
+    else: 
+        print('\n\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m '+dmd+' \x1b[1;91mindisponible')
+        raw_input('\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+        menu_decodeur()
+####################################################################################################	
+def deco_base64():
+         cls()
+         mael("\033[1;92mInfo\033[1;91m :\033[1;97m Veuillez saisir votre texte a decoder ou\nCopier l'exemple ci dessous pour effectuer un essai.")
+         mael("\033[1;91m[\033[1;93m+++\033[1;91m][38;5;214m  Exemple\033[1;97m, copier ce texte et coller.\033[1;91m [\033[1;97m+++\033[1;91m] ")
+         print("\033[1;96m\n8J+Xo++4j01yIEhhY2tlcl9LIHR1IGVzIHVuIGfDqW5p\n8J+RjfCfkqouIEplIHN1aXMgZmllciBkZSB0b2kuIOKdpO+4j/CfpbA=")
+         decodeur=raw_input("\033[1;91m[\033[1;93m***\033[1;91m][38;5;79m  Saisissez votre texte a decoder.    \033[1;91m[\033[1;93m***\033[1;91m]\n\n\033[1;97m")
+         tic = time.clock()
+         emplacement = raw_input("\033[1;91m[\033[1;97m++\033[1;91m] [38;5;218mNommez votre resultats\x1b[1;91m : \x1b[1;93m ")
+         systeme1 = decodeur.decode("UTF-8")
+         print("\033[1;91m[\033[1;93m---\033[1;91m]\033[1;97m  Votre texte en Base64 a decoder est \033[91;1m:\n\n[38;5;70m {}".format(decodeur))
+         print("\033[1;91m[\033[1;93m***\033[1;91m][38;5;221m  Il est constituer de\033[1;93m",len(decodeur), '[38;5;221mcaracteres \033[1;91m[\033[1;93m***\033[1;91m]')
+         faxel = systeme1.decode("UTF-8")
+         mael = base64.b64decode(faxel)
+         systeme2 = mael.decode("UTF-8")              
+	 save = open(emplacement,"w")
+	 save.write(systeme2)
+         save.close()
+         print("\033[1;91m[\033[1;93m---\033[1;91m]\033[1;97m  Le texte decoder est le suivant \033[91;1m:\n\n[38;5;70m {}".format(systeme2))
+         print("\033[1;91m[\033[1;93m***\033[1;91m][38;5;228m  Il est constituer de\033[1;93m",len(systeme2), '[38;5;228mcaracteres \033[1;91m[\033[1;93m***\033[1;91m]')             
+         toc = time.clock()
+         ttn = toc - tic
+         print("\x1b[38;5;212m<═════════════════════════════════════════>")
+         print("\n\x1b[1;97m║\033[1;91m[\033[1;97m--\033[1;91m] \x1b[1;97mEnregistrer sous [38;5;112m "+str(trap)+"\x1b[1;97m dans votre repertoire.\x1b[1;97m║")
+         print("\x1b[1;97m║\033[1;91m[\033[1;97m**\033[1;91m] [38;5;108mTerminer en\x1b[1;92m "+str(ttn)+" [38;5;108msecondes.\x1b[1;97m║")
+         print("\x1b[38;5;212m<═════════════════════════════════════════>")
+         print("                       \033[48;5;0;38;5;197mMr Faxel                   ")            
+         raw_input('\n\033[1;91m[\033[1;97mRetour\033[1;91m]')
+	 menu_decodeur()
+####################################################################################################
+def deco_base32():
+         cls()
+         mael("\033[1;92mInfo\033[1;91m :\033[1;97m Veuillez saisir votre texte a decoder ou\nCopier l'exemple ci dessous pour effectuer un essai.")
+         mael("\033[1;91m[\033[1;93m+++\033[1;91m][38;5;214m  Exemple\033[1;97m, copier ce texte et coller.\033[1;91m [\033[1;97m+++\033[1;91m] ")
+         print("\033[1;96m\n6CPZPI7PXCHU24RAJBQWG23FOJPUWIDUOUQGK4ZAOVXCAZ6DVFXGT4E7SGG7BH4SVIX\nCASTFEBZXK2LTEBTGSZLSEBSGKIDUN5US4IHCTWSO7OEP6CP2LMA=")
+         decodeur=raw_input("\033[1;91m[\033[1;93m***\033[1;91m][38;5;79m  Saisissez votre texte a decoder.    \033[1;91m[\033[1;93m***\033[1;91m]\n\n\033[1;97m")
+         tic = time.clock()
+         emplacement = raw_input("\033[1;91m[\033[1;97m++\033[1;91m] [38;5;218mNommez votre resultats\x1b[1;91m : \x1b[1;93m ")
+         systeme1 = decodeur.decode("UTF-8")
+         print("\033[1;91m[\033[1;93m---\033[1;91m]\033[1;97m  Votre texte en Base32 a decoder est \033[91;1m:\n\n[38;5;70m {}".format(decodeur))
+         print("\033[1;91m[\033[1;93m***\033[1;91m][38;5;221m  Il est constituer de\033[1;93m",len(decodeur), '[38;5;221mcaracteres \033[1;91m[\033[1;93m***\033[1;91m]')
+         faxel = systeme1.decode("UTF-8")
+         mael = base64.b32decode(faxel)
+         systeme2 = mael.decode("UTF-8")              
+	 save = open(emplacement,"w")
+	 save.write(systeme2)
+         save.close()
+         print("\033[1;91m[\033[1;93m---\033[1;91m]\033[1;97m  Le texte decoder est le suivant \033[91;1m:\n\n[38;5;70m {}".format(systeme2))
+         print("\033[1;91m[\033[1;93m***\033[1;91m][38;5;228m  Il est constituer de\033[1;93m",len(systeme2), '[38;5;228mcaracteres \033[1;91m[\033[1;93m***\033[1;91m]')             
+         toc = time.clock()
+         ttn = toc - tic
+         print("\x1b[38;5;212m<═════════════════════════════════════════>")
+         print("\n\x1b[1;97m║\033[1;91m[\033[1;97m--\033[1;91m] \x1b[1;97mEnregistrer sous [38;5;112m "+str(trap)+"\x1b[1;97m dans votre repertoire.\x1b[1;97m║")
+         print("\x1b[1;97m║\033[1;91m[\033[1;97m**\033[1;91m] [38;5;108mTerminer en\x1b[1;92m "+str(ttn)+" [38;5;108msecondes.\x1b[1;97m║")
+         print("\x1b[38;5;212m<═════════════════════════════════════════>")
+         print("                       \033[48;5;0;38;5;197mMr Faxel                   ")            
+         raw_input('\n\033[1;91m[\033[1;97mRetour\033[1;91m]')
+	 menu_decodeur()
+####################################################################################################
+def deco_base16():
+         cls()
+         mael("\033[1;92mInfo\033[1;91m :\033[1;97m Veuillez saisir votre texte a decoder ou\nCopier l'exemple ci dessous pour effectuer un essai.")
+         mael("\033[1;91m[\033[1;93m+++\033[1;91m][38;5;214m  Exemple\033[1;97m, copier ce texte et coller.\033[1;91m [\033[1;97m+++\033[1;91m] ")
+         print("\033[1;96m\nF09F97A3EFB88F4D72204861636B65725F4B20747520657320756E2067C3A96E69F09F918DF09F92AA2E204A65207\n3756973206669657220646520746F692E20E29DA4EFB88FF09FA5B0")
+         decodeur=raw_input("\033[1;91m[\033[1;93m***\033[1;91m][38;5;79m  Saisissez votre texte a decoder.    \033[1;91m[\033[1;93m***\033[1;91m]\n\n\033[1;97m")
+         tic = time.clock()
+         emplacement = raw_input("\033[1;91m[\033[1;97m++\033[1;91m] [38;5;218mNommez votre resultats\x1b[1;91m : \x1b[1;93m ")
+         systeme1 = decodeur.decode("UTF-8")
+         print("\033[1;91m[\033[1;93m---\033[1;91m]\033[1;97m  Votre texte en Base16 a decoder est \033[91;1m:\n\n[38;5;70m {}".format(decodeur))
+         print("\033[1;91m[\033[1;93m***\033[1;91m][38;5;221m  Il est constituer de\033[1;93m",len(decodeur), '[38;5;221mcaracteres \033[1;91m[\033[1;93m***\033[1;91m]')
+         faxel = systeme1.decode("UTF-8")
+         mael = base64.b16decode(faxel)
+         systeme2 = mael.decode("UTF-8")              
+	 save = open(emplacement,"w")
+	 save.write(systeme2)
+         save.close()
+         print("\033[1;91m[\033[1;93m---\033[1;91m]\033[1;97m  Le texte decoder est le suivant \033[91;1m:\n\n[38;5;70m {}".format(systeme2))
+         print("\033[1;91m[\033[1;93m***\033[1;91m][38;5;228m  Il est constituer de\033[1;93m",len(systeme2), '[38;5;228mcaracteres \033[1;91m[\033[1;93m***\033[1;91m]')             
+         toc = time.clock()
+         ttn = toc - tic
+         print("\x1b[38;5;212m<═════════════════════════════════════════>")
+         print("\n\x1b[1;97m║\033[1;91m[\033[1;97m--\033[1;91m] \x1b[1;97mEnregistrer sous [38;5;112m "+str(trap)+"\x1b[1;97m dans votre repertoire.\x1b[1;97m║")
+         print("\x1b[1;97m║\033[1;91m[\033[1;97m**\033[1;91m] [38;5;108mTerminer en\x1b[1;92m "+str(ttn)+" [38;5;108msecondes.\x1b[1;97m║")
+         print("\x1b[38;5;212m<═════════════════════════════════════════>")
+         print("                       \033[48;5;0;38;5;197mMr Faxel                   ")            
+         raw_input('\n\033[1;91m[\033[1;97mRetour\033[1;91m]')
+	 menu_decodeur()
 ####################################################################################################
 def connexion_facebook():
     cls()
