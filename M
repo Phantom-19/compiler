@@ -1,7 +1,7 @@
+#!/bin/bash
+#Faxel
 clear
-
 echo ""
-toilet -f pagga         Compiler          | lolcat
 echo ""
 echo "Mise a jour de Compiler en cours........." | lolcat
 echo ""
@@ -9,11 +9,9 @@ git pull origin master
 echo ""
 echo "Mise à jour de Compiler terminer........." | lolcat
 echo ""
-figlet -f small Compiler a jour ! | lolcat
-
+figlet -f small Compiler a jour!   | lolcat
 echo ""
-
-toilet -f pagga  Faxel | lolcat
+toilet -f mono12 -F border Faxel   | lolcat
 sleep 3
 echo ""
 clear
