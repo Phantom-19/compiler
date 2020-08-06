@@ -32,7 +32,7 @@ def cls():
 ####################################################################################################
 def zlib_compresse():
 	cls()
-        print(logo7)
+        #print(logo7)
 	print("\033[1;97m║")
 	script_mars = raw_input("\033[1;97m╚═\033[1;31m▶\033[1;97m Entrer le nom du script a crypter \033[1;91m▶▶▶ \033[1;97m")
 	try:
