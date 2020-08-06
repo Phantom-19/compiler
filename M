@@ -2,6 +2,7 @@
 #Faxel
 clear
 echo ""
+toilet -f pagga         COMPILER          | lolcat
 echo ""
 echo "Mise a jour de Compiler en cours........." | lolcat
 echo ""
