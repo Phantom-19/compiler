@@ -1,13 +1,10 @@
 #!/bin/bash
 #Faxel
 clear
-echo ""
 toilet -f pagga         COMPILER          | lolcat
-echo ""
 echo "Mise a jour de Compiler en cours........." | lolcat
 echo ""
 git pull origin master
-echo ""
 echo "Mise à jour de Compiler terminer........." | lolcat
 echo ""
 figlet -f small Compiler a jour!   | lolcat
