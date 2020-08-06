@@ -86,13 +86,13 @@ def zlib_base_64():
 		compresse = zlib.compress(compresse_1)
 		enregistrement = open(resultat,'w')
                 #enregistrement.write("'#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib , marshal , base64\nfrom base64 import *\nexec(zlib.decompress(base64.b64decode('''"+ repr(compresse) +"''')))")
-		enregistrement.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib , marshal , base64\nfrom base64 import *\nexec(base64.b16decode(zlib.decompress(zlib.decompress(' + repr(compresse) + '))))')
+		enregistrement.write('#Compiler par Faxel\n#Twitter https://twitter.com/Faxel2020\nimport zlib , marshal , base64\nfrom base64 import *\nexec(base64.b16decode(zlib.decompress(zlib.decompress(b' + repr(compresse) + '))))')
 		enregistrement.close()
 		print("\n\033[1;91m [\033[1;97m*\033[1;91m]\033[1;92m Compilage reussi")
-		raw_input('\033[1;91m  [\033[1;97m!!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
+		raw_input('\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
 		#menu_zlib_plus_base()
 	except:
-		print("\n\033[1;91m [\033[1;97m*\033[1;91m]\033[1;94m Compilage echouer")
+		print("\n\033[1;91m [\033[1;97m*\033[1;91m]\033[1;95m Compilage echouer")
 		raw_input('\033[1;91m [\033[1;93m!\033[1;91m]\033[1;97m Appuyer entrer pour retourner au menu\033[1;93m...')
                # menu_zlib_plus_base()
 #####################################################################################################
