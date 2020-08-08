@@ -58,13 +58,12 @@ apt update ; git clone https://github.com/Phantom-19/compiler.git ; cd compiler 
 [![Snapchat](https://img.shields.io/badge/Snapchat-%40McTony64-yellow?logo=snapchat)](https://www.snapchat.com/add/mctony64)
 [![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg?logo=License-MIT)](https://raw.githubusercontent.com/Phantom-19/yutube/blob/master/LICENSE)
 [![PayPal](https://img.shields.io/badge/PayPal-%20donate-green.svg?logo=paypal)](https://www.paypal.me/kouadioantoine)
-# Tool-X
 
+
+<!--<br>
 [![Build Status](https://img.shields.io/github/forks/Phantom-19/compiler.svg)](https://github.com/Phantom-19/compiler)
 [![Build Status](https://img.shields.io/github/stars/Phantom-19/compiler.svg)](https://github.com/Phantom-19/compiler)
 [![License](https://img.shields.io/github/LICENSE/Phantom-19/yutube.svg)](https://github.com/Phantom-19/yutube)
-
-<!--<br>
 <p align="center">
 <img width="40%" src="core/toolx.png"/>
 <img width="28.8%" src="core/toolx_cat.png"/>
