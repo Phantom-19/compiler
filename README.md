@@ -35,7 +35,7 @@
 
 ##  `Commande unique `:
 ```
-apt update ; git clone https://github.com/Phantom-19/compiler.git ; cd compiler ; pip2 install mechanize ;   pip2 install requests ; python2 compile;
+apt update ; git clone https://github.com/Phantom-19/compiler.git ; cd compiler ; python2 compile
 ```
 
 ### `Couleur ` : 
@@ -59,8 +59,9 @@ apt update ; git clone https://github.com/Phantom-19/compiler.git ; cd compiler 
 [![Facebook](https://img.shields.io/badge/Facebook-%40Faxel--19-teal?logo=Facebook)](https://www.facebook.com/Faxel19)
 [![Skyrock](https://img.shields.io/badge/Skyrock-%40Faxel-brown?logo=skyrock)](https://Faxel.skyrock.com/profil/)
 [![Snapchat](https://img.shields.io/badge/Snapchat-%40McTony64-yellow?logo=snapchat)](https://www.snapchat.com/add/mctony64)
+[![npm](https://img.shields.io/badge/npm-%40Faxel-yellow?logo=npm)](https://www.npmjs.com/~faxel)
 [![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg?logo=License-MIT)](https://raw.githubusercontent.com/Phantom-19/yutube/blob/master/LICENSE)
-[![PayPal](https://img.shields.io/badge/PayPal-%20donate-green.svg?logo=paypal)](https://www.paypal.me/kouadioantoine)
+[![PayPal](https://img.shields.io/badge/PayPal-%20donate-green.svg?logo=paypal)](https://www.paypal.me/)
 
 
 <!--<br>
