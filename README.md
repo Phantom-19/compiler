@@ -10,7 +10,6 @@
 </p> 
 <p align="center"
 <a href="https://github.com/Phantom-19/"><img title="Auteur" src="https://img.shields.io/badge/Auteur-Faxel-red.svg?logo=github"></a>
-<a href="#"><img title="Open Source" src="https://img.shields.io/badge/Open%20Source-%E2%9D%A4-green?"></a>
 </p>
 <p align="center">
 <a href="#"><img title="Version" src="https://img.shields.io/badge/Version-10.5-orange.svg?"></a>
@@ -22,7 +21,32 @@
 <a href="#"><img title="Langage" src="https://forthebadge.com/images/badges/made-with-python.svg"></a>
 </p>
 
+```
+                       ,ood8888booo,
+                    ,oda8a888a888888bo,
+                 ,od88888888aa888aa88a8bo,
+               ,da8888aaaa88a888aaaa8a8a88b,
+              ,oa888aaaa8aa8888aaa8aa8a8a88o,
+             ,88888aaaaaa8aa8888a8aa8aa888a88,
+             8888a88aaaaaa8a88aa8888888a888888
+             888aaaa88aa8aaaa8888; ;8888a88888
+             Y888a888a888a8888;'   ;888888a88Y
+              Y8a8aa8a888a88'      ,8aaa8888Y
+               Y8a8aa8aa8888;     ;8a8aaa88Y
+                `Y88aa8888;'      ;8aaa88Y'
+        ,,;;;;;;;;'''''''         ;8888Y'
+     ,,;                         ,888P
+   ,;  ,;,                      ;""
+  ;       ;          ,    ,    ,;
+ ;  ;,    ;     ,;;;;;   ;,,,  ;
+;  ; ;  ,' ;  ,;      ;  ;   ;  ;
+; ;  ; ;  ;  '        ; ,'    ;  ;
+`;'  ; ;  '; ;,       ; ;      ; ',
+     ;  ;,  ;,;       ;  ;,     ;;;
+      ;,,;             ;,,;        ```
+ ```     
 ## `Installation de compiler `:
+
 * `apt update`
 * `apt install git curl python2 python `
 * `git clone https://github.com/Phantom-19/compiler.git`
@@ -33,7 +57,8 @@
 ## ` NOM D'UTILISATEUR : Faxel    `
 ## ` MOT DE PASSE      : 08127934 `
 
-##  `Commande unique `:
+## ` Commande unique `:
+
 ```
 apt update ; git clone https://github.com/Phantom-19/compiler.git ; cd compiler ; python2 compile
 ```
@@ -48,6 +73,7 @@ apt update ; git clone https://github.com/Phantom-19/compiler.git ; cd compiler 
 ### `Si vous copiez ce code, alors donnez-moi les crédits` 
 
 ## `Retrouvez moi sur` :
+
 [![Github](https://img.shields.io/badge/Github-%40Phantom--19-cyan?logo=github)](https://github.com/Phantom-19)
 [![YouTube](https://img.shields.io/badge/Youtube-%40FasterAxel-red?logo=youtube)](https://www.youtube.com/channel/UCdmpFkmXAoSpG9fu1x0VPWw)
 [![Twitter](https://img.shields.io/twitter/follow/Faxel2020.svg?style=flat-square&label=Me%20suivre&logo=twitter)](https://twitter.com/Faxel2020)
@@ -71,28 +97,4 @@ apt update ; git clone https://github.com/Phantom-19/compiler.git ; cd compiler 
 <p align="center">
 <img width="40%" src="core/toolx.png"/>
 <img width="28.8%" src="core/toolx_cat.png"/>
-<img width="23.4%" src="core/Screenshot_2020-05-17-20-17-56.png"/>
-</p>
-\033[1;94m                       ,ood8888booo,
-\033[1;93m                    ,oda8a888a888888bo,
-\033[1;95m                 ,od88888888aa888aa88a8bo,
-\033[1;94m               ,da8888aaaa88a888aaaa8a8a88b,
-\033[1;93m              ,oa888aaaa8aa8888aaa8aa8a8a88o,
-\033[1;93m             ,88888aaaaaa8aa8888a8aa8aa888a88,
-\033[1;95m             8888a88aaaaaa8a88aa8888888a888888
-\033[1;94m             888aaaa88aa8aaaa8888; ;8888a88888
-\033[1;93m             Y888a888a888a8888;'   ;888888a88Y
-\033[1;95m              Y8a8aa8a888a88'      ,8aaa8888Y
-\033[1;94m               Y8a8aa8aa8888;     ;8a8aaa88Y
-\033[1;95m                `Y88aa8888;'      ;8aaa88Y'
-\033[1;93m        ,,;;;;;;;;'''''''         ;8888Y'
-\033[1;95m     ,,;                         ,888P
-\033[1;94m   ,;  ,;,                      ;""
-\033[1;95m  ;       ;          ,    ,    ,;
-\033[1;95m ;  ;,    ;     ,;;;;;   ;,,,  ;
-\033[1;94m;  ; ;  ,' ;  ,;      ;  ;   ;  ;
-\033[1;95m; ;  ; ;  ;  '        ; ,'    ;  ;
-\033[1;94m`;'  ; ;  '; ;,       ; ;      ; ',
-\033[1;93m     ;  ;,  ;,;       ;  ;,     ;;;
-\033[1;95m      ;,,;             ;,,;         
--->
+<img width="23.4%" src="core/Screenshot_2020-05-17-20-17-56.png"/> </p>-->
