@@ -1,7 +1,7 @@
 <p align="left">
 <a href="#"><img title="Made in Ivory Coast" src="https://img.shields.io/badge/MADE%20IN-IVORY COAST-orange?colorA=orange&colorB=green"></a>
 <p align="right">
-<a href="#"><img title="compiler " src="https://img.shields.io/badge/Tout%20compiler-cyan?colorA=cyan&colorB=black&style=for-the-badge"></a>
+<a href="#"><img title="compiler " src="https://img.shields.io/badge/Tout-%20compiler-cyan?colorA=cyan&colorB=black&style=for-the-badge"></a>
 </p>
 <p align="center">
 <img alt="Phantom-19' Statistiques Github" src="https://github-readme-stats.vercel.app/api?username=Phantom-19&show_icons=true&include_all_commits=true&hide_border=true"/>
@@ -14,9 +14,9 @@
 <p align="center">
 <a href="#"><img title="Version" src="https://img.shields.io/badge/Version-11-orange.svg?"></a>
 <a href="https://github.com/Phantom-19/followers"><img title="Abonnés" src="https://img.shields.io/github/followers/Phantom-19?color=blue"></a>
-<a href="https://github.com/Phantom-19/link/stargazers/"><img title="Étoiles" src="https://img.shields.io/github/stars/Phantom-19/compiler??color=orange"></a>
-<a href="https://github.com/Phantom-19/link/network/members"><img title="Fourches" src="https://img.shields.io/github/forks/Phantom-19/compiler??color=red"></a>
-<a href="https://github.com/Phantom-19/link/watchers"><img title="En train de regarder" src="https://img.shields.io/github/watchers/Phantom-19/compiler?label=Watchers&color=blue"></a>
+<a href="https://github.com/Phantom-19/compiler/stargazers/"><img title="Étoiles" src="https://img.shields.io/github/stars/Phantom-19/compiler??color=orange"></a>
+<a href="https://github.com/Phantom-19/compiler/network/members"><img title="Fourches" src="https://img.shields.io/github/forks/Phantom-19/compiler??color=red"></a>
+<a href="https://github.com/Phantom-19/compiler/watchers"><img title="En train de regarder" src="https://img.shields.io/github/watchers/Phantom-19/compiler?label=Watchers&color=blue"></a>
 <p align="right">
 <a href="#"><img title="Langage" src="https://forthebadge.com/images/badges/made-with-python.svg"></a>
 </p>
@@ -51,7 +51,6 @@
 * `apt install git curl python2 python `
 * `git clone https://github.com/Phantom-19/compiler.git`
 * `cd compiler`
-
 ## ` Execution > ` `python2 compile.py`
 
 ## ` NOM D'UTILISATEUR : Faxel    `
@@ -86,10 +85,8 @@ apt update ; git clone https://github.com/Phantom-19/compiler.git ; cd compiler 
 [![Skyrock](https://img.shields.io/badge/Skyrock-%40Faxel-brown?logo=skyrock)](https://Faxel.skyrock.com/profil/)
 [![Snapchat](https://img.shields.io/badge/Snapchat-%40McTony64-yellow?logo=snapchat)](https://www.snapchat.com/add/mctony64)
 [![npm](https://img.shields.io/badge/npm-%40Faxel-yellow?logo=npm)](https://www.npmjs.com/~faxel)
-[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg?logo=License-MIT)](https://raw.githubusercontent.com/Phantom-19/yutube/blob/master/LICENSE)
+[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg?logo=License-MIT)](https://raw.githubusercontent.com/Phantom-19/yutube/blob/master/MIT)
 [![PayPal](https://img.shields.io/badge/PayPal-%20donate-green.svg?logo=paypal)](https://www.paypal.me/)
-
-
 <!--<br>
 [![Build Status](https://img.shields.io/github/forks/Phantom-19/compiler.svg)](https://github.com/Phantom-19/compiler)
 [![Build Status](https://img.shields.io/github/stars/Phantom-19/compiler.svg)](https://github.com/Phantom-19/compiler)
@@ -97,4 +94,5 @@ apt update ; git clone https://github.com/Phantom-19/compiler.git ; cd compiler 
 <p align="center">
 <img width="40%" src="core/toolx.png"/>
 <img width="28.8%" src="core/toolx_cat.png"/>
-<img width="23.4%" src="core/Screenshot_2020-05-17-20-17-56.png"/> </p>-->
+<img width="23.4%" src="core/Screenshot_2020-05-17-20-17-56.png"/> </p>
+-->
