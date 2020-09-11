@@ -47,7 +47,6 @@
  ```     
 ## `Installation  `:
 
-* `apt update`
 * `apt install git curl python2 python `
 * `git clone https://github.com/Phantom-19/compiler.git`
 * `cd compiler`
@@ -57,20 +56,14 @@
 ## ` MOT DE PASSE      : 08127934 `
 
 ## ` Commande unique `:
-
 ```
-apt update ; git clone https://github.com/Phantom-19/compiler.git ; cd compiler ; python2 compile.py
+pkg update ; pkg install pip ; pkg install pip2 ; git clone https://github.com/Phantom-19/compiler.git ; cd compiler ; python2 compile.py
 ```
 
 ### `Couleur ` : 
 ````black, white, red, green, blue, cyan, magenta, yellow, lime, brown, darkgray, gray, lightgray, olive, orange, pink, purple, teal, violet````
 
-- [x] Terminer la base 
-- [x] 🇨🇮 Faxel 🇨🇮 
-- [x] 🇨🇮I'm the person whom you can never judge.🇨🇮 
-
 ### `Si vous copiez ce code, alors donnez-moi les crédits` 
-
 ## `Retrouvez moi sur` :
 
 [![Github](https://img.shields.io/badge/Github-%40Phantom--19-cyan?logo=github)](https://github.com/Phantom-19)
@@ -85,14 +78,5 @@ apt update ; git clone https://github.com/Phantom-19/compiler.git ; cd compiler 
 [![Skyrock](https://img.shields.io/badge/Skyrock-%40Faxel-brown?logo=skyrock)](https://Faxel.skyrock.com/profil/)
 [![Snapchat](https://img.shields.io/badge/Snapchat-%40McTony64-yellow?logo=snapchat)](https://www.snapchat.com/add/mctony64)
 [![npm](https://img.shields.io/badge/npm-%40Faxel-yellow?logo=npm)](https://www.npmjs.com/~faxel)
-[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg?logo=License-MIT)](https://raw.githubusercontent.com/Phantom-19/yutube/blob/master/MIT)
+[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg?logo=License-MIT)](https://raw.githubusercontent.com/Phantom-19/yutube/master/MIT)
 [![PayPal](https://img.shields.io/badge/PayPal-%20donate-green.svg?logo=paypal)](https://www.paypal.me/)
-<!--<br>
-[![Build Status](https://img.shields.io/github/forks/Phantom-19/compiler.svg)](https://github.com/Phantom-19/compiler)
-[![Build Status](https://img.shields.io/github/stars/Phantom-19/compiler.svg)](https://github.com/Phantom-19/compiler)
-[![License](https://img.shields.io/github/LICENSE/Phantom-19/yutube.svg)](https://github.com/Phantom-19/yutube)
-<p align="center">
-<img width="40%" src="core/toolx.png"/>
-<img width="28.8%" src="core/toolx_cat.png"/>
-<img width="23.4%" src="core/Screenshot_2020-05-17-20-17-56.png"/> </p>
--->
